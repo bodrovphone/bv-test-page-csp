@@ -51,6 +51,15 @@
                         <div id="BVRRContainer"></div>
                         <script nonce="omgdonttellthisanyone" type="text/javascript">
                            $BV.ui( 'rr', 'show_reviews');
+
+                           $BV.ui( 'rr', 'inline_ratings', {
+                                productIds : {
+                                'product1' : {
+                                    url : 'http://www.client.com/product/path1'
+                                }
+                                },
+                                containerPrefix : 'BVRRInlineRating'
+                            });
                         </script>
                     </section>
                     <section>
@@ -75,6 +84,11 @@
         </div> <!-- #main-container -->
 
         <div class="footer-container">
+            <div class="inline-rating-wrapper">
+                This is Inline Ratings
+                    <div id="BVRRInlineRating-product1">
+                        </div>
+            </div>
             <footer class="wrapper">
                 <h3>footer</h3>
             </footer>
