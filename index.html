@@ -53,11 +53,7 @@
                            $BV.ui( 'rr', 'show_reviews');
 
                            $BV.ui( 'rr', 'inline_ratings', {
-                                productIds : {
-                                'product1' : {
-                                    url : 'http://www.client.com/product/path1'
-                                }
-                                },
+                                productIds ['product1', 'test'],
                                 containerPrefix : 'BVRRInlineRating'
                             });
                         </script>
@@ -88,6 +84,8 @@
                 This is Inline Ratings
                     <div id="BVRRInlineRating-product1">
                         </div>
+                        <div id="BVRRInlineRating-test">
+                            </div>
             </div>
             <footer class="wrapper">
                 <h3>footer</h3>
