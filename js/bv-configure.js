@@ -1,0 +1,1 @@
+$BV.configure('global', { productId : 'product1' });
