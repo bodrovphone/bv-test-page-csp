@@ -49,6 +49,8 @@
                     </header>
                     <section>
                         <h2>article section h2</h2>
+                        <button id="transaction">Make Transaction</button>
+                        <button id="conversion">Make Conversion</button>
                         <div id="BVRRContainer"></div>
                         <script nonce="omgdonttellthisanyone" type="text/javascript">
                            $BV.ui( 'rr', 'show_reviews');
@@ -108,5 +110,50 @@
             ga('create','UA-XXXXX-X','auto');ga('send','pageview');
         </script> -->
     <!-- <script src="js/bv-ui.js"></script> -->
+
+    <!-- BV Pixel Implementation -->
+    <script nonce="omgdonttellthisanyone">
+      function makeTransaction() {
+
+      $BV.SI.trackTransactionPageView({
+        "orderId" : "0001",
+        "tax" : "1.44",
+        "shipping" : "10.00",
+        "total" : "40.84",
+        "city" : "Austin",
+        "state" : "TX",
+        "country" : "USA",
+        "currency" : "USD",
+        "items" : [
+            {
+                    "sku" : "2245",
+                    "name" : "product name",
+                    "category" : "category name",
+                    "price" : "13.42",
+                    "quantity" : "1",
+                    "imageURL" : "http://test.com/1.jpg"
+            },
+            {
+                    "sku" : "2246",
+                    "name" : "product name2",
+                    "imageURL" : "http://test.com/2.jpg"
+            }
+        ],
+        "email" : "john@example.com",
+        "deploymentZone" : "obodrov",
+        "locale" : "en_US"
+      });
+      }
+
+      function makeConversion() {
+        $BV.SI.trackConversion({
+            "type" : "CSP_conversion",
+            "label" : "CSP-test",
+            "value" : 78701
+        });
+      }
+      document.querySelector('#transaction').addEventListener('click', makeTransaction);
+      document.querySelector('#conversion').addEventListener('click', makeConversion);
+    </script>
     </body>
 </html>
