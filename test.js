@@ -458,7 +458,9 @@
               Y = [new o.stack.PostMessageTransport(Z)];
               break;
           case "2":
-              Z.remoteHelper = B(Z.remoteHelper);
+              if (Z.isHost) {
+                  Z.remoteHelper = B(Z.remoteHelper)
+              }
               Y = [new o.stack.NameTransport(Z), new o.stack.QueueBehavior(), new o.stack.VerifyBehavior({
                   initiate: Z.isHost
               })];
@@ -523,7 +525,7 @@
       X.up = X.down = null
   }
   T(o, {
-      version: "2.4.15.0",
+      version: "2.4.19.3",
       query: S,
       stack: {},
       apply: T,
@@ -547,6 +549,9 @@
               X[Y] = Z
           },
           get: function(Z, Y) {
+              if (!X.hasOwnProperty(Z)) {
+                  return
+              }
               var aa = X[Z];
               if (Y) {
                   delete X[Z]
@@ -692,7 +697,7 @@
               });
               d.body.appendChild(ae)
           }
-          var ai = "callback=flash_loaded" + ah.replace(/[\-.]/g, "_") + "&proto=" + b.location.protocol + "&domain=" + z(b.location.href) + "&port=" + f(b.location.href) + "&ns=" + I;
+          var ai = "callback=flash_loaded" + H(ah.replace(/[\-.]/g, "_")) + "&proto=" + b.location.protocol + "&domain=" + H(z(b.location.href)) + "&port=" + H(f(b.location.href)) + "&ns=" + H(I);
           ae.innerHTML = "<object height='20' width='20' type='application/x-shockwave-flash' id='" + aj + "' data='" + ag + "'><param name='allowScriptAccess' value='always'></param><param name='wmode' value='transparent'><param name='movie' value='" + ag + "'></param><param name='flashvars' value='" + ai + "'></param><embed type='application/x-shockwave-flash' FlashVars='" + ai + "' allowScriptAccess='always' wmode='transparent' src='" + ag + "' height='1' width='1'></embed></object>"
       }
       return (ac = {
@@ -1109,8 +1114,7 @@
               if (ag[0] == ab) {
                   Z = "";
                   if (ac) {
-                      ac(true);
-                      ac = null
+                      ac(true)
                   }
               }
               if (af.length > 0) {
