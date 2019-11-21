@@ -86,11 +86,14 @@
         </div>
         <script>
             const myWriteReview = e => {
+                debugger
                 $BV.ui('rr', 'submit_review');
             }
             
-
-            document.getElementById('custom-button').addEventListener(myWriteReview)
+            window.addEventListener('load', (event) => {
+                document.getElementById('custom-button').addEventListener('click', myWriteReview)
+            });
+            
         </script>
     </body>
 </html>
