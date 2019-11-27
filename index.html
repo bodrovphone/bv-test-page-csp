@@ -86,7 +86,7 @@
         </div>
         <script>
             const myWriteReview = e => {
-                $BV.ui('rr', 'submit_review');
+                $BV.ui('rr', 'submit_review', {bvFocusTarget: e.target});
             }
             
             window.addEventListener('load', (event) => {
