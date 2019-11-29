@@ -6270,7 +6270,7 @@ BV.define('components',['underscore', 'vendor/json2'], function (_, JSON) {
       };
 });
 
-BV.define('components!',{"bvRouter1":{"componentId":"bvRouter1","type":"bvRouter","routes":[{"name":"submit","paths":[":contentType/submit/:campaignId"],"params":["contentType","campaignId"],"actions":[{"component":"reviewSubmission1","scope":"rr","action":"submit_review"}]},{"name":"page","paths":[":displayCode/:contentType/:subjectType/:pageNum/:product.htm"],"params":["displayCode","contentType","subjectType","pageNum","product"],"actions":[{"component":"reviewContentList1","event":"pageto"}]},{"name":"bvstateRR","paths":["bvstate/review/:pageNum"],"params":["pageNum"],"actions":[{"component":"reviewContentList1","event":"pageto"}]},{"name":"bvstateQA","paths":["bvstate/question/:pageNum"],"params":["pageNum"],"actions":[{"component":"questionContentList1","event":"pageto"}]},{"name":"deeplink","paths":[":contentType/:id"],"params":["contentType","id"],"actions":[{"component":"reviewContentList1","event":"deeplink"},{"component":"questionContentList1","event":"deeplink"}]},{"name":"bvdata","paths":["bvdata/:urlData"],"params":["urlData"],"actions":[{"bvdata":"bvdata"}]},{"name":"sort","paths":[":contentType/sort/:key/:dir"],"params":["contentType","key","dir"],"actions":[{"component":"reviewContentList1","event":"sort"}]},{"name":"showHelpfulPositive","paths":[":contentType/showHelpfulPositive"],"params":["contentType"],"actions":[{"component":"reviewContentList1","event":"showhelpfulpositive"}]},{"name":"showHelpfulCritical","paths":[":contentType/showHelpfulCritical"],"params":["contentType"],"actions":[{"component":"reviewContentList1","event":"showhelpfulcritical"}]}],"viewUniq":0,"views":{}},"fullProfilePopup1":{"container":"BVContainer","subjectType":"Authors","contentType":"Authors","type":"fullProfile","pageview":{"bvProduct":"Profiles"},"features":{"self":["sidebar","tabs"],"sidebar":[],"tabs":["profileContentList<Reviews>","profileContentList<Questions>","profileContentList<Answers>"],"profileContentList":["contentItemCollection","ugcCount","pagination"],"contentItem":{"contentTypes":{"Reviews":{"features":["has:stars","has:productImage","has:prosCons","has:contentBadges","has:secondarySubmission","secondaryContentList","has:secondaryContentBtn"]},"Questions":{"features":["has:secondaryContentLink","secondaryContentList","has:secondarySubmission","has:secondaryContentBtn"]},"Answers":{"features":["has:secondaryContentLink","has:secondarySubmission"]}}},"secondaryContentList":{"contentTypes":{"Comments":{"features":["secondaryContentItemCollection","loadMore"]},"Answers":{"features":["secondaryContentItemCollection"]}}},"secondaryContentItem":{"contentTypes":{"Comments":{"features":["has:userBadges"]}}}},"outlets":{"showmediaviewer":[{"component":"mediaViewer1","event":"open"}],"showanswersubmission":[{"component":"answerSubmission1_inline","scope":"qa","action":"submit_answer"}],"showcommentsubmission":[{"component":"commentSubmission2","scope":"rr","action":"submit_comment"}]},"componentId":"fullProfilePopup1","createOnce":true,"viewUniq":0,"views":{}},"mediaViewer1":{"container":"BVContainer","subjectType":"Products","contentType":"Products","coverageContentTypes":["Reviews","Questions"],"type":"mediaViewer","componentId":"mediaViewer1","createOnce":true,"viewUniq":0,"views":{}},"rrSubmissionGuidelines1":{"type":"guidelines","subjectType":"Products","contentType":"Reviews","container":"BVGuidelines","features":{"self":["rrSubmissionGuidelines1","has:reviewHelperText"]},"outlets":{},"componentId":"rrSubmissionGuidelines1","autoload":true,"viewUniq":0,"views":{}},"reviewGenericSubmission1":{"type":"genericSubmission","subjectType":"Products","contentType":"Reviews","container":"BVGRSContainer","autoload":true,"features":{"self":["searchBar","categorySelect","ugcCount:filtered","ugcCount:unfiltered","productItemCollection:filtered","productItemCollection:unfiltered","loadMore:filtered","loadMore:unfiltered"],"searchBar":["has:searchOnKeyup"],"loadMore":{"instances":{"filtered":{"features":["has:infiniteScroll","has:instanceNameScope"]},"unfiltered":{"features":["has:infiniteScroll","has:instanceNameScope"]}}},"productItemCollection":{"instances":{"filtered":{"features":["has:filterByCategory","has:instanceNameScope"]},"unfiltered":{"features":["has:filterWithoutCategory","has:searchOnly","has:instanceNameScope"]}}},"ugcCount":{"instances":{"filtered":{"features":["has:instanceNameScope"]},"unfiltered":{"features":["has:instanceNameScope"]}}}},"outlets":{},"componentId":"reviewGenericSubmission1","grsSearchEnabled":true,"productsPerRow":4,"viewUniq":0,"views":{}},"inlineRatingList1":{"subjectType":"Products","contentType":"Statistics","containerPrefix":"BVRRInlineRating","type":"ratingList","features":{"self":["ratingItemCollection"],"ratingItem":["has:stars"]},"componentId":"inlineRatingList1","autoload":true,"viewUniq":0,"views":{}},"contentSearch1":{"serverRender":true,"container":"BVRRSearchContainer","subjectType":"Products","contentType":"Products","coverageContentTypes":["Reviews","Questions"],"submissionContentTypes":["Answers","Comments"],"type":"contentSearch","features":{"self":["searchBar","searchContentList","trustmarkIcon","has:stars","has:overallRating","has:reviewCount","statsPanel","has:aggregateRatingTag"],"searchContentList":["contentItemCollection","ugcCount","searchBar","pagination"],"contentItem":{"contentTypes":{"Reviews":{"features":["has:stars","has:secondaryContentLink","avatar","secondaryContentList","has:secondaryContentBtn"]},"Questions":{"features":["avatar","secondaryContentList","has:secondaryContentBtn","has:secondaryContentLink"]}}},"secondaryContentList":["secondaryContentItemCollection"],"secondaryContentItem":{"contentTypes":{"Comments":{"features":["avatar"]},"Answers":{"features":["feedback","crowdSourcedAnswerBadge"]}}},"avatar":{"contentTypes":{"Reviews":{"features":["has:hoverProfile","has:fullProfileLink","has:socialAvatar"]},"Questions":{"features":["has:hoverProfile","has:fullProfileLink","has:socialAvatar"]}}}},"outlets":{"showmediaviewer":[{"component":"mediaViewer1","event":"open"}],"showfullprofile":[{"component":"fullProfilePopup1","event":"launchprofile"}],"filtercontent":[{"component":"contentSearch1","event":"filtercontent"}],"showreviews":[{"component":"reviewContentList1","event":"scrolltocontent","scope":"rr","fallback":"doShowContent"}],"scrolltocontent":[{"component":"reviewContentList1","event":"scrolltocontent"}],"filterresults":[{"component":"reviewContentList1","event":"filterresults"}],"showsubmission":[{"component":"questionSubmission2_inline","scope":"qa","action":"submit_question"}],"showanswersubmission":[{"component":"answerSubmission1_inline","scope":"qa","action":"submit_answer"}],"showquestions":[{"component":"questionContentList1","event":"scrolltocontent","scope":"qa","fallback":"doShowContent"}],"showcommentsubmission":[{"component":"commentSubmission2","scope":"rr","action":"submit_comment"}]},"componentId":"contentSearch1","autoload":true,"viewUniq":0,"views":{}},"reviewSummary1":{"serverRender":true,"container":"BVRRSummaryContainer","subjectType":"Products","contentType":"Products","coverageContentTypes":["Reviews","Questions"],"type":"summary","features":{"self":["has:stars","has:overallRating","histogram","has:writeReviews","has:askQuestions","has:minimalistHorizontal","has:minimalist"],"histogram":["has:filterButton"]},"outlets":{"showreviewsubmission":[{"component":"reviewSubmission1","scope":"rr","action":"submit_review"}],"showreviews":[{"component":"reviewContentList1","event":"scrolltocontent","scope":"rr","fallback":"doShowContent"}],"filtercontent":[{"component":"reviewContentList1","event":"filtercontent"}],"showquestions":[{"component":"questionContentList1","event":"scrolltocontent","scope":"qa","fallback":"doShowContent"}],"showquestionsubmission":[{"component":"questionSubmission1","scope":"qa","action":"submit_question"}]},"componentId":"reviewSummary1","autoload":true,"priority":true,"viewUniq":0,"views":{}},"reviewContentList1":{"subjectType":"Products","type":"contentList","features":{"self":["contentItemCollection","contentFilter","pagination","ugcCount","has:contentSort","relevancyLink","has:writeReviews","headToHead","inlineHistogram","secondaryRatingSummary"],"pagination":["ugcCount"],"contentItem":["has:stars","has:secondaryRatings","has:reviewPhotos","has:reviewVideos","has:tags","has:prosCons","has:userBadges","has:contentBadges","secondaryContentList","has:secondaryContentBtn","feedback","has:recommended","avatar","has:socialAvatar","has:reviewAttribution","has:productFamiliesAttribution"],"secondaryContentList":["secondaryContentItemCollection<ClientResponses>","secondaryContentItemCollection<Comments>","has:inlineSubmission","loadMore"],"secondaryContentItem":["has:userBadges","feedback","avatar","has:socialAvatar"],"contentFilter":["has:filterButton"],"avatar":["has:socialAvatar","has:hoverProfile","has:fullProfileLink"]},"outlets":{"showmediaviewer":[{"component":"mediaViewer1","event":"open"}],"showfullprofile":[{"component":"fullProfilePopup1","event":"launchprofile"}],"showsubmission":[{"component":"reviewSubmission1","scope":"rr","action":"submit_review"}],"filterresults":[{"component":"reviewContentList1","event":"filterresults"}],"filtercontent":[{"component":"reviewContentList1","event":"filtercontent"}],"linkSort":[{"component":"reviewContentSort1","event":"setupsort"}],"showhelpfulpositive":[{"component":"reviewContentList1","event":"showhelpfulpositive"}],"showhelpfulcritical":[{"component":"reviewContentList1","event":"showhelpfulcritical"}],"showreviews":[{"component":"reviewContentList1","event":"scrolltocontent"}],"showcommentsubmission":[{"component":"commentSubmission1_inline","scope":"rr","action":"submit_comment"}]},"serverRender":true,"container":"BVRRContainer","contentType":"Reviews","secondaryContentType":"Comments","pageview":{"bvProduct":"RatingsAndReviews"},"monitorVisibility":true,"componentId":"reviewContentList1","autoload":true,"viewUniq":0,"views":{}},"reviewSubmission1":{"type":"submission","preload":true,"inline":false,"features":{"self":["thankYouPage","dropdownable","has:starHoverHeatMap","has:submissionPreview","has:reviewHelperText"],"thankYouPage":["has:mbox"],"photoupload":["dropdownable"],"videoupload":["dropdownable"]},"outlets":{"previewcontent":[{"component":"reviewContentList1","event":"previewcontent"}]},"container":"BVRRContainer","subjectType":"Products","contentType":"Reviews","pageview":{"bvProduct":"RatingsAndReviews"},"componentId":"reviewSubmission1","viewUniq":0,"views":{}},"reviewContentSort1":{"serverRender":true,"subjectType":"Products","type":"contentSort","sortDefault":"relevancy","sortTypes":["relevancy","mostHelpful","positive","negative","featured","oldest","mostRecent"],"features":{"self":["has:hoverDropdown"]},"outlets":{"setupme":[{"component":"reviewContentList1","event":"setupcontentsort"}],"sortcontent":[{"component":"reviewContentList1","event":"sortcontent"}]},"container":"BVRRContainer","contentType":"Reviews","componentId":"reviewContentSort1","viewUniq":0,"views":{}},"questionContentList1":{"subjectType":"Products","type":"contentList","features":{"self":["contentItemCollection","pagination","ugcCount","has:contentSort","has:askQuestions","has:inlineSubmission"],"pagination":["ugcCount"],"contentItem":["secondaryContentList","has:secondaryContentLink","has:secondarySubmission","has:secondaryContentBtn","avatar","has:socialAvatar","has:reviewAttribution","has:productFamiliesAttribution"],"secondaryContentList":["secondaryContentItemCollection"],"secondaryContentItem":["feedback","crowdSourcedAnswerBadge","avatar","has:socialAvatar"],"avatar":["has:socialAvatar","has:hoverProfile","has:fullProfileLink"]},"outlets":{"showmediaviewer":[{"component":"mediaViewer1","event":"open"}],"showfullprofile":[{"component":"fullProfilePopup1","event":"launchprofile"}],"linkSort":[{"component":"questionContentSort1","event":"setupsort"}],"showsubmission":[{"component":"questionSubmission1","scope":"qa","action":"submit_question"}],"showanswersubmission":[{"component":"answerSubmission1_inline","scope":"qa","action":"submit_answer"}]},"serverRender":true,"container":"BVQAContainer","contentType":"Questions","secondaryContentType":"Answers","pageview":{"bvProduct":"AskAndAnswer"},"monitorVisibility":true,"componentId":"questionContentList1","autoload":true,"viewUniq":0,"views":{}},"questionSubmission1":{"type":"submission","preload":false,"inline":true,"features":{"self":["thankYouPage","has:submissionPreview"],"thankYouPage":["has:mbox"]},"outlets":{"previewcontent":[{"component":"questionContentList1","event":"previewcontent"}],"showanswersubmission":[{"component":"answerSubmission1_inline","scope":"qa","action":"submit_answer"}]},"container":"BVQAContainer","subjectType":"Products","contentType":"Questions","pageview":{"bvProduct":"AskAndAnswer"},"componentId":"questionSubmission1","viewUniq":0,"views":{}},"questionContentSort1":{"serverRender":true,"subjectType":"Products","type":"contentSort","sortDefault":"helpfulnessAnswersLast","sortTypes":["recentQuestionsFirst","recentQuestionsLast","recentAnswersFirst","recentAnswersLast","mostAnsweredQuestionsFirst","mostAnsweredQuestionsLast","answersWithAffiliationStaffFirst","featuredQuestionsFirst","helpfulnessAnswersFirst","helpfulnessAnswersLast"],"features":{"self":["has:hoverDropdown"]},"outlets":{"setupme":[{"component":"questionContentList1","event":"setupcontentsort"}],"sortcontent":[{"component":"questionContentList1","event":"sortcontent"}]},"container":"BVQAContainer","contentType":"Questions","componentId":"questionContentSort1","viewUniq":0,"views":{}},"answerSubmission1_inline":{"type":"submission","preload":false,"inline":false,"features":{"self":["thankYouPage","has:submissionPreview"],"thankYouPage":["has:mbox"]},"outlets":{"previewsecondarycontent":[{"component":"questionContentList1","event":"previewsecondarycontent"}]},"container":"BVQAContainer","subjectType":"Products","contentType":"Answers","componentId":"answerSubmission1_inline","viewUniq":0,"views":{}},"questionSubmission2_inline":{"type":"submission","preload":false,"inline":true,"features":{"self":["has:submissionPreview"],"thankYouPage":[]},"outlets":{"previewcontent":[{"component":"questionContentList1","event":"previewcontent"}]},"container":"BVContainer","subjectType":"Products","contentType":"Questions","pageview":{"bvProduct":"AskAndAnswer"},"componentId":"questionSubmission2_inline","viewUniq":0,"views":{}},"commentSubmission1_inline":{"type":"submission","preload":false,"inline":true,"features":{"self":["has:submissionPreview"],"thankYouPage":[]},"outlets":{"previewsecondarycontent":[{"component":"reviewContentList1","event":"previewsecondarycontent"}]},"container":"BVRRContainer","subjectType":"Products","contentType":"Comments","componentId":"commentSubmission1_inline","viewUniq":0,"views":{}},"commentSubmission2":{"type":"submission","preload":false,"inline":false,"features":{"self":["thankYouPage"],"thankYouPage":["has:mbox"]},"outlets":{},"container":"BVRRContainer","subjectType":"Products","contentType":"Comments","componentId":"commentSubmission2","viewUniq":0,"views":{}}});
+BV.define('components!',{"bvRouter1":{"componentId":"bvRouter1","type":"bvRouter","routes":[{"name":"submit","paths":[":contentType/submit/:campaignId"],"params":["contentType","campaignId"],"actions":[{"component":"reviewSubmission1","scope":"rr","action":"submit_review"}]},{"name":"page","paths":[":displayCode/:contentType/:subjectType/:pageNum/:product.htm"],"params":["displayCode","contentType","subjectType","pageNum","product"],"actions":[{"component":"reviewContentList1","event":"pageto"}]},{"name":"bvstateRR","paths":["bvstate/review/:pageNum"],"params":["pageNum"],"actions":[{"component":"reviewContentList1","event":"pageto"}]},{"name":"bvstateQA","paths":["bvstate/question/:pageNum"],"params":["pageNum"],"actions":[{"component":"questionContentList1","event":"pageto"}]},{"name":"deeplink","paths":[":contentType/:id"],"params":["contentType","id"],"actions":[{"component":"reviewContentList1","event":"deeplink"},{"component":"questionContentList1","event":"deeplink"}]},{"name":"bvdata","paths":["bvdata/:urlData"],"params":["urlData"],"actions":[{"bvdata":"bvdata"}]},{"name":"sort","paths":[":contentType/sort/:key/:dir"],"params":["contentType","key","dir"],"actions":[{"component":"reviewContentList1","event":"sort"}]},{"name":"showHelpfulPositive","paths":[":contentType/showHelpfulPositive"],"params":["contentType"],"actions":[{"component":"reviewContentList1","event":"showhelpfulpositive"}]},{"name":"showHelpfulCritical","paths":[":contentType/showHelpfulCritical"],"params":["contentType"],"actions":[{"component":"reviewContentList1","event":"showhelpfulcritical"}]}],"viewUniq":0,"views":{}},"fullProfilePopup1":{"container":"BVContainer","subjectType":"Authors","contentType":"Authors","type":"fullProfile","pageview":{"bvProduct":"Profiles"},"features":{"self":["sidebar","tabs"],"sidebar":[],"tabs":["profileContentList<Reviews>","profileContentList<Questions>","profileContentList<Answers>"],"profileContentList":["contentItemCollection","ugcCount","pagination"],"contentItem":{"contentTypes":{"Reviews":{"features":["has:stars","has:productImage","has:prosCons","has:contentBadges","has:secondarySubmission","secondaryContentList","has:secondaryContentBtn"]},"Questions":{"features":["has:secondaryContentLink","secondaryContentList","has:secondarySubmission","has:secondaryContentBtn"]},"Answers":{"features":["has:secondaryContentLink","has:secondarySubmission"]}}},"secondaryContentList":{"contentTypes":{"Comments":{"features":["secondaryContentItemCollection","loadMore"]},"Answers":{"features":["secondaryContentItemCollection"]}}},"secondaryContentItem":{"contentTypes":{"Comments":{"features":["has:userBadges"]}}}},"outlets":{"showmediaviewer":[{"component":"mediaViewer1","event":"open"}],"showanswersubmission":[{"component":"answerSubmission1_inline","scope":"qa","action":"submit_answer"}],"showcommentsubmission":[{"component":"commentSubmission2","scope":"rr","action":"submit_comment"}]},"componentId":"fullProfilePopup1","createOnce":true,"viewUniq":0,"views":{}},"mediaViewer1":{"container":"BVContainer","subjectType":"Products","contentType":"Products","coverageContentTypes":["Reviews","Questions"],"type":"mediaViewer","componentId":"mediaViewer1","createOnce":true,"viewUniq":0,"views":{}},"rrSubmissionGuidelines1":{"type":"guidelines","subjectType":"Products","contentType":"Reviews","container":"BVGuidelines","features":{"self":["rrSubmissionGuidelines1","has:reviewHelperText"]},"outlets":{},"componentId":"rrSubmissionGuidelines1","autoload":true,"viewUniq":0,"views":{}},"reviewGenericSubmission1":{"type":"genericSubmission","subjectType":"Products","contentType":"Reviews","container":"BVGRSContainer","autoload":true,"features":{"self":["searchBar","categorySelect","ugcCount:filtered","ugcCount:unfiltered","productItemCollection:filtered","productItemCollection:unfiltered","loadMore:filtered","loadMore:unfiltered"],"searchBar":["has:searchOnKeyup"],"loadMore":{"instances":{"filtered":{"features":["has:infiniteScroll","has:instanceNameScope"]},"unfiltered":{"features":["has:infiniteScroll","has:instanceNameScope"]}}},"productItemCollection":{"instances":{"filtered":{"features":["has:filterByCategory","has:instanceNameScope"]},"unfiltered":{"features":["has:filterWithoutCategory","has:searchOnly","has:instanceNameScope"]}}},"ugcCount":{"instances":{"filtered":{"features":["has:instanceNameScope"]},"unfiltered":{"features":["has:instanceNameScope"]}}}},"outlets":{},"componentId":"reviewGenericSubmission1","grsSearchEnabled":true,"productsPerRow":4,"viewUniq":0,"views":{}},"inlineRatingList1":{"subjectType":"Products","contentType":"Statistics","containerPrefix":"BVRRInlineRating","type":"ratingList","features":{"self":["ratingItemCollection"],"ratingItem":["has:stars"]},"componentId":"inlineRatingList1","autoload":true,"viewUniq":0,"views":{}},"contentSearch1":{"serverRender":true,"container":"BVRRSearchContainer","subjectType":"Products","contentType":"Products","coverageContentTypes":["Reviews","Questions"],"submissionContentTypes":["Answers","Comments"],"type":"contentSearch","features":{"self":["searchBar","searchContentList","trustmarkIcon","has:stars","has:overallRating","has:reviewCount","statsPanel"],"searchContentList":["contentItemCollection","ugcCount","searchBar","pagination"],"contentItem":{"contentTypes":{"Reviews":{"features":["has:stars","has:secondaryContentLink","avatar","secondaryContentList","has:secondaryContentBtn"]},"Questions":{"features":["avatar","secondaryContentList","has:secondaryContentBtn","has:secondaryContentLink"]}}},"secondaryContentList":["secondaryContentItemCollection"],"secondaryContentItem":{"contentTypes":{"Comments":{"features":["avatar"]},"Answers":{"features":["feedback","crowdSourcedAnswerBadge"]}}},"avatar":{"contentTypes":{"Reviews":{"features":["has:socialAvatar"]},"Questions":{"features":["has:socialAvatar"]}}}},"outlets":{"showmediaviewer":[{"component":"mediaViewer1","event":"open"}],"showfullprofile":[{"component":"fullProfilePopup1","event":"launchprofile"}],"filtercontent":[{"component":"contentSearch1","event":"filtercontent"}],"showreviews":[{"component":"reviewContentList1","event":"scrolltocontent","scope":"rr","fallback":"doShowContent"}],"scrolltocontent":[{"component":"reviewContentList1","event":"scrolltocontent"}],"filterresults":[{"component":"reviewContentList1","event":"filterresults"}],"showsubmission":[{"component":"questionSubmission2_inline","scope":"qa","action":"submit_question"}],"showanswersubmission":[{"component":"answerSubmission1_inline","scope":"qa","action":"submit_answer"}],"showquestions":[{"component":"questionContentList1","event":"scrolltocontent","scope":"qa","fallback":"doShowContent"}],"showcommentsubmission":[{"component":"commentSubmission2","scope":"rr","action":"submit_comment"}]},"componentId":"contentSearch1","autoload":true,"viewUniq":0,"views":{}},"contentSearch2":{"serverRender":true,"container":"BVQASearchContainer","subjectType":"Products","contentType":"Products","coverageContentTypes":["Reviews","Questions"],"submissionContentTypes":["Answers","Comments"],"type":"contentSearch","features":{"self":["searchBar","searchContentList","has:stars","has:overallRating","has:reviewCount","statsPanel"],"searchContentList":["contentItemCollection","ugcCount","searchBar","pagination"],"contentItem":{"contentTypes":{"Reviews":{"features":["has:stars","has:secondaryContentLink","avatar","secondaryContentList","has:secondaryContentBtn"]},"Questions":{"features":["avatar","secondaryContentList","has:secondaryContentBtn","has:secondaryContentLink"]}}},"secondaryContentList":["secondaryContentItemCollection"],"secondaryContentItem":{"contentTypes":{"Comments":{"features":["avatar"]},"Answers":{"features":["feedback","crowdSourcedAnswerBadge"]}}},"avatar":{"contentTypes":{"Reviews":{"features":["has:socialAvatar"]},"Questions":{"features":["has:socialAvatar"]}}}},"outlets":{"showmediaviewer":[{"component":"mediaViewer1","event":"open"}],"showfullprofile":[{"component":"fullProfilePopup1","event":"launchprofile"}],"filtercontent":[{"component":"contentSearch2","event":"filtercontent"}],"showreviews":[{"component":"reviewContentList1","event":"scrolltocontent","scope":"rr","fallback":"doShowContent"}],"scrolltocontent":[{"component":"reviewContentList1","event":"scrolltocontent"}],"filterresults":[{"component":"reviewContentList1","event":"filterresults"}],"showsubmission":[{"component":"questionSubmission2_inline","scope":"qa","action":"submit_question"}],"showanswersubmission":[{"component":"answerSubmission1_inline","scope":"qa","action":"submit_answer"}],"showquestions":[{"component":"questionContentList1","event":"scrolltocontent","scope":"qa","fallback":"doShowContent"}],"showcommentsubmission":[{"component":"commentSubmission2","scope":"rr","action":"submit_comment"}]},"componentId":"contentSearch2","autoload":true,"viewUniq":0,"views":{}},"reviewSummary1":{"serverRender":true,"container":"BVRRSummaryContainer","subjectType":"Products","contentType":"Products","coverageContentTypes":["Reviews","Questions"],"type":"summary","features":{"self":["has:stars","has:overallRating","has:aggregateRatingTag","histogram","has:writeReviews","has:askQuestions","has:minimalistHorizontal","has:minimalist"],"histogram":["has:filterButton"]},"outlets":{"showreviewsubmission":[{"component":"reviewSubmission1","scope":"rr","action":"submit_review"}],"showreviews":[{"component":"reviewContentList1","event":"scrolltocontent","scope":"rr","fallback":"doShowContent"}],"filtercontent":[{"component":"reviewContentList1","event":"filtercontent"}],"showquestions":[{"component":"questionContentList1","event":"scrolltocontent","scope":"qa","fallback":"doShowContent"}],"showquestionsubmission":[{"component":"questionSubmission1","scope":"qa","action":"submit_question"}]},"componentId":"reviewSummary1","autoload":true,"priority":true,"viewUniq":0,"views":{}},"reviewContentList1":{"subjectType":"Products","type":"contentList","features":{"self":["contentItemCollection","contentFilter","ugcCount","has:contentSort","has:writeReviews","headToHead","inlineHistogram","secondaryRatingSummary","loadMore"],"pagination":["ugcCount"],"contentItem":["has:stars","has:secondaryRatings","has:reviewPhotos","has:reviewVideos","has:tags","has:prosCons","has:userBadges","has:contentBadges","secondaryContentList","has:secondaryContentBtn","has:recommended","inlineProfile","has:fullProfileLink","has:reviewAttribution","has:productFamiliesAttribution"],"secondaryContentList":["secondaryContentItemCollection<ClientResponses>","secondaryContentItemCollection<Comments>","has:inlineSubmission","loadMore"],"secondaryContentItem":["has:userBadges","has:socialAvatar"],"contentFilter":["has:filterButton"],"inlineProfile":["has:socialAvatar","has:fullProfileLink"]},"outlets":{"showmediaviewer":[{"component":"mediaViewer1","event":"open"}],"showfullprofile":[{"component":"fullProfilePopup1","event":"launchprofile"}],"showsubmission":[{"component":"reviewSubmission1","scope":"rr","action":"submit_review"}],"filterresults":[{"component":"reviewContentList1","event":"filterresults"}],"filtercontent":[{"component":"reviewContentList1","event":"filtercontent"}],"linkSort":[{"component":"reviewContentSort1","event":"setupsort"}],"showhelpfulpositive":[{"component":"reviewContentList1","event":"showhelpfulpositive"}],"showhelpfulcritical":[{"component":"reviewContentList1","event":"showhelpfulcritical"}],"showreviews":[{"component":"reviewContentList1","event":"scrolltocontent"}],"showcommentsubmission":[{"component":"commentSubmission1_inline","scope":"rr","action":"submit_comment"}]},"serverRender":true,"container":"BVRRContainer","contentType":"Reviews","secondaryContentType":"Comments","pageview":{"bvProduct":"RatingsAndReviews"},"monitorVisibility":true,"componentId":"reviewContentList1","autoload":true,"viewUniq":0,"views":{}},"reviewSubmission1":{"type":"submission","preload":true,"inline":false,"features":{"self":["thankYouPage","dropdownable","has:submissionPreview"],"thankYouPage":["has:mbox"]},"outlets":{"previewcontent":[{"component":"reviewContentList1","event":"previewcontent"}]},"container":"BVRRContainer","subjectType":"Products","contentType":"Reviews","pageview":{"bvProduct":"RatingsAndReviews"},"componentId":"reviewSubmission1","viewUniq":0,"views":{}},"reviewContentSort1":{"serverRender":true,"subjectType":"Products","type":"contentSort","sortDefault":"mostRecent","sortTypes":["mostHelpful","positive","featured","mostRecent"],"features":{"self":[]},"outlets":{"setupme":[{"component":"reviewContentList1","event":"setupcontentsort"}],"sortcontent":[{"component":"reviewContentList1","event":"sortcontent"}]},"container":"BVRRContainer","contentType":"Reviews","componentId":"reviewContentSort1","viewUniq":0,"views":{}},"questionContentList1":{"subjectType":"Products","type":"contentList","features":{"self":["contentItemCollection","ugcCount","has:contentSort","has:askQuestions","loadMore"],"pagination":["ugcCount"],"contentItem":["secondaryContentList","has:secondaryContentLink","has:secondarySubmission","has:secondaryContentBtn","has:fullProfileLink","has:reviewAttribution","has:productFamiliesAttribution"],"secondaryContentList":["secondaryContentItemCollection"],"secondaryContentItem":["feedback","crowdSourcedAnswerBadge"]},"outlets":{"showmediaviewer":[{"component":"mediaViewer1","event":"open"}],"showfullprofile":[{"component":"fullProfilePopup1","event":"launchprofile"}],"linkSort":[{"component":"questionContentSort1","event":"setupsort"}],"showsubmission":[{"component":"questionSubmission1","scope":"qa","action":"submit_question"}],"showanswersubmission":[{"component":"answerSubmission1_inline","scope":"qa","action":"submit_answer"}]},"serverRender":true,"container":"BVQAContainer","contentType":"Questions","secondaryContentType":"Answers","pageview":{"bvProduct":"AskAndAnswer"},"monitorVisibility":true,"componentId":"questionContentList1","autoload":true,"viewUniq":0,"views":{}},"questionSubmission1":{"type":"submission","preload":false,"inline":false,"features":{"self":["thankYouPage","has:submissionPreview"],"thankYouPage":["has:mbox"]},"outlets":{"previewcontent":[{"component":"questionContentList1","event":"previewcontent"}],"showanswersubmission":[{"component":"answerSubmission1_inline","scope":"qa","action":"submit_answer"}]},"container":"BVQAContainer","subjectType":"Products","contentType":"Questions","pageview":{"bvProduct":"AskAndAnswer"},"componentId":"questionSubmission1","viewUniq":0,"views":{}},"questionContentSort1":{"serverRender":true,"subjectType":"Products","type":"contentSort","sortDefault":"recentQuestionsFirst","sortTypes":["recentQuestionsFirst","recentAnswersFirst","mostAnsweredQuestionsFirst","mostAnsweredQuestionsLast","answersWithAffiliationStaffFirst","helpfulnessAnswersLast"],"features":{"self":[]},"outlets":{"setupme":[{"component":"questionContentList1","event":"setupcontentsort"}],"sortcontent":[{"component":"questionContentList1","event":"sortcontent"}]},"container":"BVQAContainer","contentType":"Questions","componentId":"questionContentSort1","viewUniq":0,"views":{}},"answerSubmission1_inline":{"type":"submission","preload":false,"inline":false,"features":{"self":["thankYouPage","has:submissionPreview"],"thankYouPage":["has:mbox"]},"outlets":{"previewsecondarycontent":[{"component":"questionContentList1","event":"previewsecondarycontent"}]},"container":"BVQAContainer","subjectType":"Products","contentType":"Answers","componentId":"answerSubmission1_inline","viewUniq":0,"views":{}},"questionSubmission2_inline":{"type":"submission","preload":false,"inline":false,"features":{"self":["has:submissionPreview"],"thankYouPage":[]},"outlets":{"previewcontent":[{"component":"questionContentList1","event":"previewcontent"}]},"container":"BVContainer","subjectType":"Products","contentType":"Questions","pageview":{"bvProduct":"AskAndAnswer"},"componentId":"questionSubmission2_inline","viewUniq":0,"views":{}},"commentSubmission1_inline":{"type":"submission","preload":false,"inline":true,"features":{"self":["has:submissionPreview"],"thankYouPage":[]},"outlets":{"previewsecondarycontent":[{"component":"reviewContentList1","event":"previewsecondarycontent"}]},"container":"BVRRContainer","subjectType":"Products","contentType":"Comments","componentId":"commentSubmission1_inline","viewUniq":0,"views":{}},"commentSubmission2":{"type":"submission","preload":false,"inline":false,"features":{"self":["thankYouPage"],"thankYouPage":["has:mbox"]},"outlets":{},"container":"BVRRContainer","subjectType":"Products","contentType":"Comments","componentId":"commentSubmission2","viewUniq":0,"views":{}}});
 
 BV.define('framework/util/featureHelper',[
   'underscore'
@@ -16009,7 +16009,7 @@ BV.define('badges',['underscore', 'vendor/json2'], function (_, JSON) {
   };
 });
 
-BV.define('badges!',{"expert":{"badgeDescription":"This person has a high level of expertise or experience with the product or service.","badgeTitle":"Expert"},"verifiedpurchaser":{"badgeDescription":"This reviewer owns this product.","badgeTitle":"Verified Purchaser"},"featured":{"badgeDescription":"The company that provides the product or service considers this review helpful.","badgeTitle":"Featured"},"staff":{"badgeDescription":"When enabled, you can configure these badges to indicate that the contributor has an affiliation with the product or retail organization.","badgeTitle":"Staff"},"incentivizedreview":{"badgeImageUrl":"{{baseUrl}}/images/badgeImages/incentivizedreview.png","badgeDescription":"This reviewer received an incentive to write this review. An incentive can be a coupon, sample product, sweepstakes entry, loyalty points, or other token of value in exchange for writing a review for this product.","badgeTitle":"Incentivized Review","badgeDisplayLabel":"Incentivised Review"}});
+BV.define('badges!',{"expert":{"badgeDescription":"This person has a high level of expertise or experience with the product or service.","badgeTitle":"Expert"},"verifiedpurchaser":{"badgeDescription":"This reviewer owns this product.","badgeTitle":"Verified Purchaser"},"featured":{"badgeDescription":"The company that provides the product or service considers this review helpful.","badgeTitle":"Featured"},"top500":{"badgeDescription":"This person is one of the top 500 contributors of useful reviews.","badgeTitle":"Top 500 Contributor"},"top10":{"badgeDescription":"This person is one of the top 10 contributors of useful reviews.","badgeTitle":"Top 10 Contributor"},"top50":{"badgeDescription":"This person is one of the top 50 contributors of useful reviews.","badgeTitle":"Top 50 Contributor"},"top1000":{"badgeDescription":"This person is one of the top 1000 contributors of useful reviews.","badgeTitle":"Top 1000 Contributor"},"top1":{"badgeDescription":"This person is the top contributor of useful reviews.","badgeTitle":"Top Contributor"},"staff":{"badgeDescription":"When enabled, you can configure these badges to indicate that the contributor has an affiliation with the product or retail organization.","badgeTitle":"Staff"},"top25":{"badgeDescription":"This person is one of the top 25 contributors of useful reviews.","badgeTitle":"Top 25 Contributor"},"incentivizedreview":{"badgeImageUrl":"{{baseUrl}}/images/badgeImages/incentivizedreview.png","badgeDescription":"This reviewer received an incentive to write this review. An incentive can be a coupon, sample product, sweepstakes entry, loyalty points, or other token of value in exchange for writing a review for this product.","badgeTitle":"Incentivized Review","badgeDisplayLabel":"Incentivised Review"},"top250":{"badgeDescription":"This person is one of the top 250 contributors of useful reviews.","badgeTitle":"Top 250 Contributor"},"top100":{"badgeDescription":"This person is one of the top 100 contributors of useful reviews.","badgeTitle":"Top 100 Contributor"}});
 
 /**
  * @fileOverview Helper that checks if badge image exists but also sets description and title.
@@ -19881,9 +19881,10 @@ BV.define('bv/c2013/model/contentItem',[
         this.subscribe('previewsecondarycontent', this.previewSecondaryContent);
       }
 
+      // additional check for ContentLocale was added to solve post-submission issue (see UIA-9338)
       canTranslate = ENVConfig.translatedReviews &&
         this.get('contentType') === 'Reviews' &&
-        this.get('Text') !== null;
+        this.get('Text') !== null && !!this.get('ContentLocale');
 
       if (canTranslate) {
         // Reviews whose content are in a foreign language should get marked so
@@ -35776,8 +35777,7 @@ function program17(depth0,data,depth2) {
     + "-";
   if (stack2 = helpers.value) { stack2 = stack2.call(depth0, {hash:{}}); }
   else { stack2 = depth0.value; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
-  buffer += escapeExpression(stack2)
-    + " ";
+  buffer += escapeExpression(stack2);
   stack2 = helpers['if'].call(depth0, ((stack1 = depth2.validation),stack1 == null || stack1 === false ? stack1 : stack1.required), {hash:{},inverse:self.noop,fn:self.program(18, program18, data)});
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += "\"";
@@ -35786,7 +35786,7 @@ function program17(depth0,data,depth2) {
 function program18(depth0,data) {
   
   
-  return "bv-required-text-reader";
+  return " bv-required-text-reader";
   }
 
 function program20(depth0,data,depth2) {
@@ -36006,13 +36006,13 @@ function program3(depth0,data) {
   stack1 = helpers['if'].call(depth0, depth0.textarea, {hash:{},inverse:self.noop,fn:self.program(8, program8, data)});
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += " ";
-  stack1 = helpers['if'].call(depth0, depth0.radio, {hash:{},inverse:self.noop,fn:self.program(12, program12, data)});
+  stack1 = helpers['if'].call(depth0, depth0.radio, {hash:{},inverse:self.noop,fn:self.program(14, program14, data)});
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += " ";
-  stack1 = helpers['if'].call(depth0, depth0.checkbox, {hash:{},inverse:self.noop,fn:self.program(25, program25, data)});
+  stack1 = helpers['if'].call(depth0, depth0.checkbox, {hash:{},inverse:self.noop,fn:self.program(27, program27, data)});
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += " ";
-  stack1 = helpers['if'].call(depth0, depth0.select, {hash:{},inverse:self.noop,fn:self.program(27, program27, data)});
+  stack1 = helpers['if'].call(depth0, depth0.select, {hash:{},inverse:self.noop,fn:self.program(29, program29, data)});
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += " ";
   return buffer;
@@ -36075,11 +36075,10 @@ function program8(depth0,data) {
   buffer += " "
     + " <textarea id=\"bv-textarea-field-"
     + escapeExpression(((stack1 = ((stack1 = depth0.schema),stack1 == null || stack1 === false ? stack1 : stack1.Id)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\" aria-describedby=\"";
-  if (stack2 = helpers.requiredWarning) { stack2 = stack2.call(depth0, {hash:{}}); }
-  else { stack2 = depth0.requiredWarning; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
-  buffer += escapeExpression(stack2)
-    + "\" class=\"bv-text bv-focusable ";
+    + "\" ";
+  stack2 = helpers['if'].call(depth0, depth0.requiredWarning, {hash:{},inverse:self.noop,fn:self.program(9, program9, data)});
+  if(stack2 || stack2 === 0) { buffer += stack2; }
+  buffer += " class=\"bv-text bv-focusable ";
   if (stack2 = helpers.inputClasses) { stack2 = stack2.call(depth0, {hash:{}}); }
   else { stack2 = depth0.inputClasses; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
   buffer += escapeExpression(stack2)
@@ -36096,7 +36095,7 @@ function program8(depth0,data) {
     + "\" ";
   options = {hash:{
     '_schemaId': (((stack1 = depth0.schema),stack1 == null || stack1 === false ? stack1 : stack1.Id))
-  },inverse:self.noop,fn:self.program(9, program9, data)};
+  },inverse:self.noop,fn:self.program(11, program11, data)};
   stack2 = ((stack1 = helpers.ifHasFeature),stack1 ? stack1.call(depth0, "reviewHelperText", depth0.rawData, options) : helperMissing.call(depth0, "ifHasFeature", "reviewHelperText", depth0.rawData, options));
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += ">"
@@ -36106,15 +36105,26 @@ function program8(depth0,data) {
   }
 function program9(depth0,data) {
   
+  var buffer = "", stack1;
+  buffer += "aria-describedby=\"";
+  if (stack1 = helpers.requiredWarning) { stack1 = stack1.call(depth0, {hash:{}}); }
+  else { stack1 = depth0.requiredWarning; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\"";
+  return buffer;
+  }
+
+function program11(depth0,data) {
+  
   var stack1, stack2, options;
   options = {hash:{
     'prefix': ("helpertext_")
-  },inverse:self.noop,fn:self.program(10, program10, data)};
+  },inverse:self.noop,fn:self.program(12, program12, data)};
   stack2 = ((stack1 = helpers.msgExists),stack1 ? stack1.call(depth0, depth0._schemaId, depth0.msgpack, depth0, options) : helperMissing.call(depth0, "msgExists", depth0._schemaId, depth0.msgpack, depth0, options));
   if(stack2 || stack2 === 0) { return stack2; }
   else { return ''; }
   }
-function program10(depth0,data) {
+function program12(depth0,data) {
   
   var buffer = "", stack1;
   buffer += " data-bv-dropdown-inmbox data-bv-dropdown-style=\"helperTextOverflow\" data-bv-dropdown-always-show=\"false\" data-bv-dropdown-text=\"";
@@ -36125,59 +36135,63 @@ function program10(depth0,data) {
   return buffer;
   }
 
-function program12(depth0,data) {
+function program14(depth0,data) {
   
   var buffer = "", stack1, stack2, options;
   buffer += " "
     + " <span class=\"bv-fieldset-"
     + escapeExpression(((stack1 = ((stack1 = depth0.schema),stack1 == null || stack1 === false ? stack1 : stack1.Id)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "-wrapper bv-fieldset-radio-wrapper\" role=\"radiogroup\" aria-labelledby=\"";
-  options = {hash:{},inverse:self.noop,fn:self.program(13, program13, data)};
+    + "-wrapper bv-fieldset-radio-wrapper\" role=\"radiogroup\" ";
+  options = {hash:{},inverse:self.noop,fn:self.program(15, program15, data)};
   stack2 = ((stack1 = helpers.equals),stack1 ? stack1.call(depth0, ((stack1 = depth0.schema),stack1 == null || stack1 === false ? stack1 : stack1.Id), "rating", options) : helperMissing.call(depth0, "equals", ((stack1 = depth0.schema),stack1 == null || stack1 === false ? stack1 : stack1.Id), "rating", options));
   if(stack2 || stack2 === 0) { buffer += stack2; }
-  options = {hash:{},inverse:self.program(17, program17, data),fn:self.program(15, program15, data)};
+  options = {hash:{},inverse:self.program(19, program19, data),fn:self.program(17, program17, data)};
   stack2 = ((stack1 = helpers.equals),stack1 ? stack1.call(depth0, ((stack1 = depth0.dimsumField),stack1 == null || stack1 === false ? stack1 : stack1.type), "SLIDER", options) : helperMissing.call(depth0, "equals", ((stack1 = depth0.dimsumField),stack1 == null || stack1 === false ? stack1 : stack1.type), "SLIDER", options));
   if(stack2 || stack2 === 0) { buffer += stack2; }
-  buffer += "\"> ";
+  buffer += "> ";
   stack2 = self.invokePartial(partials.submissionInputRadio, 'submissionInputRadio', depth0, helpers, partials);
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += " ";
-  options = {hash:{},inverse:self.program(22, program22, data),fn:self.program(20, program20, data)};
+  options = {hash:{},inverse:self.program(24, program24, data),fn:self.program(22, program22, data)};
   stack2 = ((stack1 = helpers.equals),stack1 ? stack1.call(depth0, ((stack1 = depth0.dimsumField),stack1 == null || stack1 === false ? stack1 : stack1.type), "SLIDER", options) : helperMissing.call(depth0, "equals", ((stack1 = depth0.dimsumField),stack1 == null || stack1 === false ? stack1 : stack1.type), "SLIDER", options));
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += " </span> ";
   return buffer;
   }
-function program13(depth0,data) {
-  
-  var stack1;
-  if (stack1 = helpers.requiredWarning) { stack1 = stack1.call(depth0, {hash:{}}); }
-  else { stack1 = depth0.requiredWarning; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
-  return escapeExpression(stack1);
-  }
-
 function program15(depth0,data) {
   
   var buffer = "", stack1;
-  buffer += " bv-fieldset-label-"
-    + escapeExpression(((stack1 = ((stack1 = depth0.schema),stack1 == null || stack1 === false ? stack1 : stack1.Id)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1));
+  buffer += "aria-labelledby=\"";
+  if (stack1 = helpers.requiredWarning) { stack1 = stack1.call(depth0, {hash:{}}); }
+  else { stack1 = depth0.requiredWarning; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
+  buffer += escapeExpression(stack1)
+    + "\"";
   return buffer;
   }
 
 function program17(depth0,data) {
   
+  var buffer = "", stack1;
+  buffer += "aria-labelledby=\"bv-fieldset-label-"
+    + escapeExpression(((stack1 = ((stack1 = depth0.schema),stack1 == null || stack1 === false ? stack1 : stack1.Id)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "\"";
+  return buffer;
+  }
+
+function program19(depth0,data) {
+  
   var stack1, stack2;
-  stack2 = helpers['if'].call(depth0, ((stack1 = depth0.validation),stack1 == null || stack1 === false ? stack1 : stack1.required), {hash:{},inverse:self.noop,fn:self.program(18, program18, data)});
+  stack2 = helpers['if'].call(depth0, ((stack1 = depth0.validation),stack1 == null || stack1 === false ? stack1 : stack1.required), {hash:{},inverse:self.noop,fn:self.program(20, program20, data)});
   if(stack2 || stack2 === 0) { return stack2; }
   else { return ''; }
   }
-function program18(depth0,data) {
+function program20(depth0,data) {
   
   
-  return " bv-required-text-reader";
+  return "aria-labelledby=\"bv-required-text-reader\"";
   }
 
-function program20(depth0,data) {
+function program22(depth0,data) {
   
   var buffer = "", stack1, options;
   buffer += " <span class=\"bv-sliderscore-helper-1\" aria-hidden=\"true\">";
@@ -36194,17 +36208,17 @@ function program20(depth0,data) {
   return buffer;
   }
 
-function program22(depth0,data) {
+function program24(depth0,data) {
   
   var buffer = "", stack1, stack2, options;
   buffer += " ";
-  options = {hash:{},inverse:self.noop,fn:self.programWithDepth(program23, data, depth0)};
+  options = {hash:{},inverse:self.noop,fn:self.programWithDepth(program25, data, depth0)};
   stack2 = ((stack1 = helpers.loop),stack1 ? stack1.call(depth0, ((stack1 = depth0.ui),stack1 == null || stack1 === false ? stack1 : stack1.numHelpers), depth0, options) : helperMissing.call(depth0, "loop", ((stack1 = depth0.ui),stack1 == null || stack1 === false ? stack1 : stack1.numHelpers), depth0, options));
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += " ";
   return buffer;
   }
-function program23(depth0,data,depth1) {
+function program25(depth0,data,depth1) {
   
   var buffer = "", stack1, options;
   buffer += " <span class=\"bv-rating-helper bv-";
@@ -36224,7 +36238,7 @@ function program23(depth0,data,depth1) {
   return buffer;
   }
 
-function program25(depth0,data) {
+function program27(depth0,data) {
   
   var buffer = "", stack1;
   buffer += " "
@@ -36235,7 +36249,7 @@ function program25(depth0,data) {
   return buffer;
   }
 
-function program27(depth0,data) {
+function program29(depth0,data) {
   
   var buffer = "", stack1;
   buffer += " "
@@ -53139,302 +53153,6 @@ function (
   });
 });
 
-BV.define('bv/c2013/model/relevancyLink',[
-  'ENV',
-  'framework/bmodel',
-  'underscore'
-], function (ENV, BModel, _) {
-  return BModel.extend({
-    name: 'relevancyLink',
-
-    init: function (config, options) {
-      _.extend(this.options, options);
-
-      // Listen to this so we know when the default sort has been set. Once we
-      // know that we can choose to show/hide the relevancy link.
-      this.subscribe('setupcontentsort', this.setupContentSort);
-
-      // Whenever content is sorted, we need to determine again if we should
-      // show the relevancy link.
-      this.subscribe('sortcontent', this.sortContent);
-    },
-
-    sortContent: function (val) {
-      this.trigger('sortcontent', val);
-    },
-
-    setupContentSort: function (sortModel) {
-      this.set({
-        defaultSort: sortModel.get('defaultSort'),
-        currentSort: sortModel.get('currentSort')
-      });
-      this.trigger('setupcontentsort', this);
-    }
-
-  });
-});
-
-/* START_TEMPLATE */
-BV.define('hbs!relevancyLink',['hbs','vendor/handlebars/runtime', 'template/helpers/view', 'template/helpers/extmsg'], function(hbs, Handlebars){ 
-var t = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
-  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
-helpers = helpers || Handlebars.helpers;
-  var buffer = "", stack1, stack2, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, self=this;
-
-function program1(depth0,data) {
-  
-  var buffer = "", stack1, options;
-  buffer += " <span class=\"bv-sort-relevancy\"> <button type=\"button\" class=\"bv-relevancy-popup-target bv-focusable\"> <span aria-hidden=\"true\">?</span> <span class=\"bv-off-screen\">";
-  options = {hash:{}};
-  buffer += escapeExpression(((stack1 = helpers.extmsg),stack1 ? stack1.call(depth0, "offscreen_relevancy_link_description", depth0.msgpack, depth0, options) : helperMissing.call(depth0, "extmsg", "offscreen_relevancy_link_description", depth0.msgpack, depth0, options)))
-    + "</span> </button> </span> ";
-  return buffer;
-  }
-
-  buffer += " ";
-  options = {hash:{
-    'tag': ("div")
-  },inverse:self.noop,fn:self.program(1, program1, data)};
-  stack2 = ((stack1 = helpers.view),stack1 ? stack1.call(depth0, depth0, options) : helperMissing.call(depth0, "view", depth0, options));
-  if(stack2 || stack2 === 0) { buffer += stack2; }
-  buffer += " ";
-  return buffer;
-  });
-Handlebars.registerPartial('relevancyLink', t);
-t.deps = [];
-t.tplMountedViews = [];
-return t;
-});
-/* END_TEMPLATE */
-;
-/* START GENERATED MESSAGE */
-BV.define('_i18n_relevancyPopup', ['vendor/messageformat', 'vendor/handlebars/runtime', 'underscore', 'framework/util/bvtrackerqueue'], function (MessageFormat, Handlebars, _, BVTrackerQueue) {
-function relevancyPopup( data ) {
-try { return (function(d){
-var r = "";
-r += "<strong>Relevancy sort</strong> puts the best reviews at the top. We look at things like helpfulness votes, latest reviews, pictures and other traits that readers look for in their reviews.";
-return r;
-})(data); } catch(e) { BVTrackerQueue.push( [ 'error', new Error('MF error on `relevancyPopup`: ' + e.toString() ) ] ); return ''; }
-}
-Handlebars.registerHelper('_i18n_relevancyPopup', function () {
-var data = {};
-var args = [].slice.call( arguments, 0, arguments.length-1 );
-_(args).forEach(function (arg) {
-  _.extend(data, arg);
-});
-return relevancyPopup(data);
-});
-return relevancyPopup;
-});
-/* END GENERATED MESSAGE */;
-/* START_TEMPLATE */
-BV.define('hbs!relevancyPopup',['hbs','vendor/handlebars/runtime', 'template/helpers/view', '_i18n_relevancyPopup'], function(hbs, Handlebars){ 
-var t = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
-  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
-helpers = helpers || Handlebars.helpers;
-  var buffer = "", stack1, stack2, options, functionType="function", escapeExpression=this.escapeExpression, self=this, helperMissing=helpers.helperMissing;
-
-function program1(depth0,data) {
-  
-  var buffer = "", stack1;
-  buffer += " <!--[if lt IE 7]> <div class=\"bv-compat bvie6 bvie-lt8 bvie\"> <![endif]--> <!--[if IE 7]> <div class=\"bv-compat bvie7 bvie-lt8 bvie\"> <![endif]--> <!--[if IE 8]> <div class=\"bv-compat bvie8 bvie\"> <![endif]--> <!--[if IE 9]> <div class=\"bv-compat bvie9 bvie\"> <![endif]--> <!--[if gt IE 9]> <!--><div class=\"bv-compat\"> <!--<![endif]--> <div class=\"bv-popup bv-focusable\" tabindex=\"0\"> "
-    + " ";
-  if (stack1 = helpers._i18n_relevancyPopup) { stack1 = stack1.call(depth0, {hash:{}}); }
-  else { stack1 = depth0._i18n_relevancyPopup; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
-  if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += " </div> </div> ";
-  return buffer;
-  }
-
-  buffer += " <div class=\"bv-core-container-";
-  if (stack1 = helpers.version) { stack1 = stack1.call(depth0, {hash:{}}); }
-  else { stack1 = depth0.version; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
-  buffer += escapeExpression(stack1)
-    + "\"> ";
-  options = {hash:{
-    'tag': ("div"),
-    'classList': ("popup-relevancy-link")
-  },inverse:self.noop,fn:self.program(1, program1, data)};
-  stack2 = ((stack1 = helpers.view),stack1 ? stack1.call(depth0, depth0, options) : helperMissing.call(depth0, "view", depth0, options));
-  if(stack2 || stack2 === 0) { buffer += stack2; }
-  buffer += " </div> ";
-  return buffer;
-  });
-Handlebars.registerPartial('relevancyPopup', t);
-t.deps = [];
-t.tplMountedViews = [];
-return t;
-});
-/* END_TEMPLATE */
-;
-BV.define('bv/c2013/view/relevancyPopup',[
-  'bv/ui-core/bpopupview',
-  'hbs!relevancyPopup',
-  'jquery'
-], function (BPopupView, template, $) {
-  return BPopupView.extend({
-
-    name: 'relevancyPopup',
-    width: 350,
-    height: 200,
-
-    template: template,
-
-    topPositionModifier: function (pos) {
-      return pos + 10;
-    }
-
-  });
-});
-
-BV.define('mf!bv/c2013/messages/sort',['vendor/messageformat', 'framework/util/bvtrackerqueue'], function (MessageFormat, BVTrackerQueue) { 
-  return {
-"content_sort_label" : function (x) { try { return (function(d){
-var r = "";
-r += "Sort by";
-return r;
-})(x||{}); } catch(e){ BVTrackerQueue.push([ 'error', new Error( 'MF error on `content_sort_label`: ' + e.toString() ) ] ); return ""; } },"featured" : function (x) { try { return (function(d){
-var r = "";
-r += "Featured";
-return r;
-})(x||{}); } catch(e){ BVTrackerQueue.push([ 'error', new Error( 'MF error on `featured`: ' + e.toString() ) ] ); return ""; } },"mostRecent" : function (x) { try { return (function(d){
-var r = "";
-r += "Most Recent";
-return r;
-})(x||{}); } catch(e){ BVTrackerQueue.push([ 'error', new Error( 'MF error on `mostRecent`: ' + e.toString() ) ] ); return ""; } },"oldest" : function (x) { try { return (function(d){
-var r = "";
-r += "Oldest";
-return r;
-})(x||{}); } catch(e){ BVTrackerQueue.push([ 'error', new Error( 'MF error on `oldest`: ' + e.toString() ) ] ); return ""; } },"negative" : function (x) { try { return (function(d){
-var r = "";
-r += "Lowest to Highest Rating";
-return r;
-})(x||{}); } catch(e){ BVTrackerQueue.push([ 'error', new Error( 'MF error on `negative`: ' + e.toString() ) ] ); return ""; } },"positive" : function (x) { try { return (function(d){
-var r = "";
-r += "Highest to Lowest Rating";
-return r;
-})(x||{}); } catch(e){ BVTrackerQueue.push([ 'error', new Error( 'MF error on `positive`: ' + e.toString() ) ] ); return ""; } },"mostHelpful" : function (x) { try { return (function(d){
-var r = "";
-r += "Most Helpful";
-return r;
-})(x||{}); } catch(e){ BVTrackerQueue.push([ 'error', new Error( 'MF error on `mostHelpful`: ' + e.toString() ) ] ); return ""; } },"mostUnhelpful" : function (x) { try { return (function(d){
-var r = "";
-r += "Least Helpful";
-return r;
-})(x||{}); } catch(e){ BVTrackerQueue.push([ 'error', new Error( 'MF error on `mostUnhelpful`: ' + e.toString() ) ] ); return ""; } },"relevancy" : function (x) { try { return (function(d){
-var r = "";
-r += "Most Relevant";
-return r;
-})(x||{}); } catch(e){ BVTrackerQueue.push([ 'error', new Error( 'MF error on `relevancy`: ' + e.toString() ) ] ); return ""; } },"recentAnswersFirst" : function (x) { try { return (function(d){
-var r = "";
-r += "Newest answers";
-return r;
-})(x||{}); } catch(e){ BVTrackerQueue.push([ 'error', new Error( 'MF error on `recentAnswersFirst`: ' + e.toString() ) ] ); return ""; } },"recentAnswersLast" : function (x) { try { return (function(d){
-var r = "";
-r += "Oldest answers";
-return r;
-})(x||{}); } catch(e){ BVTrackerQueue.push([ 'error', new Error( 'MF error on `recentAnswersLast`: ' + e.toString() ) ] ); return ""; } },"mostAnsweredQuestionsFirst" : function (x) { try { return (function(d){
-var r = "";
-r += "Most answered";
-return r;
-})(x||{}); } catch(e){ BVTrackerQueue.push([ 'error', new Error( 'MF error on `mostAnsweredQuestionsFirst`: ' + e.toString() ) ] ); return ""; } },"mostAnsweredQuestionsLast" : function (x) { try { return (function(d){
-var r = "";
-r += "Answers needed";
-return r;
-})(x||{}); } catch(e){ BVTrackerQueue.push([ 'error', new Error( 'MF error on `mostAnsweredQuestionsLast`: ' + e.toString() ) ] ); return ""; } },"answersWithAffiliationStaffFirst" : function (x) { try { return (function(d){
-var r = "";
-r += "Staff answers";
-return r;
-})(x||{}); } catch(e){ BVTrackerQueue.push([ 'error', new Error( 'MF error on `answersWithAffiliationStaffFirst`: ' + e.toString() ) ] ); return ""; } },"recentQuestionsFirst" : function (x) { try { return (function(d){
-var r = "";
-r += "Newest questions";
-return r;
-})(x||{}); } catch(e){ BVTrackerQueue.push([ 'error', new Error( 'MF error on `recentQuestionsFirst`: ' + e.toString() ) ] ); return ""; } },"recentQuestionsLast" : function (x) { try { return (function(d){
-var r = "";
-r += "Oldest questions";
-return r;
-})(x||{}); } catch(e){ BVTrackerQueue.push([ 'error', new Error( 'MF error on `recentQuestionsLast`: ' + e.toString() ) ] ); return ""; } },"helpfulnessAnswersFirst" : function (x) { try { return (function(d){
-var r = "";
-r += "Most helpful answers";
-return r;
-})(x||{}); } catch(e){ BVTrackerQueue.push([ 'error', new Error( 'MF error on `helpfulnessAnswersFirst`: ' + e.toString() ) ] ); return ""; } },"helpfulnessAnswersLast" : function (x) { try { return (function(d){
-var r = "";
-r += "Least helpful answers";
-return r;
-})(x||{}); } catch(e){ BVTrackerQueue.push([ 'error', new Error( 'MF error on `helpfulnessAnswersLast`: ' + e.toString() ) ] ); return ""; } },"featuredQuestionsFirst" : function (x) { try { return (function(d){
-var r = "";
-r += "Featured questions first";
-return r;
-})(x||{}); } catch(e){ BVTrackerQueue.push([ 'error', new Error( 'MF error on `featuredQuestionsFirst`: ' + e.toString() ) ] ); return ""; } },"offscreen_sort_arrow" : function (x) { try { return (function(d){
-var r = "";
-r += "Menu";
-return r;
-})(x||{}); } catch(e){ BVTrackerQueue.push([ 'error', new Error( 'MF error on `offscreen_sort_arrow`: ' + e.toString() ) ] ); return ""; } },"offscreen_relevancy_link_description" : function (x) { try { return (function(d){
-var r = "";
-r += "Display a popup with information about Relevancy Sort.";
-return r;
-})(x||{}); } catch(e){ BVTrackerQueue.push([ 'error', new Error( 'MF error on `offscreen_relevancy_link_description`: ' + e.toString() ) ] ); return ""; } }
-};
-});
-
-BV.define('bv/c2013/view/relevancyLink',[
-  'bv/ui-core/bpopuptargetview',
-  'underscore',
-  'hbs!relevancyLink',
-  'bv/c2013/view/relevancyPopup',
-  'mf!bv/c2013/messages/sort'
-], function (BPopupTargetView, _, template, RelevancyPopupView, msgPack) {
-  return BPopupTargetView.extend({
-
-    linkEl: '.bv-relevancy-popup-target',
-    name: 'relevancyLink',
-    classList: ['relevancy-link-target'],
-    msgpacks: [msgPack],
-
-    options: {
-      delay: 250,
-      popupInTriggerEvent: 'mouseenter',
-      popupOutTriggerEvent: 'mouseleave',
-      positionPopupRelativeToLink: true
-    },
-
-    template: template,
-    TargetView: RelevancyPopupView,
-
-    init: function (opts) {
-      this.listenTo(this.model, {
-        sortcontent: this.sortContent,
-        setupcontentsort: this.setupContentSort
-      });
-    },
-
-    /**
-     * Override the default attach behavior so we can show/hide the relevancy
-     * link based on the default sort.
-     */
-    attach: function () {
-      var attachResult = BPopupTargetView.prototype.attach.apply(this, arguments);
-
-      var currentSort = this.model.get('currentSort');
-      if (currentSort) {
-        this.sortContent(currentSort);
-      }
-
-      return attachResult;
-    },
-
-    sortContent: function (val) {
-      if (this.$viewEl) {
-        this.$viewEl.toggleClass('bv-relevancy-link-target-visible', val === 'relevancy');
-      }
-    },
-
-    setupContentSort: function (setup) {
-      this.sortContent(setup.get('currentSort'));
-    }
-  });
-});
-
 BV.define('mf!bv/c2013/messages/headToHead',['vendor/messageformat', 'framework/util/bvtrackerqueue'], function (MessageFormat, BVTrackerQueue) { 
   return {
 "show_full_Review" : function (x) { try { return (function(d){
@@ -54536,6 +54254,122 @@ BV.define('bv/c2013/view/secondaryRatingSummary',[
   });
 });
 
+BV.define('bv/c2013/model/inlineProfile',[
+  'ENV',
+  'bv/c2013/model/avatar'
+], function (ENV, AvatarModel) {
+  return AvatarModel.extend({
+
+    name: 'inlineProfile',
+
+    init: function (config, options) {
+      AvatarModel.prototype.init.apply(this, arguments);
+      this.set('_isPopup', false);
+      this.get('Author').DisplayContext = 'inline';
+      this.subscribe('updateprofile', this.updateProfile);
+    },
+
+    updateProfile: function (parent, author) {
+      AvatarModel.prototype.generateAvatarImage.call(this, author);
+      parent.set('Author', this.get('Author'));
+    }
+
+  });
+});
+
+/* START_TEMPLATE */
+BV.define('hbs!contentAuthorProfileInline',['hbs','vendor/handlebars/runtime','hbs!contentAuthorProfile', 'template/helpers/view'], function(hbs, Handlebars){ 
+var t = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [2,'>= 1.0.0-rc.3'];
+helpers = helpers || Handlebars.helpers; partials = partials || Handlebars.partials;
+  var buffer = "", stack1, stack2, options, self=this, helperMissing=helpers.helperMissing;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += " <div class=\"bv-inline-profile\"> ";
+  stack1 = self.invokePartial(partials.contentAuthorProfile, 'contentAuthorProfile', depth0, helpers, partials);
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += " </div> ";
+  return buffer;
+  }
+
+  buffer += " ";
+  options = {hash:{
+    'tag': ("div"),
+    'classList': ("author-profile")
+  },inverse:self.noop,fn:self.program(1, program1, data)};
+  stack2 = ((stack1 = helpers.view),stack1 ? stack1.call(depth0, depth0, options) : helperMissing.call(depth0, "view", depth0, options));
+  if(stack2 || stack2 === 0) { buffer += stack2; }
+  buffer += " ";
+  return buffer;
+  });
+Handlebars.registerPartial('contentAuthorProfileInline', t);
+t.deps = ["contentAuthorProfile"];
+t.tplMountedViews = [];
+return t;
+});
+/* END_TEMPLATE */
+;
+/**
+ * @fileOverview A view to display inline profiles.
+ */
+BV.define('bv/c2013/view/inlineProfile',[
+  'framework/bview',
+  'underscore',
+  'hbs!contentAuthorProfileInline',
+  'mf!bv/c2013/messages/avatar',
+  'bv/util/productInfo',
+  'framework/util/bvtracker',
+  'util/specialKeys'
+], function (BView, _, template, msgPack, ProductInfo, BVTracker, specialKeys) {
+  return BView.extend({
+    name: 'inlineProfile',
+
+    templateName: 'contentAuthorProfileInline',
+
+    events: {
+      'click .bv-content-author-name .bv-fullprofile-popup-target': 'launchProfile'
+    },
+
+    template: template,
+
+    msgpacks: [msgPack],
+
+    /**
+     * Opens a modal with the full profile.
+     * First checks if full profile link is enabled, and bails if it isn't.
+     * Then opens the full profile, and triggers a BVTracker event.
+     *
+     * @param  {Event} e The event that triggered opening the profile.
+     */
+    launchProfile: function (e) {
+      // If full profile link is not enabled, bail.
+      if (!this.hasFeature('fullProfileLink')) {
+        return;
+      }
+
+      // If this review is syndicated, there's no profile to show.
+      if ( this.model.get('isSyndicated') ) {
+        return;
+      }
+
+      // use r&r component outlet to trigger full profile popup component event
+      this.getTopModel().trigger('showfullprofile', this.model.get('Author'));
+
+      BVTracker.feature({
+        type: 'Used',
+        name: 'Click',
+        detail1: 'ViewProfileButton',
+        detail2: 'AuthorAvatar',
+        bvProduct: ProductInfo.getType(this),
+        productId: ProductInfo.getId(this),
+        categoryId: ProductInfo.getCategoryId(this)
+      });
+    }
+  });
+});
+
 BV.define('bv/c2013/model/contentSort',[
   'ENV',
   'framework/bmodel',
@@ -54802,14 +54636,16 @@ function program2(depth0,data) {
   return "selected";
   }
 
-  buffer += " <div class=\"bv-sort-native\"> <label for=\"bv-dropdown-select-"
+  buffer += " <div class=\"bv-sort-native\"> <span id=\"bv-dropdown-label-select-"
     + escapeExpression(((stack1 = ((stack1 = depth0._bview),stack1 == null || stack1 === false ? stack1 : stack1.viewId)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "\"> ";
   options = {hash:{
     'prefix': ("content_sort_")
   }};
   buffer += escapeExpression(((stack1 = helpers.extmsg),stack1 ? stack1.call(depth0, "label", depth0.msgpack, depth0, options) : helperMissing.call(depth0, "extmsg", "label", depth0.msgpack, depth0, options)))
-    + ": </label> <select id=\"bv-dropdown-select-"
+    + ": </span> <select id=\"bv-dropdown-select-"
+    + escapeExpression(((stack1 = ((stack1 = depth0._bview),stack1 == null || stack1 === false ? stack1 : stack1.viewId)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "\" aria-labelledby=\"bv-dropdown-label-select-"
     + escapeExpression(((stack1 = ((stack1 = depth0._bview),stack1 == null || stack1 === false ? stack1 : stack1.viewId)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "\" class=\"bv-focusable\"> ";
   stack2 = helpers.each.call(depth0, depth0.sortTypes, {hash:{},inverse:self.noop,fn:self.programWithDepth(program1, data, depth0)});
@@ -54877,6 +54713,96 @@ return t;
 });
 /* END_TEMPLATE */
 ;
+BV.define('mf!bv/c2013/messages/sort',['vendor/messageformat', 'framework/util/bvtrackerqueue'], function (MessageFormat, BVTrackerQueue) { 
+  return {
+"content_sort_label" : function (x) { try { return (function(d){
+var r = "";
+r += "Sort by";
+return r;
+})(x||{}); } catch(e){ BVTrackerQueue.push([ 'error', new Error( 'MF error on `content_sort_label`: ' + e.toString() ) ] ); return ""; } },"featured" : function (x) { try { return (function(d){
+var r = "";
+r += "Featured";
+return r;
+})(x||{}); } catch(e){ BVTrackerQueue.push([ 'error', new Error( 'MF error on `featured`: ' + e.toString() ) ] ); return ""; } },"mostRecent" : function (x) { try { return (function(d){
+var r = "";
+r += "Most Recent";
+return r;
+})(x||{}); } catch(e){ BVTrackerQueue.push([ 'error', new Error( 'MF error on `mostRecent`: ' + e.toString() ) ] ); return ""; } },"oldest" : function (x) { try { return (function(d){
+var r = "";
+r += "Oldest";
+return r;
+})(x||{}); } catch(e){ BVTrackerQueue.push([ 'error', new Error( 'MF error on `oldest`: ' + e.toString() ) ] ); return ""; } },"negative" : function (x) { try { return (function(d){
+var r = "";
+r += "Lowest to Highest Rating";
+return r;
+})(x||{}); } catch(e){ BVTrackerQueue.push([ 'error', new Error( 'MF error on `negative`: ' + e.toString() ) ] ); return ""; } },"positive" : function (x) { try { return (function(d){
+var r = "";
+r += "Highest to Lowest Rating";
+return r;
+})(x||{}); } catch(e){ BVTrackerQueue.push([ 'error', new Error( 'MF error on `positive`: ' + e.toString() ) ] ); return ""; } },"mostHelpful" : function (x) { try { return (function(d){
+var r = "";
+r += "Most Helpful";
+return r;
+})(x||{}); } catch(e){ BVTrackerQueue.push([ 'error', new Error( 'MF error on `mostHelpful`: ' + e.toString() ) ] ); return ""; } },"mostUnhelpful" : function (x) { try { return (function(d){
+var r = "";
+r += "Least Helpful";
+return r;
+})(x||{}); } catch(e){ BVTrackerQueue.push([ 'error', new Error( 'MF error on `mostUnhelpful`: ' + e.toString() ) ] ); return ""; } },"relevancy" : function (x) { try { return (function(d){
+var r = "";
+r += "Most Relevant";
+return r;
+})(x||{}); } catch(e){ BVTrackerQueue.push([ 'error', new Error( 'MF error on `relevancy`: ' + e.toString() ) ] ); return ""; } },"recentAnswersFirst" : function (x) { try { return (function(d){
+var r = "";
+r += "Newest answers";
+return r;
+})(x||{}); } catch(e){ BVTrackerQueue.push([ 'error', new Error( 'MF error on `recentAnswersFirst`: ' + e.toString() ) ] ); return ""; } },"recentAnswersLast" : function (x) { try { return (function(d){
+var r = "";
+r += "Oldest answers";
+return r;
+})(x||{}); } catch(e){ BVTrackerQueue.push([ 'error', new Error( 'MF error on `recentAnswersLast`: ' + e.toString() ) ] ); return ""; } },"mostAnsweredQuestionsFirst" : function (x) { try { return (function(d){
+var r = "";
+r += "Most answered";
+return r;
+})(x||{}); } catch(e){ BVTrackerQueue.push([ 'error', new Error( 'MF error on `mostAnsweredQuestionsFirst`: ' + e.toString() ) ] ); return ""; } },"mostAnsweredQuestionsLast" : function (x) { try { return (function(d){
+var r = "";
+r += "Answers needed";
+return r;
+})(x||{}); } catch(e){ BVTrackerQueue.push([ 'error', new Error( 'MF error on `mostAnsweredQuestionsLast`: ' + e.toString() ) ] ); return ""; } },"answersWithAffiliationStaffFirst" : function (x) { try { return (function(d){
+var r = "";
+r += "Staff answers";
+return r;
+})(x||{}); } catch(e){ BVTrackerQueue.push([ 'error', new Error( 'MF error on `answersWithAffiliationStaffFirst`: ' + e.toString() ) ] ); return ""; } },"recentQuestionsFirst" : function (x) { try { return (function(d){
+var r = "";
+r += "Newest questions";
+return r;
+})(x||{}); } catch(e){ BVTrackerQueue.push([ 'error', new Error( 'MF error on `recentQuestionsFirst`: ' + e.toString() ) ] ); return ""; } },"recentQuestionsLast" : function (x) { try { return (function(d){
+var r = "";
+r += "Oldest questions";
+return r;
+})(x||{}); } catch(e){ BVTrackerQueue.push([ 'error', new Error( 'MF error on `recentQuestionsLast`: ' + e.toString() ) ] ); return ""; } },"helpfulnessAnswersFirst" : function (x) { try { return (function(d){
+var r = "";
+r += "Most helpful answers";
+return r;
+})(x||{}); } catch(e){ BVTrackerQueue.push([ 'error', new Error( 'MF error on `helpfulnessAnswersFirst`: ' + e.toString() ) ] ); return ""; } },"helpfulnessAnswersLast" : function (x) { try { return (function(d){
+var r = "";
+r += "Least helpful answers";
+return r;
+})(x||{}); } catch(e){ BVTrackerQueue.push([ 'error', new Error( 'MF error on `helpfulnessAnswersLast`: ' + e.toString() ) ] ); return ""; } },"featuredQuestionsFirst" : function (x) { try { return (function(d){
+var r = "";
+r += "Featured questions first";
+return r;
+})(x||{}); } catch(e){ BVTrackerQueue.push([ 'error', new Error( 'MF error on `featuredQuestionsFirst`: ' + e.toString() ) ] ); return ""; } },"offscreen_sort_arrow" : function (x) { try { return (function(d){
+var r = "";
+r += "Menu";
+return r;
+})(x||{}); } catch(e){ BVTrackerQueue.push([ 'error', new Error( 'MF error on `offscreen_sort_arrow`: ' + e.toString() ) ] ); return ""; } },"offscreen_relevancy_link_description" : function (x) { try { return (function(d){
+var r = "";
+r += "Display a popup with information about Relevancy Sort.";
+return r;
+})(x||{}); } catch(e){ BVTrackerQueue.push([ 'error', new Error( 'MF error on `offscreen_relevancy_link_description`: ' + e.toString() ) ] ); return ""; } }
+};
+});
+
 /* START_TEMPLATE */
 BV.define('hbs!contentSortDropdown',['hbs','vendor/handlebars/runtime', 'template/helpers/view', 'template/helpers/toLowerCase', 'template/helpers/equals', 'template/helpers/extmsg'], function(hbs, Handlebars){ 
 var t = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
@@ -55317,14 +55243,14 @@ BV.define('mappings!nonsubmission',[
 "bv/c2013/view/contentList",
 "bv/c2013/model/contentFilter",
 "bv/c2013/view/contentFilter",
-"bv/c2013/model/relevancyLink",
-"bv/c2013/view/relevancyLink",
 "bv/c2013/model/headToHead",
 "bv/c2013/view/headToHead",
 "bv/c2013/model/inlineHistogram",
 "bv/c2013/view/inlineHistogram",
 "bv/c2013/model/secondaryRatingSummary",
 "bv/c2013/view/secondaryRatingSummary",
+"bv/c2013/model/inlineProfile",
+"bv/c2013/view/inlineProfile",
 "bv/c2013/collection/secondaryContentItemCollection",
 "bv/c2013/view/secondaryContentItemCollection",
 "bv/c2013/collection/secondaryContentItemCollection",
@@ -55404,14 +55330,14 @@ contentListModel,
 contentListView,
 contentFilterModel,
 contentFilterView,
-relevancyLinkModel,
-relevancyLinkView,
 headToHeadModel,
 headToHeadView,
 inlineHistogramModel,
 inlineHistogramView,
 secondaryRatingSummaryModel,
 secondaryRatingSummaryView,
+inlineProfileModel,
+inlineProfileView,
 secondaryContentItemCollectionModel,
 secondaryContentItemCollectionView,
 secondaryContentItemCollectionModel,
@@ -55451,10 +55377,10 @@ contentSortView
     histogram : {name : 'histogram', model : histogramModel, view : histogramView},
     contentList : {name : 'contentList', model : contentListModel, view : contentListView},
     contentFilter : {name : 'contentFilter', model : contentFilterModel, view : contentFilterView},
-    relevancyLink : {name : 'relevancyLink', model : relevancyLinkModel, view : relevancyLinkView},
     headToHead : {name : 'headToHead', model : headToHeadModel, view : headToHeadView},
     inlineHistogram : {name : 'inlineHistogram', model : inlineHistogramModel, view : inlineHistogramView},
     secondaryRatingSummary : {name : 'secondaryRatingSummary', model : secondaryRatingSummaryModel, view : secondaryRatingSummaryView},
+    inlineProfile : {name : 'inlineProfile', model : inlineProfileModel, view : inlineProfileView},
     secondaryContentItemCollection : {name : 'secondaryContentItemCollection', type : [], collection : secondaryContentItemCollectionModel, view : secondaryContentItemCollectionView},
     contentSort : {name : 'contentSort', has : { name : 'contentSort'}, model : contentSortModel, view : contentSortView},
     stars : { name : 'stars', has : { name : 'stars'}},
@@ -55474,10 +55400,8 @@ contentSortView
     searchOnly : { name : 'searchOnly', has : { name : 'searchOnly'}},
     overallRating : { name : 'overallRating', has : { name : 'overallRating'}},
     reviewCount : { name : 'reviewCount', has : { name : 'reviewCount'}},
-    aggregateRatingTag : { name : 'aggregateRatingTag', has : { name : 'aggregateRatingTag'}},
-    hoverProfile : { name : 'hoverProfile', has : { name : 'hoverProfile'}},
-    fullProfileLink : { name : 'fullProfileLink', has : { name : 'fullProfileLink'}},
     socialAvatar : { name : 'socialAvatar', has : { name : 'socialAvatar'}},
+    aggregateRatingTag : { name : 'aggregateRatingTag', has : { name : 'aggregateRatingTag'}},
     writeReviews : { name : 'writeReviews', has : { name : 'writeReviews'}},
     askQuestions : { name : 'askQuestions', has : { name : 'askQuestions'}},
     minimalistHorizontal : { name : 'minimalistHorizontal', has : { name : 'minimalistHorizontal'}},
@@ -55488,10 +55412,10 @@ contentSortView
     reviewVideos : { name : 'reviewVideos', has : { name : 'reviewVideos'}},
     tags : { name : 'tags', has : { name : 'tags'}},
     recommended : { name : 'recommended', has : { name : 'recommended'}},
+    fullProfileLink : { name : 'fullProfileLink', has : { name : 'fullProfileLink'}},
     reviewAttribution : { name : 'reviewAttribution', has : { name : 'reviewAttribution'}},
     productFamiliesAttribution : { name : 'productFamiliesAttribution', has : { name : 'productFamiliesAttribution'}},
-    inlineSubmission : { name : 'inlineSubmission', has : { name : 'inlineSubmission'}},
-    hoverDropdown : { name : 'hoverDropdown', has : { name : 'hoverDropdown'}}
+    inlineSubmission : { name : 'inlineSubmission', has : { name : 'inlineSubmission'}}
   };
 
   mappings.profileContentList.type.push('Reviews');
@@ -56474,7 +56398,7 @@ BV.define('util/deviceFingerprint',[
 
 BV.define('dimsumFields!fieldIdMap',[], {"CustomerService":{"prefix":"rating_CustomerService"},"TestSlider":{"prefix":"rating_TestSlider"},"Slider7":{"prefix":"rating_Slider7"},"anotherTestSlider3":{"prefix":"rating_anotherTestSlider3"},"TestDropdown":{"prefix":"contextdatavalue_TestDropdown"},"TestText":{"prefix":"additionalfield_TestText"},"BestUsesTelecom":{"prefix":"tag_BestUsesTelecom"}});
 
-BV.define('dimsumFields!agreements',[], {"reviews":{},"questions":{"termsAndConditions":{"userDefined":false,"name":"Terms & Conditions","id":"termsAndConditions","enabled":true,"displayType":"HOSTED","submissionTitle":"I agree to the <a href=\"#\" class=\"bv-text-link bv-focusable\">terms &amp; conditions</a>","agreementTitle":"Terms and Conditions","hostedText":"<span><strong>Introduction.&nbsp; </strong>Thank you for submitting UGC (as defined below) through the Bazaarvoice, Inc. (“we”, “our” or “Bazaarvoice”) services. &nbsp;The UGC submitted by consumers such as yourself is helpful to many parties including other consumers, retailers and manufacturers.&nbsp; You probably already know UGC is heavily relied-upon by consumers that are considering purchases.&nbsp; What you may not know is that UGC is also used by product retailers and manufacturers for many other purposes, including product development and improvement, making decisions on which products to stock and marketing.&nbsp; By submitting content you are helping improve both the shopping experience and the product and service quality for the entire market.&nbsp; Bazaarvoice would like to be the first to thank you for your contribution!</span>We have found that there are a number of common questions that consumers have about the submission process.&nbsp; We have tried to answer those questions as thoroughly as possible, below. Please review these questions and explanations because they control your submission of UGC.&nbsp; If you’ve read the below and still have questions or would like further explanation you can contact our Privacy Team at privacy@bazaarvoice.com, and they will get back to you as soon as possible.<span><strong>What do Bazaarvoice and its clients need to use the UGC:</strong> In order to use the UGC as described in these terms, Bazaarvoice needs a license to use the UGC.&nbsp; Accordingly, you hereby grant Bazaarvoice, Bazaarvoice’s clients and each of their sublicensees and affiliates a perpetual, unlimited, nonexclusive, fully sublicenseable, irrevocable, worldwide right and license to use, reproduce, modify, adapt, publish, translate, create derivative works from, distribute, and display such content throughout the world in any media. You further grant Bazaarvoice, Bazaarvoice’s clients and each of their and sublicensees and affiliates the right to use the name and likeness that you submit in connection with such content.</span><span><strong>What you may post</strong>: Depending on the Bazaarvoice service, you may post reviews, comments, photos, questions and other user-generated content (collectively “UGC”).</span><span><strong>What you may not post:</strong> You may not post any UGC that is illegal, obscene, threatening, defamatory, infringes the intellectual property rights of any party, contains software viruses, commercial solicitation, chain letters, mass mailings or any form of spam.&nbsp; Additionally, you may not use a false e-mail address, impersonate any person or entity, or otherwise mislead as to the origin of any UGC.&nbsp; Bazaarvoice reserves the right, but not the obligation, to remove any UGC from a website on the Bazaarvoice network for any reason or no reason.</span><span><strong>What happens to UGC that you submit:</strong>&nbsp; Any UGC you submit may be used for other advertising purposes and posted to publicly-facing websites, including other websites across the Internet on the Bazaarvoice network in addition to the website that you originally submitted the UGC. Accordingly, please do not post anything that you do not want to share with the general public (for example, financial information, social security number, etc.).&nbsp; In addition, as mentioned in the introduction, the UGC that you submit may be used for advertising, analytic and other statistical purposes including, for example, product improvement, benchmarking (e.g. where various products/services or categories of products/services are compared against each other or against the market as a whole), sentiment analysis (e.g. using the data from multiple reviews it is possible to determine how consumers as a whole feel about a product/service), and online behavioral advertising.</span><span><strong>What you are promising by submitting UGC:</strong>&nbsp; By submitting UGC you represent and warrant that: (i) you are the sole owner of the UGC; (ii) the UGC is accurate; (iii) you are at least thirteen (13) years old; and, (iv) the UGC you submit does not violate these Terms of Use.&nbsp; Because you are solely responsible for what you post, you also agree to indemnify Bazaarvoice and Bazaarvoice’s clients for a breach of your representations and warranties.&nbsp;</span><span><strong>Where you can find additional information on Bazaarvoice’s use of the UGC:</strong>&nbsp; Bazaarvoice’s use of any UGC you submit is subject to Bazaarvoice’s Privacy Policy, which can be found at <a target=\"_blank\" rel=\"nofollow\" href=\"http://www.bazaarvoice.com/privacy-policy\">http://www.bazaarvoice.com/privacy-policy</a>.</span><span><strong>What happens if there is a dispute:</strong>&nbsp; You agree that all disputes between you and Bazaarvoice (whether or not such dispute involves a third party) with regard to your relationship with Bazaarvoice, including without limitation disputes related to these Terms of Use, your use of this Site, and/or rights of privacy and/or publicity, will be resolved by binding, individual arbitration under the American Arbitration Association's rules for arbitration of consumer-related disputes and you and Bazaarvoice hereby expressly waive trial by jury. As an alternative, you may bring your claim in your local \"small claims\" court, if permitted by that small claims court's rules. You may bring claims only on your own behalf. Neither you nor Bazaarvoice will participate in a class action or class-wide arbitration for any claims covered by this agreement. You also agree not to participate in claims brought in a private attorney general or representative capacity, or consolidated claims involving another person's account, if Bazaarvoice is a party to the proceeding. This dispute resolution provision will be governed by the Federal Arbitration Act. In the event the American Arbitration Association is unwilling or unable to set a hearing date within one hundred and sixty (160) days of filing the case, then either Bazaarvoice or you can elect to have the arbitration administered instead by the Judicial Arbitration and Mediation Services. Judgment on the award rendered by the arbitrator may be entered in any court having competent jurisdiction. Any provision of applicable law notwithstanding, the arbitrator will not have authority to award damages, remedies or awards that conflict with these Terms of Use.</span>You may opt out of this agreement to arbitrate. If you do so, neither you nor Bazaarvoice can require the other to participate in an arbitration proceeding. To opt out, you must notify Bazaarvoice in writing within 30 days of the date that you first became subject to this arbitration provision. You must use this address to opt out:Bazaarvoice, Inc.ATTN: Legal - Arbitration Opt Out3900 N. Capital of Texas Hwy, Suite 300Austin, Texas 78746privacy@bazaarvoice.com","remoteUrl":"","required":true},"Test":{"userDefined":true,"name":"Test","id":"Test","enabled":true,"displayType":"HOSTED","submissionTitle":"I agree to the <a href=\"#\" class=\"bv-text-link bv-focusable\">terms &amp; conditions</a>","agreementTitle":"Terms and Conditions","hostedText":"<strong>Introduction.&nbsp;&nbsp;</strong>Thank you for submitting UGC (as defined below) through the Bazaarvoice, Inc. (“we”, “our” or “Bazaarvoice”) services. &nbsp;The UGC submitted by consumers such as yourself is helpful to many parties including other consumers, retailers and manufacturers.&nbsp; You probably already know UGC is heavily relied-upon by consumers that are considering purchases.&nbsp; What you may not know is that UGC is also used by product retailers and manufacturers for many other purposes, including product development and improvement, making decisions on which products to stock and marketing.&nbsp; By submitting content you are helping improve both the shopping experience and the product and service quality for the entire market.&nbsp; Bazaarvoice would like to be the first to thank you for your contribution!We have found that there are a number of common questions that consumers have about the submission process.&nbsp; We have tried to answer those questions as thoroughly as possible, below. Please review these questions and explanations because they control your submission of UGC.&nbsp; If you’ve read the below and still have questions or would like further explanation you can contact our Privacy Team at privacy@bazaarvoice.com, and they will get back to you as soon as possible.<strong>What do Bazaarvoice and its clients need to use the UGC:</strong>&nbsp;In order to use the UGC as described in these terms, Bazaarvoice needs a license to use the UGC.&nbsp; Accordingly, you hereby grant Bazaarvoice, Bazaarvoice’s clients and each of their sublicensees and affiliates a perpetual, unlimited, nonexclusive, fully sublicenseable, irrevocable, worldwide right and license to use, reproduce, modify, adapt, publish, translate, create derivative works from, distribute, and display such content throughout the world in any media. You further grant Bazaarvoice, Bazaarvoice’s clients and each of their and sublicensees and affiliates the right to use the name and likeness that you submit in connection with such content.<strong>What you may post</strong>: Depending on the Bazaarvoice service, you may post reviews, comments, photos, questions and other user-generated content (collectively “UGC”).<strong>What you may not post:</strong>&nbsp;You may not post any UGC that is illegal, obscene, threatening, defamatory, infringes the intellectual property rights of any party, contains software viruses, commercial solicitation, chain letters, mass mailings or any form of spam.&nbsp; Additionally, you may not use a false e-mail address, impersonate any person or entity, or otherwise mislead as to the origin of any UGC.&nbsp; Bazaarvoice reserves the right, but not the obligation, to remove any UGC from a website on the Bazaarvoice network for any reason or no reason.<strong>What happens to UGC that you submit:</strong>&nbsp; Any UGC you submit may be used for other advertising purposes and posted to publicly-facing websites, including other websites across the Internet on the Bazaarvoice network in addition to the website that you originally submitted the UGC. Accordingly, please do not post anything that you do not want to share with the general public (for example, financial information, social security number, etc.).&nbsp; In addition, as mentioned in the introduction, the UGC that you submit may be used for advertising, analytic and other statistical purposes including, for example, product improvement, benchmarking (e.g. where various products/services or categories of products/services are compared against each other or against the market as a whole), sentiment analysis (e.g. using the data from multiple reviews it is possible to determine how consumers as a whole feel about a product/service), and online behavioral advertising.<strong>What you are promising by submitting UGC:</strong>&nbsp; By submitting UGC you represent and warrant that: (i) you are the sole owner of the UGC; (ii) the UGC is accurate; (iii) you are at least thirteen (13) years old; and, (iv) the UGC you submit does not violate these Terms of Use.&nbsp; Because you are solely responsible for what you post, you also agree to indemnify Bazaarvoice and Bazaarvoice’s clients for a breach of your representations and warranties.&nbsp;<strong>Where you can find additional information on Bazaarvoice’s use of the UGC:</strong>&nbsp; Bazaarvoice’s use of any UGC you submit is subject to Bazaarvoice’s Privacy Policy, which can be found at&nbsp;<a target=\"_blank\" rel=\"nofollow\" href=\"http://www.bazaarvoice.com/privacy-policy\">http://www.bazaarvoice.com/privacy-policy</a>.<strong>What happens if there is a dispute:</strong>&nbsp; You agree that all disputes between you and Bazaarvoice (whether or not such dispute involves a third party) with regard to your relationship with Bazaarvoice, including without limitation disputes related to these Terms of Use, your use of this Site, and/or rights of privacy and/or publicity, will be resolved by binding, individual arbitration under the American Arbitration Association's rules for arbitration of consumer-related disputes and you and Bazaarvoice hereby expressly waive trial by jury. As an alternative, you may bring your claim in your local \"small claims\" court, if permitted by that small claims court's rules. You may bring claims only on your own behalf. Neither you nor Bazaarvoice will participate in a class action or class-wide arbitration for any claims covered by this agreement. You also agree not to participate in claims brought in a private attorney general or representative capacity, or consolidated claims involving another person's account, if Bazaarvoice is a party to the proceeding. This dispute resolution provision will be governed by the Federal Arbitration Act. In the event the American Arbitration Association is unwilling or unable to set a hearing date within one hundred and sixty (160) days of filing the case, then either Bazaarvoice or you can elect to have the arbitration administered instead by the Judicial Arbitration and Mediation Services. Judgment on the award rendered by the arbitrator may be entered in any court having competent jurisdiction. Any provision of applicable law notwithstanding, the arbitrator will not have authority to award damages, remedies or awards that conflict with these Terms of Use.You may opt out of this agreement to arbitrate. If you do so, neither you nor Bazaarvoice can require the other to participate in an arbitration proceeding. To opt out, you must notify Bazaarvoice in writing within 30 days of the date that you first became subject to this arbitration provision. You must use this address to opt out:Bazaarvoice, Inc.ATTN: Legal - Arbitration Opt Out3900 N. Capital of Texas Hwy, Suite 300Austin, Texas 78746privacy@bazaarvoice.com","remoteUrl":"","required":true}}});
+BV.define('dimsumFields!agreements',[], {"reviews":{"termsAndConditions":{"userDefined":false,"name":"Terms & Conditions","id":"termsAndConditions","enabled":true,"displayType":"HOSTED","submissionTitle":"Do you agree?","agreementTitle":"Terms and Conditions","hostedText":"<p>\n\t<strong>CUSTOMER RATINGS AND REVIEWS TERMS OF USE</strong></p>\n<div>\n\tThese Terms of Use govern your conduct associated with the Customer Ratings and Review service offered by <strong>[ABC Company]</strong> (the \"CRR Service\"). To the extent of any conflict between <strong>[ABC Company's]</strong> Privacy Policy and these Terms of Use, these Terms of Use shall control with respect to the CRR Service.</div>\n<div>\n\t&nbsp;</div>\n<div>\n\tBy submitting any content to <strong>[ABC Company]</strong>, you represent and warrant that:</div>\n<ul>\n\t<li>\n\t\tYou are the sole author and owner of the intellectual property rights thereto;</li>\n\t<li>\n\t\tAll \"moral rights\" that you may have in such content have been voluntarily waived by you;</li>\n\t<li>\n\t\tAll content that you post is accurate;</li>\n\t<li>\n\t\tYou are at least <strong>[xx]</strong> years old;</li>\n\t<li>\n\t\tUse of the content you supply does not violate these Terms of Use and will not cause injury to any person or entity.</li>\n</ul>\n<div>\n\tYou further agree and warrant that you shall not submit any content:</div>\n<ul>\n\t<li>\n\t\tThat is known by you to be false, inaccurate or misleading;</li>\n\t<li>\n\t\tThat infringes any third party's copyright, patent, trademark, trade secret or other proprietary rights or rights of publicity or privacy;</li>\n\t<li>\n\t\tThat violates any law, statute, ordinance or regulation (including, but not limited to, those governing export control, consumer protection, unfair competition, anti-discrimination or false advertising);</li>\n\t<li>\n\t\tThat is, or may reasonably be considered to be, defamatory, libelous, hateful, racially or religiously biased or offensive, unlawfully threatening or unlawfully harassing to any individual, partnership or corporation;</li>\n\t<li>\n\t\tFor which you were compensated or granted any consideration by any third party;</li>\n\t<li>\n\t\tThat includes any information that references other websites, addresses, email addresses,&nbsp;contact information or phone numbers;</li>\n\t<li>\n\t\tThat contains any computer viruses, worms or other potentially damaging computer programs or files.</li>\n</ul>\n<div>\n\tYou agree to indemnify and hold <strong>[ABC Company]</strong> (and its officers, directors, agents, subsidiaries, joint ventures, employees and third-party service providers, including but not limited to Bazaarvoice, Inc.), harmless from all claims, demands, and damages (actual and consequential) of every kind and nature, known and unknown including reasonable attorneys' fees, arising out of a breach of your representations and warranties set forth above, or your violation of any law or the rights of a third party.</div>\n<div>\n\t&nbsp;</div>\n<div>\n\tFor any content that you submit, you grant <strong>ABC Company</strong> a perpetual, irrevocable, royalty-free, transferable right and license to use, copy, modify, delete in its entirety, adapt, publish, translate, create derivative works from and/or sell and/or distribute such content and/or incorporate such content into any form, medium or technology throughout the world without compensation to you.</div>\n<div>\n\t&nbsp;</div>\n<div>\n\tAll content that you submit may be used at <strong>[ABC Company's]</strong> sole discretion. <strong>[ABC Company]</strong> reserves the right to change, condense or delete any content on <strong>[ABC Company's]</strong> website that <strong>[ABC Company]</strong> deems, in its sole discretion, to violate the content guidelines or any other provision of these Terms of Use. <strong>[ABC Company]</strong> does not guarantee that you will have any recourse through <strong>[ABC Company]</strong> to edit or delete any content you have submitted. Ratings and written comments are generally posted within two to four business days. However, <strong>[ABC Company]</strong> reserves the right to remove or to refuse to post any submission for any reason. You acknowledge that you, not <strong>[ABC Company]</strong>, are responsible for the contents of your submission. None of the content that you submit shall be subject to any obligation of confidence on the part of <strong>[ABC Company]</strong>, its agents, subsidiaries, affiliates, partners or third party service providers and their respective directors, officers and employees.</div>\n<div>\n\t&nbsp;</div>\n<div>\n\tBy submitting your email address in connection with your rating and review, you agree that <strong>[ABC Company]</strong> and its third party service providers may use your email address to contact you about the status of your review and other administrative purposes.</div>","remoteUrl":"https://www.yslbeautyus.com/terms.html","required":true}},"questions":{"termsAndConditions":{"userDefined":false,"name":"Terms & Conditions","id":"termsAndConditions","enabled":true,"displayType":"HOSTED","submissionTitle":"I agree to the <a href=\"#\" class=\"bv-text-link bv-focusable\">terms &amp; conditions</a>","agreementTitle":"Terms and Conditions","hostedText":"<span><strong>Introduction.&nbsp; </strong>Thank you for submitting UGC (as defined below) through the Bazaarvoice, Inc. (“we”, “our” or “Bazaarvoice”) services. &nbsp;The UGC submitted by consumers such as yourself is helpful to many parties including other consumers, retailers and manufacturers.&nbsp; You probably already know UGC is heavily relied-upon by consumers that are considering purchases.&nbsp; What you may not know is that UGC is also used by product retailers and manufacturers for many other purposes, including product development and improvement, making decisions on which products to stock and marketing.&nbsp; By submitting content you are helping improve both the shopping experience and the product and service quality for the entire market.&nbsp; Bazaarvoice would like to be the first to thank you for your contribution!</span>We have found that there are a number of common questions that consumers have about the submission process.&nbsp; We have tried to answer those questions as thoroughly as possible, below. Please review these questions and explanations because they control your submission of UGC.&nbsp; If you’ve read the below and still have questions or would like further explanation you can contact our Privacy Team at privacy@bazaarvoice.com, and they will get back to you as soon as possible.<span><strong>What do Bazaarvoice and its clients need to use the UGC:</strong> In order to use the UGC as described in these terms, Bazaarvoice needs a license to use the UGC.&nbsp; Accordingly, you hereby grant Bazaarvoice, Bazaarvoice’s clients and each of their sublicensees and affiliates a perpetual, unlimited, nonexclusive, fully sublicenseable, irrevocable, worldwide right and license to use, reproduce, modify, adapt, publish, translate, create derivative works from, distribute, and display such content throughout the world in any media. You further grant Bazaarvoice, Bazaarvoice’s clients and each of their and sublicensees and affiliates the right to use the name and likeness that you submit in connection with such content.</span><span><strong>What you may post</strong>: Depending on the Bazaarvoice service, you may post reviews, comments, photos, questions and other user-generated content (collectively “UGC”).</span><span><strong>What you may not post:</strong> You may not post any UGC that is illegal, obscene, threatening, defamatory, infringes the intellectual property rights of any party, contains software viruses, commercial solicitation, chain letters, mass mailings or any form of spam.&nbsp; Additionally, you may not use a false e-mail address, impersonate any person or entity, or otherwise mislead as to the origin of any UGC.&nbsp; Bazaarvoice reserves the right, but not the obligation, to remove any UGC from a website on the Bazaarvoice network for any reason or no reason.</span><span><strong>What happens to UGC that you submit:</strong>&nbsp; Any UGC you submit may be used for other advertising purposes and posted to publicly-facing websites, including other websites across the Internet on the Bazaarvoice network in addition to the website that you originally submitted the UGC. Accordingly, please do not post anything that you do not want to share with the general public (for example, financial information, social security number, etc.).&nbsp; In addition, as mentioned in the introduction, the UGC that you submit may be used for advertising, analytic and other statistical purposes including, for example, product improvement, benchmarking (e.g. where various products/services or categories of products/services are compared against each other or against the market as a whole), sentiment analysis (e.g. using the data from multiple reviews it is possible to determine how consumers as a whole feel about a product/service), and online behavioral advertising.</span><span><strong>What you are promising by submitting UGC:</strong>&nbsp; By submitting UGC you represent and warrant that: (i) you are the sole owner of the UGC; (ii) the UGC is accurate; (iii) you are at least thirteen (13) years old; and, (iv) the UGC you submit does not violate these Terms of Use.&nbsp; Because you are solely responsible for what you post, you also agree to indemnify Bazaarvoice and Bazaarvoice’s clients for a breach of your representations and warranties.&nbsp;</span><span><strong>Where you can find additional information on Bazaarvoice’s use of the UGC:</strong>&nbsp; Bazaarvoice’s use of any UGC you submit is subject to Bazaarvoice’s Privacy Policy, which can be found at <a target=\"_blank\" rel=\"nofollow\" href=\"http://www.bazaarvoice.com/privacy-policy\">http://www.bazaarvoice.com/privacy-policy</a>.</span><span><strong>What happens if there is a dispute:</strong>&nbsp; You agree that all disputes between you and Bazaarvoice (whether or not such dispute involves a third party) with regard to your relationship with Bazaarvoice, including without limitation disputes related to these Terms of Use, your use of this Site, and/or rights of privacy and/or publicity, will be resolved by binding, individual arbitration under the American Arbitration Association's rules for arbitration of consumer-related disputes and you and Bazaarvoice hereby expressly waive trial by jury. As an alternative, you may bring your claim in your local \"small claims\" court, if permitted by that small claims court's rules. You may bring claims only on your own behalf. Neither you nor Bazaarvoice will participate in a class action or class-wide arbitration for any claims covered by this agreement. You also agree not to participate in claims brought in a private attorney general or representative capacity, or consolidated claims involving another person's account, if Bazaarvoice is a party to the proceeding. This dispute resolution provision will be governed by the Federal Arbitration Act. In the event the American Arbitration Association is unwilling or unable to set a hearing date within one hundred and sixty (160) days of filing the case, then either Bazaarvoice or you can elect to have the arbitration administered instead by the Judicial Arbitration and Mediation Services. Judgment on the award rendered by the arbitrator may be entered in any court having competent jurisdiction. Any provision of applicable law notwithstanding, the arbitrator will not have authority to award damages, remedies or awards that conflict with these Terms of Use.</span>You may opt out of this agreement to arbitrate. If you do so, neither you nor Bazaarvoice can require the other to participate in an arbitration proceeding. To opt out, you must notify Bazaarvoice in writing within 30 days of the date that you first became subject to this arbitration provision. You must use this address to opt out:Bazaarvoice, Inc.ATTN: Legal - Arbitration Opt Out3900 N. Capital of Texas Hwy, Suite 300Austin, Texas 78746privacy@bazaarvoice.com","remoteUrl":"","required":true}}});
 
 BV.define('bv/util/sanitize',{
 	// Used to sanitize a subjectID like a product ID. Since clients
@@ -57742,9 +57666,7 @@ dropdownableModel
     submission : {name : 'submission', model : submissionModel},
     thankYouPage : {name : 'thankYouPage', model : thankYouPageModel},
     dropdownable : {name : 'dropdownable', model : dropdownableModel},
-    starHoverHeatMap : { name : 'starHoverHeatMap', has : { name : 'starHoverHeatMap'}},
     submissionPreview : { name : 'submissionPreview', has : { name : 'submissionPreview'}},
-    reviewHelperText : { name : 'reviewHelperText', has : { name : 'reviewHelperText'}},
     mbox : { name : 'mbox', has : { name : 'mbox'}}
   };
 

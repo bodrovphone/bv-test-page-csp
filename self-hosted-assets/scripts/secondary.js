@@ -1156,7 +1156,7 @@ function program7(depth0,data) {
 function program9(depth0,data,depth1,depth2) {
   
   var buffer = "", stack1, stack2, options;
-  buffer += " <fieldset class=\"bv-fieldset bv-focusable bv-fieldset-"
+  buffer += " <fieldset class=\"bv-fieldset bv-fieldset-"
     + escapeExpression(((stack1 = ((stack1 = depth0.schema),stack1 == null || stack1 === false ? stack1 : stack1.Id)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + " bv-";
   if (stack2 = helpers.type) { stack2 = stack2.call(depth0, {hash:{}}); }
@@ -1166,7 +1166,7 @@ function program9(depth0,data,depth1,depth2) {
   if (stack2 = helpers.fieldsetClasses) { stack2 = stack2.call(depth0, {hash:{}}); }
   else { stack2 = depth0.fieldsetClasses; stack2 = typeof stack2 === functionType ? stack2.apply(depth0) : stack2; }
   buffer += escapeExpression(stack2)
-    + "\" tabindex=\"0\"> <div class=\"bv-fieldset-arrowicon\"></div> <div class=\"bv-fieldset-inner\"> <label for=\"bv-textarea-field-"
+    + "\"> <div class=\"bv-fieldset-arrowicon\"></div> <div class=\"bv-fieldset-inner\"> <label for=\"bv-textarea-field-"
     + escapeExpression(((stack1 = ((stack1 = depth0.schema),stack1 == null || stack1 === false ? stack1 : stack1.Id)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "\" class=\"bv-fieldset-label-wrapper\"> <span class=\"bv-fieldset-label\" aria-describedby=\""
     + escapeExpression(((stack1 = ((stack1 = depth0.schema),stack1 == null || stack1 === false ? stack1 : stack1.Id)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
@@ -4724,7 +4724,7 @@ BV.define('vendor/jquery/autosize',['jquery', 'body'], function ($, body) {
 	hidden = 'hidden',
 	borderBox = 'border-box',
 	lineHeight = 'lineHeight',
-	copy = $('<textarea tabindex="-1"/>').css({
+	copy = $('<textarea tabindex="-1" title="none"/>').css({
 		position: 'absolute',
 		top: '-9999px',
 		left: 0,
@@ -7626,9 +7626,7 @@ dropdownableView
     submission : {name : 'submission', view : submissionView},
     thankYouPage : {name : 'thankYouPage', view : thankYouPageView},
     dropdownable : {name : 'dropdownable', view : dropdownableView},
-    starHoverHeatMap : { name : 'starHoverHeatMap', has : { name : 'starHoverHeatMap'}},
     submissionPreview : { name : 'submissionPreview', has : { name : 'submissionPreview'}},
-    reviewHelperText : { name : 'reviewHelperText', has : { name : 'reviewHelperText'}},
     mbox : { name : 'mbox', has : { name : 'mbox'}}
   };
 
