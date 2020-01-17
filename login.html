@@ -16,16 +16,16 @@
       document.getElementById("loginBtn").addEventListener("click", check);
 
       function check (event) {
-        var url = window.location.href;
-        var bveventidIndex = url.indexOf('bveventid') + 10;
-        var bveventid = url.slice(bveventidIndex, bveventidIndex + 11);
+        // var url = window.location.href;
+        // var bveventidIndex = url.indexOf('bveventid') + 10;
+        // var bveventid = url.slice(bveventidIndex, bveventidIndex + 11);
         var form = document.getElementById("submitForm");
 
         event.preventDefault();
 
         if(form.userid.value == "obodrov" && form.password.value == "0000")
         {
-          window.location.href = "https://bodrovphone.github.io/bv-test-page-csp/containerPage.html?bveventid=" + bveventid +"&bvuserToken=990bdbe47f657bb2e7ee1947f18c68dc2d35848191302e003784ddeaab7d4f427573657269643d62347332306f6d653066616137707533796a6936676b6d756e266d61786167653d333026646174653d3230323030313135"
+          window.location.href = "https://bodrovphone.github.io/bv-test-page-csp/containerPage.html?bvaction=submit_review&bvuserToken=990bdbe47f657bb2e7ee1947f18c68dc2d35848191302e003784ddeaab7d4f427573657269643d62347332306f6d653066616137707533796a6936676b6d756e266d61786167653d333026646174653d3230323030313135"
         }
         else
         {
