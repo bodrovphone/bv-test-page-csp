@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Login page</title>
+  </head>
+  <body>
+    <h1>Simple Login Page</h1>
+    <form name="login" id="submitForm">
+      Username <input type="text" name="userid"/>
+      Password <input type="password" name="password"/>
+      <button id="loginBtn">Login</button>
+      <input type="reset" value="Cancel"/>
+    </form>
+
+    <script nonce="secretkey" language="javascript">
+      document.getElementById("loginBtn").addEventListener("click", check);
+
+      function check (event) {
+        var url = window.location.href;
+        var bveventidIndex = url.indexOf('bveventid') + 10;
+        var bveventid = url.slice(bveventidIndex, bveventidIndex + 11);
+        var form = document.getElementById("submitForm");
+
+        event.preventDefault();
+
+        if(form.userid.value == "obodrov" && form.password.value == "0000")
+        {
+          window.location.href = "https://vderkach.github.io/githubpages/container.html?bveventid=" + bveventid +"&bvuserToken=990bdbe47f657bb2e7ee1947f18c68dc2d35848191302e003784ddeaab7d4f427573657269643d62347332306f6d653066616137707533796a6936676b6d756e266d61786167653d333026646174653d3230323030313135"
+        }
+        else
+        {
+          alert("Error");
+        }
+      }
+    </script>
+  </body>
+</html>
