@@ -6270,7 +6270,7 @@ BV.define('components',['underscore', 'vendor/json2'], function (_, JSON) {
       };
 });
 
-BV.define('components!',{"bvRouter1":{"componentId":"bvRouter1","type":"bvRouter","routes":[{"name":"submit","paths":[":contentType/submit/:campaignId"],"params":["contentType","campaignId"],"actions":[{"component":"reviewSubmission1","scope":"rr","action":"submit_review"}]},{"name":"page","paths":[":displayCode/:contentType/:subjectType/:pageNum/:product.htm"],"params":["displayCode","contentType","subjectType","pageNum","product"],"actions":[{"component":"reviewContentList1","event":"pageto"}]},{"name":"bvstateRR","paths":["bvstate/review/:pageNum"],"params":["pageNum"],"actions":[{"component":"reviewContentList1","event":"pageto"}]},{"name":"bvstateQA","paths":["bvstate/question/:pageNum"],"params":["pageNum"],"actions":[{"component":"questionContentList1","event":"pageto"}]},{"name":"deeplink","paths":[":contentType/:id"],"params":["contentType","id"],"actions":[{"component":"reviewContentList1","event":"deeplink"},{"component":"questionContentList1","event":"deeplink"}]},{"name":"bvdata","paths":["bvdata/:urlData"],"params":["urlData"],"actions":[{"bvdata":"bvdata"}]},{"name":"sort","paths":[":contentType/sort/:key/:dir"],"params":["contentType","key","dir"],"actions":[{"component":"reviewContentList1","event":"sort"}]},{"name":"showHelpfulPositive","paths":[":contentType/showHelpfulPositive"],"params":["contentType"],"actions":[{"component":"reviewContentList1","event":"showhelpfulpositive"}]},{"name":"showHelpfulCritical","paths":[":contentType/showHelpfulCritical"],"params":["contentType"],"actions":[{"component":"reviewContentList1","event":"showhelpfulcritical"}]}],"viewUniq":0,"views":{}},"fullProfilePopup1":{"container":"BVContainer","subjectType":"Authors","contentType":"Authors","type":"fullProfile","pageview":{"bvProduct":"Profiles"},"features":{"self":["sidebar","tabs"],"sidebar":[],"tabs":["profileContentList<Reviews>","profileContentList<Questions>","profileContentList<Answers>"],"profileContentList":["contentItemCollection","ugcCount","pagination"],"contentItem":{"contentTypes":{"Reviews":{"features":["has:stars","has:productImage","has:prosCons","has:contentBadges","has:secondarySubmission","secondaryContentList","has:secondaryContentBtn"]},"Questions":{"features":["has:secondaryContentLink","secondaryContentList","has:secondarySubmission","has:secondaryContentBtn"]},"Answers":{"features":["has:secondaryContentLink","has:secondarySubmission"]}}},"secondaryContentList":{"contentTypes":{"Comments":{"features":["secondaryContentItemCollection","loadMore"]},"Answers":{"features":["secondaryContentItemCollection"]}}},"secondaryContentItem":{"contentTypes":{"Comments":{"features":["has:userBadges"]}}}},"outlets":{"showmediaviewer":[{"component":"mediaViewer1","event":"open"}],"showanswersubmission":[{"component":"answerSubmission1_inline","scope":"qa","action":"submit_answer"}],"showcommentsubmission":[{"component":"commentSubmission2","scope":"rr","action":"submit_comment"}]},"componentId":"fullProfilePopup1","createOnce":true,"viewUniq":0,"views":{}},"mediaViewer1":{"container":"BVContainer","subjectType":"Products","contentType":"Products","coverageContentTypes":["Reviews","Questions"],"type":"mediaViewer","componentId":"mediaViewer1","createOnce":true,"viewUniq":0,"views":{}},"rrSubmissionGuidelines1":{"type":"guidelines","subjectType":"Products","contentType":"Reviews","container":"BVGuidelines","features":{"self":["rrSubmissionGuidelines1","has:reviewHelperText"]},"outlets":{},"componentId":"rrSubmissionGuidelines1","autoload":true,"viewUniq":0,"views":{}},"reviewGenericSubmission1":{"type":"genericSubmission","subjectType":"Products","contentType":"Reviews","container":"BVGRSContainer","autoload":true,"features":{"self":["searchBar","categorySelect","ugcCount:filtered","ugcCount:unfiltered","productItemCollection:filtered","productItemCollection:unfiltered","loadMore:filtered","loadMore:unfiltered"],"searchBar":["has:searchOnKeyup"],"loadMore":{"instances":{"filtered":{"features":["has:infiniteScroll","has:instanceNameScope"]},"unfiltered":{"features":["has:infiniteScroll","has:instanceNameScope"]}}},"productItemCollection":{"instances":{"filtered":{"features":["has:filterByCategory","has:instanceNameScope"]},"unfiltered":{"features":["has:filterWithoutCategory","has:searchOnly","has:instanceNameScope"]}}},"ugcCount":{"instances":{"filtered":{"features":["has:instanceNameScope"]},"unfiltered":{"features":["has:instanceNameScope"]}}}},"outlets":{},"componentId":"reviewGenericSubmission1","grsSearchEnabled":true,"productsPerRow":4,"viewUniq":0,"views":{}},"inlineRatingList1":{"subjectType":"Products","contentType":"Statistics","containerPrefix":"BVRRInlineRating","type":"ratingList","features":{"self":["ratingItemCollection"],"ratingItem":["has:stars"]},"componentId":"inlineRatingList1","autoload":true,"viewUniq":0,"views":{}},"contentSearch1":{"serverRender":true,"container":"BVRRSearchContainer","subjectType":"Products","contentType":"Products","coverageContentTypes":["Reviews","Questions"],"submissionContentTypes":["Answers","Comments"],"type":"contentSearch","features":{"self":["searchBar","searchContentList","trustmarkIcon","has:stars","has:overallRating","has:reviewCount","statsPanel"],"searchContentList":["contentItemCollection","ugcCount","searchBar","pagination"],"contentItem":{"contentTypes":{"Reviews":{"features":["has:stars","has:secondaryContentLink","avatar","secondaryContentList","has:secondaryContentBtn"]},"Questions":{"features":["avatar","secondaryContentList","has:secondaryContentBtn","has:secondaryContentLink"]}}},"secondaryContentList":["secondaryContentItemCollection"],"secondaryContentItem":{"contentTypes":{"Comments":{"features":["avatar"]},"Answers":{"features":["feedback","crowdSourcedAnswerBadge"]}}},"avatar":{"contentTypes":{"Reviews":{"features":["has:socialAvatar"]},"Questions":{"features":["has:socialAvatar"]}}}},"outlets":{"showmediaviewer":[{"component":"mediaViewer1","event":"open"}],"showfullprofile":[{"component":"fullProfilePopup1","event":"launchprofile"}],"filtercontent":[{"component":"contentSearch1","event":"filtercontent"}],"showreviews":[{"component":"reviewContentList1","event":"scrolltocontent","scope":"rr","fallback":"doShowContent"}],"scrolltocontent":[{"component":"reviewContentList1","event":"scrolltocontent"}],"filterresults":[{"component":"reviewContentList1","event":"filterresults"}],"showsubmission":[{"component":"questionSubmission2_inline","scope":"qa","action":"submit_question"}],"showanswersubmission":[{"component":"answerSubmission1_inline","scope":"qa","action":"submit_answer"}],"showquestions":[{"component":"questionContentList1","event":"scrolltocontent","scope":"qa","fallback":"doShowContent"}],"showcommentsubmission":[{"component":"commentSubmission2","scope":"rr","action":"submit_comment"}]},"componentId":"contentSearch1","autoload":true,"viewUniq":0,"views":{}},"contentSearch2":{"serverRender":true,"container":"BVQASearchContainer","subjectType":"Products","contentType":"Products","coverageContentTypes":["Reviews","Questions"],"submissionContentTypes":["Answers","Comments"],"type":"contentSearch","features":{"self":["searchBar","searchContentList","has:stars","has:overallRating","has:reviewCount","statsPanel"],"searchContentList":["contentItemCollection","ugcCount","searchBar","pagination"],"contentItem":{"contentTypes":{"Reviews":{"features":["has:stars","has:secondaryContentLink","avatar","secondaryContentList","has:secondaryContentBtn"]},"Questions":{"features":["avatar","secondaryContentList","has:secondaryContentBtn","has:secondaryContentLink"]}}},"secondaryContentList":["secondaryContentItemCollection"],"secondaryContentItem":{"contentTypes":{"Comments":{"features":["avatar"]},"Answers":{"features":["feedback","crowdSourcedAnswerBadge"]}}},"avatar":{"contentTypes":{"Reviews":{"features":["has:socialAvatar"]},"Questions":{"features":["has:socialAvatar"]}}}},"outlets":{"showmediaviewer":[{"component":"mediaViewer1","event":"open"}],"showfullprofile":[{"component":"fullProfilePopup1","event":"launchprofile"}],"filtercontent":[{"component":"contentSearch2","event":"filtercontent"}],"showreviews":[{"component":"reviewContentList1","event":"scrolltocontent","scope":"rr","fallback":"doShowContent"}],"scrolltocontent":[{"component":"reviewContentList1","event":"scrolltocontent"}],"filterresults":[{"component":"reviewContentList1","event":"filterresults"}],"showsubmission":[{"component":"questionSubmission2_inline","scope":"qa","action":"submit_question"}],"showanswersubmission":[{"component":"answerSubmission1_inline","scope":"qa","action":"submit_answer"}],"showquestions":[{"component":"questionContentList1","event":"scrolltocontent","scope":"qa","fallback":"doShowContent"}],"showcommentsubmission":[{"component":"commentSubmission2","scope":"rr","action":"submit_comment"}]},"componentId":"contentSearch2","autoload":true,"viewUniq":0,"views":{}},"reviewSummary1":{"serverRender":true,"container":"BVRRSummaryContainer","subjectType":"Products","contentType":"Products","coverageContentTypes":["Reviews","Questions"],"type":"summary","features":{"self":["has:stars","has:overallRating","has:aggregateRatingTag","histogram","has:writeReviews","has:askQuestions","has:minimalistHorizontal","has:minimalist"],"histogram":["has:filterButton"]},"outlets":{"showreviewsubmission":[{"component":"reviewSubmission1","scope":"rr","action":"submit_review"}],"showreviews":[{"component":"reviewContentList1","event":"scrolltocontent","scope":"rr","fallback":"doShowContent"}],"filtercontent":[{"component":"reviewContentList1","event":"filtercontent"}],"showquestions":[{"component":"questionContentList1","event":"scrolltocontent","scope":"qa","fallback":"doShowContent"}],"showquestionsubmission":[{"component":"questionSubmission1","scope":"qa","action":"submit_question"}]},"componentId":"reviewSummary1","autoload":true,"priority":true,"viewUniq":0,"views":{}},"reviewContentList1":{"subjectType":"Products","type":"contentList","features":{"self":["contentItemCollection","contentFilter","ugcCount","has:contentSort","has:writeReviews","headToHead","inlineHistogram","secondaryRatingSummary","loadMore"],"pagination":["ugcCount"],"contentItem":["has:stars","has:secondaryRatings","has:reviewPhotos","has:reviewVideos","has:tags","has:prosCons","has:userBadges","has:contentBadges","secondaryContentList","has:secondaryContentBtn","has:recommended","inlineProfile","has:fullProfileLink","has:reviewAttribution","has:productFamiliesAttribution"],"secondaryContentList":["secondaryContentItemCollection<ClientResponses>","secondaryContentItemCollection<Comments>","has:inlineSubmission","loadMore"],"secondaryContentItem":["has:userBadges","has:socialAvatar"],"contentFilter":["has:filterButton"],"inlineProfile":["has:socialAvatar","has:fullProfileLink"]},"outlets":{"showmediaviewer":[{"component":"mediaViewer1","event":"open"}],"showfullprofile":[{"component":"fullProfilePopup1","event":"launchprofile"}],"showsubmission":[{"component":"reviewSubmission1","scope":"rr","action":"submit_review"}],"filterresults":[{"component":"reviewContentList1","event":"filterresults"}],"filtercontent":[{"component":"reviewContentList1","event":"filtercontent"}],"linkSort":[{"component":"reviewContentSort1","event":"setupsort"}],"showhelpfulpositive":[{"component":"reviewContentList1","event":"showhelpfulpositive"}],"showhelpfulcritical":[{"component":"reviewContentList1","event":"showhelpfulcritical"}],"showreviews":[{"component":"reviewContentList1","event":"scrolltocontent"}],"showcommentsubmission":[{"component":"commentSubmission1_inline","scope":"rr","action":"submit_comment"}]},"serverRender":true,"container":"BVRRContainer","contentType":"Reviews","secondaryContentType":"Comments","pageview":{"bvProduct":"RatingsAndReviews"},"monitorVisibility":true,"componentId":"reviewContentList1","autoload":true,"viewUniq":0,"views":{}},"reviewSubmission1":{"type":"submission","preload":true,"inline":false,"features":{"self":["thankYouPage","dropdownable","has:submissionPreview"],"thankYouPage":["has:mbox"]},"outlets":{"previewcontent":[{"component":"reviewContentList1","event":"previewcontent"}]},"container":"BVRRContainer","subjectType":"Products","contentType":"Reviews","pageview":{"bvProduct":"RatingsAndReviews"},"componentId":"reviewSubmission1","viewUniq":0,"views":{}},"reviewContentSort1":{"serverRender":true,"subjectType":"Products","type":"contentSort","sortDefault":"mostRecent","sortTypes":["mostHelpful","positive","featured","mostRecent"],"features":{"self":[]},"outlets":{"setupme":[{"component":"reviewContentList1","event":"setupcontentsort"}],"sortcontent":[{"component":"reviewContentList1","event":"sortcontent"}]},"container":"BVRRContainer","contentType":"Reviews","componentId":"reviewContentSort1","viewUniq":0,"views":{}},"questionContentList1":{"subjectType":"Products","type":"contentList","features":{"self":["contentItemCollection","ugcCount","has:contentSort","has:askQuestions","loadMore"],"pagination":["ugcCount"],"contentItem":["secondaryContentList","has:secondaryContentLink","has:secondarySubmission","has:secondaryContentBtn","has:fullProfileLink","has:reviewAttribution","has:productFamiliesAttribution"],"secondaryContentList":["secondaryContentItemCollection"],"secondaryContentItem":["feedback","crowdSourcedAnswerBadge"]},"outlets":{"showmediaviewer":[{"component":"mediaViewer1","event":"open"}],"showfullprofile":[{"component":"fullProfilePopup1","event":"launchprofile"}],"linkSort":[{"component":"questionContentSort1","event":"setupsort"}],"showsubmission":[{"component":"questionSubmission1","scope":"qa","action":"submit_question"}],"showanswersubmission":[{"component":"answerSubmission1_inline","scope":"qa","action":"submit_answer"}]},"serverRender":true,"container":"BVQAContainer","contentType":"Questions","secondaryContentType":"Answers","pageview":{"bvProduct":"AskAndAnswer"},"monitorVisibility":true,"componentId":"questionContentList1","autoload":true,"viewUniq":0,"views":{}},"questionSubmission1":{"type":"submission","preload":false,"inline":false,"features":{"self":["thankYouPage","has:submissionPreview"],"thankYouPage":["has:mbox"]},"outlets":{"previewcontent":[{"component":"questionContentList1","event":"previewcontent"}],"showanswersubmission":[{"component":"answerSubmission1_inline","scope":"qa","action":"submit_answer"}]},"container":"BVQAContainer","subjectType":"Products","contentType":"Questions","pageview":{"bvProduct":"AskAndAnswer"},"componentId":"questionSubmission1","viewUniq":0,"views":{}},"questionContentSort1":{"serverRender":true,"subjectType":"Products","type":"contentSort","sortDefault":"recentQuestionsFirst","sortTypes":["recentQuestionsFirst","recentAnswersFirst","mostAnsweredQuestionsFirst","mostAnsweredQuestionsLast","answersWithAffiliationStaffFirst","helpfulnessAnswersLast"],"features":{"self":[]},"outlets":{"setupme":[{"component":"questionContentList1","event":"setupcontentsort"}],"sortcontent":[{"component":"questionContentList1","event":"sortcontent"}]},"container":"BVQAContainer","contentType":"Questions","componentId":"questionContentSort1","viewUniq":0,"views":{}},"answerSubmission1_inline":{"type":"submission","preload":false,"inline":false,"features":{"self":["thankYouPage","has:submissionPreview"],"thankYouPage":["has:mbox"]},"outlets":{"previewsecondarycontent":[{"component":"questionContentList1","event":"previewsecondarycontent"}]},"container":"BVQAContainer","subjectType":"Products","contentType":"Answers","componentId":"answerSubmission1_inline","viewUniq":0,"views":{}},"questionSubmission2_inline":{"type":"submission","preload":false,"inline":false,"features":{"self":["has:submissionPreview"],"thankYouPage":[]},"outlets":{"previewcontent":[{"component":"questionContentList1","event":"previewcontent"}]},"container":"BVContainer","subjectType":"Products","contentType":"Questions","pageview":{"bvProduct":"AskAndAnswer"},"componentId":"questionSubmission2_inline","viewUniq":0,"views":{}},"commentSubmission1_inline":{"type":"submission","preload":false,"inline":true,"features":{"self":["has:submissionPreview"],"thankYouPage":[]},"outlets":{"previewsecondarycontent":[{"component":"reviewContentList1","event":"previewsecondarycontent"}]},"container":"BVRRContainer","subjectType":"Products","contentType":"Comments","componentId":"commentSubmission1_inline","viewUniq":0,"views":{}},"commentSubmission2":{"type":"submission","preload":false,"inline":false,"features":{"self":["thankYouPage"],"thankYouPage":["has:mbox"]},"outlets":{},"container":"BVRRContainer","subjectType":"Products","contentType":"Comments","componentId":"commentSubmission2","viewUniq":0,"views":{}}});
+BV.define('components!',{"bvRouter1":{"componentId":"bvRouter1","type":"bvRouter","routes":[{"name":"submit","paths":[":contentType/submit/:campaignId"],"params":["contentType","campaignId"],"actions":[{"component":"reviewSubmission1","scope":"rr","action":"submit_review"}]},{"name":"page","paths":[":displayCode/:contentType/:subjectType/:pageNum/:product.htm"],"params":["displayCode","contentType","subjectType","pageNum","product"],"actions":[{"component":"reviewContentList1","event":"pageto"}]},{"name":"bvstateRR","paths":["bvstate/review/:pageNum"],"params":["pageNum"],"actions":[{"component":"reviewContentList1","event":"pageto"}]},{"name":"bvstateQA","paths":["bvstate/question/:pageNum"],"params":["pageNum"],"actions":[{"component":"questionContentList1","event":"pageto"}]},{"name":"deeplink","paths":[":contentType/:id"],"params":["contentType","id"],"actions":[{"component":"reviewContentList1","event":"deeplink"},{"component":"questionContentList1","event":"deeplink"}]},{"name":"bvdata","paths":["bvdata/:urlData"],"params":["urlData"],"actions":[{"bvdata":"bvdata"}]},{"name":"sort","paths":[":contentType/sort/:key/:dir"],"params":["contentType","key","dir"],"actions":[{"component":"reviewContentList1","event":"sort"}]},{"name":"showHelpfulPositive","paths":[":contentType/showHelpfulPositive"],"params":["contentType"],"actions":[{"component":"reviewContentList1","event":"showhelpfulpositive"}]},{"name":"showHelpfulCritical","paths":[":contentType/showHelpfulCritical"],"params":["contentType"],"actions":[{"component":"reviewContentList1","event":"showhelpfulcritical"}]}],"viewUniq":0,"views":{}},"fullProfilePopup1":{"container":"BVContainer","subjectType":"Authors","contentType":"Authors","type":"fullProfile","pageview":{"bvProduct":"Profiles"},"features":{"self":["sidebar","tabs"],"sidebar":[],"tabs":["profileContentList<Reviews>","profileContentList<Questions>","profileContentList<Answers>"],"profileContentList":["contentItemCollection","ugcCount","pagination"],"contentItem":{"contentTypes":{"Reviews":{"features":["has:stars","has:productImage","has:prosCons","has:contentBadges","has:secondarySubmission","secondaryContentList","has:secondaryContentBtn"]},"Questions":{"features":["has:secondaryContentLink","secondaryContentList","has:secondarySubmission","has:secondaryContentBtn"]},"Answers":{"features":["has:secondaryContentLink","has:secondarySubmission"]}}},"secondaryContentList":{"contentTypes":{"Comments":{"features":["secondaryContentItemCollection","loadMore"]},"Answers":{"features":["secondaryContentItemCollection"]}}},"secondaryContentItem":{"contentTypes":{"Comments":{"features":["has:userBadges"]}}}},"outlets":{"showmediaviewer":[{"component":"mediaViewer1","event":"open"}],"showanswersubmission":[{"component":"answerSubmission1_inline","scope":"qa","action":"submit_answer"}],"showcommentsubmission":[{"component":"commentSubmission2","scope":"rr","action":"submit_comment"}]},"componentId":"fullProfilePopup1","createOnce":true,"viewUniq":0,"views":{}},"mediaViewer1":{"container":"BVContainer","subjectType":"Products","contentType":"Products","coverageContentTypes":["Reviews","Questions"],"type":"mediaViewer","componentId":"mediaViewer1","createOnce":true,"viewUniq":0,"views":{}},"rrSubmissionGuidelines1":{"type":"guidelines","subjectType":"Products","contentType":"Reviews","container":"BVGuidelines","features":{"self":["rrSubmissionGuidelines1","has:reviewHelperText"]},"outlets":{},"componentId":"rrSubmissionGuidelines1","autoload":true,"viewUniq":0,"views":{}},"reviewGenericSubmission1":{"type":"genericSubmission","subjectType":"Products","contentType":"Reviews","container":"BVGRSContainer","autoload":true,"features":{"self":["searchBar","categorySelect","ugcCount:filtered","ugcCount:unfiltered","productItemCollection:filtered","productItemCollection:unfiltered","loadMore:filtered","loadMore:unfiltered"],"searchBar":["has:searchOnKeyup"],"loadMore":{"instances":{"filtered":{"features":["has:infiniteScroll","has:instanceNameScope"]},"unfiltered":{"features":["has:infiniteScroll","has:instanceNameScope"]}}},"productItemCollection":{"instances":{"filtered":{"features":["has:filterByCategory","has:instanceNameScope"]},"unfiltered":{"features":["has:filterWithoutCategory","has:searchOnly","has:instanceNameScope"]}}},"ugcCount":{"instances":{"filtered":{"features":["has:instanceNameScope"]},"unfiltered":{"features":["has:instanceNameScope"]}}}},"outlets":{},"componentId":"reviewGenericSubmission1","grsSearchEnabled":true,"productsPerRow":4,"viewUniq":0,"views":{}},"inlineRatingList1":{"subjectType":"Products","contentType":"Statistics","containerPrefix":"BVRRInlineRating","type":"ratingList","features":{"self":["ratingItemCollection"],"ratingItem":["has:stars"]},"componentId":"inlineRatingList1","autoload":true,"viewUniq":0,"views":{}},"contentSearch1":{"serverRender":true,"container":"BVRRSearchContainer","subjectType":"Products","contentType":"Products","coverageContentTypes":["Reviews","Questions"],"submissionContentTypes":["Answers","Comments"],"type":"contentSearch","features":{"self":["searchBar","searchContentList","trustmarkIcon","has:stars","has:overallRating","has:reviewCount","statsPanel"],"searchContentList":["contentItemCollection","ugcCount","searchBar","pagination"],"contentItem":{"contentTypes":{"Reviews":{"features":["has:stars","has:secondaryContentLink","avatar","secondaryContentList","has:secondaryContentBtn"]},"Questions":{"features":["avatar","secondaryContentList","has:secondaryContentBtn","has:secondaryContentLink"]}}},"secondaryContentList":["secondaryContentItemCollection"],"secondaryContentItem":{"contentTypes":{"Comments":{"features":["avatar"]},"Answers":{"features":["feedback","crowdSourcedAnswerBadge"]}}},"avatar":{"contentTypes":{"Reviews":{"features":["has:socialAvatar"]},"Questions":{"features":["has:socialAvatar"]}}}},"outlets":{"showmediaviewer":[{"component":"mediaViewer1","event":"open"}],"showfullprofile":[{"component":"fullProfilePopup1","event":"launchprofile"}],"filtercontent":[{"component":"contentSearch1","event":"filtercontent"}],"showreviews":[{"component":"reviewContentList1","event":"scrolltocontent","scope":"rr","fallback":"doShowContent"}],"scrolltocontent":[{"component":"reviewContentList1","event":"scrolltocontent"}],"filterresults":[{"component":"reviewContentList1","event":"filterresults"}],"showsubmission":[{"component":"questionSubmission2_inline","scope":"qa","action":"submit_question"}],"showanswersubmission":[{"component":"answerSubmission1_inline","scope":"qa","action":"submit_answer"}],"showquestions":[{"component":"questionContentList1","event":"scrolltocontent","scope":"qa","fallback":"doShowContent"}],"showcommentsubmission":[{"component":"commentSubmission2","scope":"rr","action":"submit_comment"}]},"componentId":"contentSearch1","autoload":true,"viewUniq":0,"views":{}},"contentSearch2":{"serverRender":true,"container":"BVQASearchContainer","subjectType":"Products","contentType":"Products","coverageContentTypes":["Reviews","Questions"],"submissionContentTypes":["Answers","Comments"],"type":"contentSearch","features":{"self":["searchBar","searchContentList","has:stars","has:overallRating","has:reviewCount","statsPanel"],"searchContentList":["contentItemCollection","ugcCount","searchBar","pagination"],"contentItem":{"contentTypes":{"Reviews":{"features":["has:stars","has:secondaryContentLink","avatar","secondaryContentList","has:secondaryContentBtn"]},"Questions":{"features":["avatar","secondaryContentList","has:secondaryContentBtn","has:secondaryContentLink"]}}},"secondaryContentList":["secondaryContentItemCollection"],"secondaryContentItem":{"contentTypes":{"Comments":{"features":["avatar"]},"Answers":{"features":["feedback","crowdSourcedAnswerBadge"]}}},"avatar":{"contentTypes":{"Reviews":{"features":["has:socialAvatar"]},"Questions":{"features":["has:socialAvatar"]}}}},"outlets":{"showmediaviewer":[{"component":"mediaViewer1","event":"open"}],"showfullprofile":[{"component":"fullProfilePopup1","event":"launchprofile"}],"filtercontent":[{"component":"contentSearch2","event":"filtercontent"}],"showreviews":[{"component":"reviewContentList1","event":"scrolltocontent","scope":"rr","fallback":"doShowContent"}],"scrolltocontent":[{"component":"reviewContentList1","event":"scrolltocontent"}],"filterresults":[{"component":"reviewContentList1","event":"filterresults"}],"showsubmission":[{"component":"questionSubmission2_inline","scope":"qa","action":"submit_question"}],"showanswersubmission":[{"component":"answerSubmission1_inline","scope":"qa","action":"submit_answer"}],"showquestions":[{"component":"questionContentList1","event":"scrolltocontent","scope":"qa","fallback":"doShowContent"}],"showcommentsubmission":[{"component":"commentSubmission2","scope":"rr","action":"submit_comment"}]},"componentId":"contentSearch2","autoload":true,"viewUniq":0,"views":{}},"reviewSummary1":{"serverRender":true,"container":"BVRRSummaryContainer","subjectType":"Products","contentType":"Products","coverageContentTypes":["Reviews","Questions"],"type":"summary","features":{"self":["has:stars","has:overallRating","has:aggregateRatingTag","histogram","has:writeReviews","has:askQuestions","has:minimalistHorizontal","has:minimalist"],"histogram":["has:filterButton"]},"outlets":{"showreviewsubmission":[{"component":"reviewSubmission1","scope":"rr","action":"submit_review"}],"showreviews":[{"component":"reviewContentList1","event":"scrolltocontent","scope":"rr","fallback":"doShowContent"}],"filtercontent":[{"component":"reviewContentList1","event":"filtercontent"}],"showquestions":[{"component":"questionContentList1","event":"scrolltocontent","scope":"qa","fallback":"doShowContent"}],"showquestionsubmission":[{"component":"questionSubmission1","scope":"qa","action":"submit_question"}]},"componentId":"reviewSummary1","autoload":true,"priority":true,"viewUniq":0,"views":{}},"reviewContentList1":{"subjectType":"Products","type":"contentList","features":{"self":["contentItemCollection","contentFilter","ugcCount","has:contentSort","has:writeReviews","headToHead","inlineHistogram","secondaryRatingSummary","loadMore"],"pagination":["ugcCount"],"contentItem":["has:stars","has:secondaryRatings","has:reviewPhotos","has:reviewVideos","has:tags","has:prosCons","has:userBadges","has:contentBadges","secondaryContentList","has:secondaryContentBtn","has:recommended","inlineProfile","has:fullProfileLink","has:reviewAttribution","has:productFamiliesAttribution"],"secondaryContentList":["secondaryContentItemCollection<ClientResponses>","secondaryContentItemCollection<Comments>","has:inlineSubmission","loadMore"],"secondaryContentItem":["has:userBadges","has:socialAvatar"],"contentFilter":["has:filterButton"],"inlineProfile":["has:socialAvatar","has:fullProfileLink"]},"outlets":{"showmediaviewer":[{"component":"mediaViewer1","event":"open"}],"showfullprofile":[{"component":"fullProfilePopup1","event":"launchprofile"}],"showsubmission":[{"component":"reviewSubmission1","scope":"rr","action":"submit_review"}],"filterresults":[{"component":"reviewContentList1","event":"filterresults"}],"filtercontent":[{"component":"reviewContentList1","event":"filtercontent"}],"linkSort":[{"component":"reviewContentSort1","event":"setupsort"}],"showhelpfulpositive":[{"component":"reviewContentList1","event":"showhelpfulpositive"}],"showhelpfulcritical":[{"component":"reviewContentList1","event":"showhelpfulcritical"}],"showreviews":[{"component":"reviewContentList1","event":"scrolltocontent"}],"showcommentsubmission":[{"component":"commentSubmission1_inline","scope":"rr","action":"submit_comment"}]},"serverRender":true,"container":"BVRRContainer","contentType":"Reviews","secondaryContentType":"Comments","pageview":{"bvProduct":"RatingsAndReviews"},"monitorVisibility":true,"componentId":"reviewContentList1","autoload":true,"viewUniq":0,"views":{}},"reviewSubmission1":{"type":"submission","preload":true,"inline":false,"features":{"self":["thankYouPage","dropdownable","has:submissionPreview"],"thankYouPage":["has:mbox"]},"outlets":{"previewcontent":[{"component":"reviewContentList1","event":"previewcontent"}]},"container":"BVRRContainer","subjectType":"Products","contentType":"Reviews","pageview":{"bvProduct":"RatingsAndReviews"},"componentId":"reviewSubmission1","viewUniq":0,"views":{}},"reviewContentSort1":{"serverRender":true,"subjectType":"Products","type":"contentSort","sortDefault":"mostRecent","sortTypes":["mostHelpful","positive","featured","mostRecent"],"features":{"self":[]},"outlets":{"setupme":[{"component":"reviewContentList1","event":"setupcontentsort"}],"sortcontent":[{"component":"reviewContentList1","event":"sortcontent"}]},"container":"BVRRContainer","contentType":"Reviews","componentId":"reviewContentSort1","viewUniq":0,"views":{}},"questionContentList1":{"subjectType":"Products","type":"contentList","features":{"self":["contentItemCollection","ugcCount","has:contentSort","has:askQuestions","has:inlineSubmission","loadMore"],"pagination":["ugcCount"],"contentItem":["secondaryContentList","has:secondaryContentLink","has:secondarySubmission","has:secondaryContentBtn","has:fullProfileLink","has:reviewAttribution","has:productFamiliesAttribution"],"secondaryContentList":["secondaryContentItemCollection"],"secondaryContentItem":["feedback","crowdSourcedAnswerBadge"]},"outlets":{"showmediaviewer":[{"component":"mediaViewer1","event":"open"}],"showfullprofile":[{"component":"fullProfilePopup1","event":"launchprofile"}],"linkSort":[{"component":"questionContentSort1","event":"setupsort"}],"showsubmission":[{"component":"questionSubmission1","scope":"qa","action":"submit_question"}],"showanswersubmission":[{"component":"answerSubmission1_inline","scope":"qa","action":"submit_answer"}]},"serverRender":true,"container":"BVQAContainer","contentType":"Questions","secondaryContentType":"Answers","pageview":{"bvProduct":"AskAndAnswer"},"monitorVisibility":true,"componentId":"questionContentList1","autoload":true,"viewUniq":0,"views":{}},"questionSubmission1":{"type":"submission","preload":false,"inline":true,"features":{"self":["thankYouPage","has:submissionPreview"],"thankYouPage":["has:mbox"]},"outlets":{"previewcontent":[{"component":"questionContentList1","event":"previewcontent"}],"showanswersubmission":[{"component":"answerSubmission1_inline","scope":"qa","action":"submit_answer"}]},"container":"BVQAContainer","subjectType":"Products","contentType":"Questions","pageview":{"bvProduct":"AskAndAnswer"},"componentId":"questionSubmission1","viewUniq":0,"views":{}},"questionContentSort1":{"serverRender":true,"subjectType":"Products","type":"contentSort","sortDefault":"recentQuestionsFirst","sortTypes":["recentQuestionsFirst","recentAnswersFirst","mostAnsweredQuestionsFirst","mostAnsweredQuestionsLast","answersWithAffiliationStaffFirst","helpfulnessAnswersLast"],"features":{"self":[]},"outlets":{"setupme":[{"component":"questionContentList1","event":"setupcontentsort"}],"sortcontent":[{"component":"questionContentList1","event":"sortcontent"}]},"container":"BVQAContainer","contentType":"Questions","componentId":"questionContentSort1","viewUniq":0,"views":{}},"answerSubmission1_inline":{"type":"submission","preload":false,"inline":false,"features":{"self":["thankYouPage","has:submissionPreview"],"thankYouPage":["has:mbox"]},"outlets":{"previewsecondarycontent":[{"component":"questionContentList1","event":"previewsecondarycontent"}]},"container":"BVQAContainer","subjectType":"Products","contentType":"Answers","componentId":"answerSubmission1_inline","viewUniq":0,"views":{}},"questionSubmission2_inline":{"type":"submission","preload":false,"inline":true,"features":{"self":["has:submissionPreview"],"thankYouPage":[]},"outlets":{"previewcontent":[{"component":"questionContentList1","event":"previewcontent"}]},"container":"BVContainer","subjectType":"Products","contentType":"Questions","pageview":{"bvProduct":"AskAndAnswer"},"componentId":"questionSubmission2_inline","viewUniq":0,"views":{}},"commentSubmission1_inline":{"type":"submission","preload":false,"inline":false,"features":{"self":["has:submissionPreview"],"thankYouPage":[]},"outlets":{"previewsecondarycontent":[{"component":"reviewContentList1","event":"previewsecondarycontent"}]},"container":"BVRRContainer","subjectType":"Products","contentType":"Comments","componentId":"commentSubmission1_inline","viewUniq":0,"views":{}},"commentSubmission2":{"type":"submission","preload":false,"inline":false,"features":{"self":["thankYouPage"],"thankYouPage":["has:mbox"]},"outlets":{},"container":"BVRRContainer","subjectType":"Products","contentType":"Comments","componentId":"commentSubmission2","viewUniq":0,"views":{}}});
 
 BV.define('framework/util/featureHelper',[
   'underscore'
@@ -18942,7 +18942,7 @@ BV.define('util/lookup',['underscore'], function (_) {
   };
 
 });
-BV.define('dimsumFields!',[], {"rating":{"CustomerService":{"displayLabel":"Customer Service","submissionFormLabel":"Customer Service","filterable":false,"possibleValues":[],"autoPopulate":false,"type":"RATING","required":false,"allowUserCreated":false,"disabledPossibleValues":[],"hideDisplay":false,"name":{"$schema":"http://config.bazaarvoice.com/api/schemas/Configuration/LocalizedText/1.0.1","defaultValue":"Customer Service"},"id":"CustomerService","subjectIDRequired":false,"hideOnSubmission":false},"TestSlider":{"displayLabel":"Test Slider","sliderDimension2Label":"Test Slider Right","submissionFormLabel":"Test Slider","filterable":false,"possibleValues":[{"displayLabel":"Test Slider1","id":"valueLabel1"},{"displayLabel":"Test Slider2","id":"valueLabel2"},{"displayLabel":"Test Slider3","id":"valueLabel3"},{"displayLabel":"Test Slider4","id":"valueLabel4"},{"displayLabel":"Test Slider5","id":"valueLabel5"}],"autoPopulate":false,"sliderSize":5,"type":"SLIDER","required":false,"allowUserCreated":false,"disabledPossibleValues":[],"hideDisplay":false,"name":{"$schema":"http://config.bazaarvoice.com/api/schemas/Configuration/LocalizedText/1.0.1","defaultValue":"Test Slider"},"sliderDimension1Label":"Test Slider Left","id":"TestSlider","subjectIDRequired":false,"hideOnSubmission":false},"Slider7":{"displayLabel":"Slider 7","sliderDimension2Label":"test","submissionFormLabel":"Slider 7","filterable":false,"possibleValues":[{"displayLabel":"1","id":"valueLabel1"},{"displayLabel":"2","id":"valueLabel2"},{"displayLabel":"3","id":"valueLabel3"},{"displayLabel":"4","id":"valueLabel4"},{"displayLabel":"5","id":"valueLabel5"},{"displayLabel":"6","id":"valueLabel6"},{"displayLabel":"7","id":"valueLabel7"}],"autoPopulate":false,"sliderSize":7,"type":"SLIDER","required":false,"allowUserCreated":false,"disabledPossibleValues":[],"hideDisplay":true,"name":{"$schema":"http://config.bazaarvoice.com/api/schemas/Configuration/LocalizedText/1.0.1","defaultValue":"Slider 7"},"sliderDimension1Label":"Cool","id":"Slider7","subjectIDRequired":false,"hideOnSubmission":false},"anotherTestSlider3":{"displayLabel":"another test slider 3","sliderDimension2Label":"three","submissionFormLabel":"another test slider 3","filterable":false,"possibleValues":[{"displayLabel":"1","id":"valueLabel1"},{"displayLabel":"2","id":"valueLabel2"},{"displayLabel":"3","id":"valueLabel3"}],"autoPopulate":false,"sliderSize":3,"type":"SLIDER","required":false,"allowUserCreated":false,"disabledPossibleValues":[],"hideDisplay":false,"name":{"$schema":"http://config.bazaarvoice.com/api/schemas/Configuration/LocalizedText/1.0.1","defaultValue":"another test slider 3"},"sliderDimension1Label":"one","id":"anotherTestSlider3","subjectIDRequired":false,"hideOnSubmission":false}},"contextdatavalue":{"TestDropdown":{"displayLabel":"Test Dropdown","submissionFormLabel":"Test Dropdown","filterable":false,"possibleValues":[{"displayLabel":"Test Dropdown","id":"TestDropdown"},{"displayLabel":"Test Dropdown 2","id":"TestDropdown2"}],"autoPopulate":false,"type":"CHOICE","required":false,"allowUserCreated":false,"disabledPossibleValues":[],"hideDisplay":false,"name":{"$schema":"http://config.bazaarvoice.com/api/schemas/Configuration/LocalizedText/1.0.1","defaultValue":"Test Dropdown"},"id":"TestDropdown","subjectIDRequired":false,"hideOnSubmission":false}},"additionalfield":{"TestText":{"displayLabel":"Test Text","submissionFormLabel":"Test Text","filterable":false,"possibleValues":[],"autoPopulate":false,"type":"TEXT","required":false,"allowUserCreated":false,"answerLength":"SHORT_LINE","disabledPossibleValues":[],"hideDisplay":false,"name":{"$schema":"http://config.bazaarvoice.com/api/schemas/Configuration/LocalizedText/1.0.1","defaultValue":"Test Text"},"id":"TestText","subjectIDRequired":false,"hideOnSubmission":false}},"tag":{"BestUsesTelecom":{"displayLabel":"Best Uses - Telecom","submissionFormLabel":"Best Uses","filterable":false,"possibleValues":[{"displayLabel":"Everyday Use","id":"EverydayUse"},{"displayLabel":"Home Use","id":"HomeUse"},{"displayLabel":"Office Use","id":"OfficeUse"},{"displayLabel":"Outdoors","id":"Outdoors"}],"autoPopulate":false,"type":"MULTICHOICE_TAGGROUP","required":false,"allowUserCreated":false,"disabledPossibleValues":[],"hideDisplay":false,"name":{"$schema":"http://config.bazaarvoice.com/api/schemas/Configuration/LocalizedText/1.0.1","defaultValue":"Best Uses - Telecom"},"id":"BestUsesTelecom","subjectIDRequired":false,"hideOnSubmission":false}}});
+BV.define('dimsumFields!',[], {"rating":{"CustomerService":{"displayLabel":"Customer Service","submissionFormLabel":"Customer Service","filterable":false,"possibleValues":[],"autoPopulate":false,"type":"RATING","required":true,"allowUserCreated":false,"disabledPossibleValues":[],"hideDisplay":false,"name":{"$schema":"http://config.bazaarvoice.com/api/schemas/Configuration/LocalizedText/1.0.1","defaultValue":"Customer Service"},"id":"CustomerService","subjectIDRequired":false,"hideOnSubmission":false},"TestSlider":{"displayLabel":"Test Slider","sliderDimension2Label":"Test Slider Right","submissionFormLabel":"Test Slider","filterable":false,"possibleValues":[{"displayLabel":"Test Slider1","id":"valueLabel1"},{"displayLabel":"Test Slider2","id":"valueLabel2"},{"displayLabel":"Test Slider3","id":"valueLabel3"},{"displayLabel":"Test Slider4","id":"valueLabel4"},{"displayLabel":"Test Slider5","id":"valueLabel5"}],"autoPopulate":false,"sliderSize":5,"type":"SLIDER","required":true,"allowUserCreated":false,"disabledPossibleValues":[],"hideDisplay":false,"name":{"$schema":"http://config.bazaarvoice.com/api/schemas/Configuration/LocalizedText/1.0.1","defaultValue":"Test Slider"},"sliderDimension1Label":"Test Slider Left","id":"TestSlider","subjectIDRequired":false,"hideOnSubmission":false},"Slider7":{"displayLabel":"Slider 7","sliderDimension2Label":"test","submissionFormLabel":"Slider 7","filterable":false,"possibleValues":[{"displayLabel":"1","id":"valueLabel1"},{"displayLabel":"2","id":"valueLabel2"},{"displayLabel":"3","id":"valueLabel3"},{"displayLabel":"4","id":"valueLabel4"},{"displayLabel":"5","id":"valueLabel5"},{"displayLabel":"6","id":"valueLabel6"},{"displayLabel":"7","id":"valueLabel7"}],"autoPopulate":false,"sliderSize":7,"type":"SLIDER","required":false,"allowUserCreated":false,"disabledPossibleValues":[],"hideDisplay":true,"name":{"$schema":"http://config.bazaarvoice.com/api/schemas/Configuration/LocalizedText/1.0.1","defaultValue":"Slider 7"},"sliderDimension1Label":"Cool","id":"Slider7","subjectIDRequired":false,"hideOnSubmission":false},"anotherTestSlider3":{"displayLabel":"another test slider 3","sliderDimension2Label":"three","submissionFormLabel":"another test slider 3","filterable":false,"possibleValues":[{"displayLabel":"1","id":"valueLabel1"},{"displayLabel":"2","id":"valueLabel2"},{"displayLabel":"3","id":"valueLabel3"}],"autoPopulate":false,"sliderSize":3,"type":"SLIDER","required":false,"allowUserCreated":false,"disabledPossibleValues":[],"hideDisplay":false,"name":{"$schema":"http://config.bazaarvoice.com/api/schemas/Configuration/LocalizedText/1.0.1","defaultValue":"another test slider 3"},"sliderDimension1Label":"one","id":"anotherTestSlider3","subjectIDRequired":false,"hideOnSubmission":false}},"contextdatavalue":{"TestDropdown":{"displayLabel":"Test Dropdown","submissionFormLabel":"Test Dropdown","filterable":false,"possibleValues":[{"displayLabel":"Test Dropdown","id":"TestDropdown"},{"displayLabel":"Test Dropdown 2","id":"TestDropdown2"}],"autoPopulate":false,"type":"CHOICE","required":true,"allowUserCreated":false,"disabledPossibleValues":[],"hideDisplay":false,"name":{"$schema":"http://config.bazaarvoice.com/api/schemas/Configuration/LocalizedText/1.0.1","defaultValue":"Test Dropdown"},"id":"TestDropdown","subjectIDRequired":false,"hideOnSubmission":false}},"additionalfield":{"TestText":{"displayLabel":"Test Text","submissionFormLabel":"Test Text","filterable":false,"possibleValues":[],"autoPopulate":false,"type":"TEXT","required":false,"allowUserCreated":false,"answerLength":"SHORT_LINE","disabledPossibleValues":[],"hideDisplay":false,"name":{"$schema":"http://config.bazaarvoice.com/api/schemas/Configuration/LocalizedText/1.0.1","defaultValue":"Test Text"},"id":"TestText","subjectIDRequired":false,"hideOnSubmission":false}},"tag":{"BestUsesTelecom":{"displayLabel":"Best Uses - Telecom","submissionFormLabel":"Best Uses","filterable":false,"possibleValues":[{"displayLabel":"Everyday Use","id":"EverydayUse"},{"displayLabel":"Home Use","id":"HomeUse"},{"displayLabel":"Office Use","id":"OfficeUse"},{"displayLabel":"Outdoors","id":"Outdoors"}],"autoPopulate":false,"type":"MULTICHOICE_TAGGROUP","required":false,"allowUserCreated":false,"disabledPossibleValues":[],"hideDisplay":false,"name":{"$schema":"http://config.bazaarvoice.com/api/schemas/Configuration/LocalizedText/1.0.1","defaultValue":"Best Uses - Telecom"},"id":"BestUsesTelecom","subjectIDRequired":false,"hideOnSubmission":false}}});
 
 /**
  * Provides a simple lookup of Firebird config field information
@@ -19076,7 +19076,7 @@ BV.define('bv/util/configFieldInfo',[
   return new ConfigFieldReader(dimsumFields);
 });
 
-BV.define('dimsumFields!fields',[], {"rating":{"CustomerService":{"displayLabel":"Customer Service","submissionFormLabel":"Customer Service","filterable":false,"possibleValues":[],"autoPopulate":false,"type":"RATING","required":false,"allowUserCreated":false,"disabledPossibleValues":[],"hideDisplay":false,"name":{"$schema":"http://config.bazaarvoice.com/api/schemas/Configuration/LocalizedText/1.0.1","defaultValue":"Customer Service"},"id":"CustomerService","subjectIDRequired":false,"hideOnSubmission":false},"TestSlider":{"displayLabel":"Test Slider","sliderDimension2Label":"Test Slider Right","submissionFormLabel":"Test Slider","filterable":false,"possibleValues":[{"displayLabel":"Test Slider1","id":"valueLabel1"},{"displayLabel":"Test Slider2","id":"valueLabel2"},{"displayLabel":"Test Slider3","id":"valueLabel3"},{"displayLabel":"Test Slider4","id":"valueLabel4"},{"displayLabel":"Test Slider5","id":"valueLabel5"}],"autoPopulate":false,"sliderSize":5,"type":"SLIDER","required":false,"allowUserCreated":false,"disabledPossibleValues":[],"hideDisplay":false,"name":{"$schema":"http://config.bazaarvoice.com/api/schemas/Configuration/LocalizedText/1.0.1","defaultValue":"Test Slider"},"sliderDimension1Label":"Test Slider Left","id":"TestSlider","subjectIDRequired":false,"hideOnSubmission":false},"Slider7":{"displayLabel":"Slider 7","sliderDimension2Label":"test","submissionFormLabel":"Slider 7","filterable":false,"possibleValues":[{"displayLabel":"1","id":"valueLabel1"},{"displayLabel":"2","id":"valueLabel2"},{"displayLabel":"3","id":"valueLabel3"},{"displayLabel":"4","id":"valueLabel4"},{"displayLabel":"5","id":"valueLabel5"},{"displayLabel":"6","id":"valueLabel6"},{"displayLabel":"7","id":"valueLabel7"}],"autoPopulate":false,"sliderSize":7,"type":"SLIDER","required":false,"allowUserCreated":false,"disabledPossibleValues":[],"hideDisplay":true,"name":{"$schema":"http://config.bazaarvoice.com/api/schemas/Configuration/LocalizedText/1.0.1","defaultValue":"Slider 7"},"sliderDimension1Label":"Cool","id":"Slider7","subjectIDRequired":false,"hideOnSubmission":false},"anotherTestSlider3":{"displayLabel":"another test slider 3","sliderDimension2Label":"three","submissionFormLabel":"another test slider 3","filterable":false,"possibleValues":[{"displayLabel":"1","id":"valueLabel1"},{"displayLabel":"2","id":"valueLabel2"},{"displayLabel":"3","id":"valueLabel3"}],"autoPopulate":false,"sliderSize":3,"type":"SLIDER","required":false,"allowUserCreated":false,"disabledPossibleValues":[],"hideDisplay":false,"name":{"$schema":"http://config.bazaarvoice.com/api/schemas/Configuration/LocalizedText/1.0.1","defaultValue":"another test slider 3"},"sliderDimension1Label":"one","id":"anotherTestSlider3","subjectIDRequired":false,"hideOnSubmission":false}},"contextdatavalue":{"TestDropdown":{"displayLabel":"Test Dropdown","submissionFormLabel":"Test Dropdown","filterable":false,"possibleValues":[{"displayLabel":"Test Dropdown","id":"TestDropdown"},{"displayLabel":"Test Dropdown 2","id":"TestDropdown2"}],"autoPopulate":false,"type":"CHOICE","required":false,"allowUserCreated":false,"disabledPossibleValues":[],"hideDisplay":false,"name":{"$schema":"http://config.bazaarvoice.com/api/schemas/Configuration/LocalizedText/1.0.1","defaultValue":"Test Dropdown"},"id":"TestDropdown","subjectIDRequired":false,"hideOnSubmission":false}},"additionalfield":{"TestText":{"displayLabel":"Test Text","submissionFormLabel":"Test Text","filterable":false,"possibleValues":[],"autoPopulate":false,"type":"TEXT","required":false,"allowUserCreated":false,"answerLength":"SHORT_LINE","disabledPossibleValues":[],"hideDisplay":false,"name":{"$schema":"http://config.bazaarvoice.com/api/schemas/Configuration/LocalizedText/1.0.1","defaultValue":"Test Text"},"id":"TestText","subjectIDRequired":false,"hideOnSubmission":false}},"tag":{"BestUsesTelecom":{"displayLabel":"Best Uses - Telecom","submissionFormLabel":"Best Uses","filterable":false,"possibleValues":[{"displayLabel":"Everyday Use","id":"EverydayUse"},{"displayLabel":"Home Use","id":"HomeUse"},{"displayLabel":"Office Use","id":"OfficeUse"},{"displayLabel":"Outdoors","id":"Outdoors"}],"autoPopulate":false,"type":"MULTICHOICE_TAGGROUP","required":false,"allowUserCreated":false,"disabledPossibleValues":[],"hideDisplay":false,"name":{"$schema":"http://config.bazaarvoice.com/api/schemas/Configuration/LocalizedText/1.0.1","defaultValue":"Best Uses - Telecom"},"id":"BestUsesTelecom","subjectIDRequired":false,"hideOnSubmission":false}}});
+BV.define('dimsumFields!fields',[], {"rating":{"CustomerService":{"displayLabel":"Customer Service","submissionFormLabel":"Customer Service","filterable":false,"possibleValues":[],"autoPopulate":false,"type":"RATING","required":true,"allowUserCreated":false,"disabledPossibleValues":[],"hideDisplay":false,"name":{"$schema":"http://config.bazaarvoice.com/api/schemas/Configuration/LocalizedText/1.0.1","defaultValue":"Customer Service"},"id":"CustomerService","subjectIDRequired":false,"hideOnSubmission":false},"TestSlider":{"displayLabel":"Test Slider","sliderDimension2Label":"Test Slider Right","submissionFormLabel":"Test Slider","filterable":false,"possibleValues":[{"displayLabel":"Test Slider1","id":"valueLabel1"},{"displayLabel":"Test Slider2","id":"valueLabel2"},{"displayLabel":"Test Slider3","id":"valueLabel3"},{"displayLabel":"Test Slider4","id":"valueLabel4"},{"displayLabel":"Test Slider5","id":"valueLabel5"}],"autoPopulate":false,"sliderSize":5,"type":"SLIDER","required":true,"allowUserCreated":false,"disabledPossibleValues":[],"hideDisplay":false,"name":{"$schema":"http://config.bazaarvoice.com/api/schemas/Configuration/LocalizedText/1.0.1","defaultValue":"Test Slider"},"sliderDimension1Label":"Test Slider Left","id":"TestSlider","subjectIDRequired":false,"hideOnSubmission":false},"Slider7":{"displayLabel":"Slider 7","sliderDimension2Label":"test","submissionFormLabel":"Slider 7","filterable":false,"possibleValues":[{"displayLabel":"1","id":"valueLabel1"},{"displayLabel":"2","id":"valueLabel2"},{"displayLabel":"3","id":"valueLabel3"},{"displayLabel":"4","id":"valueLabel4"},{"displayLabel":"5","id":"valueLabel5"},{"displayLabel":"6","id":"valueLabel6"},{"displayLabel":"7","id":"valueLabel7"}],"autoPopulate":false,"sliderSize":7,"type":"SLIDER","required":false,"allowUserCreated":false,"disabledPossibleValues":[],"hideDisplay":true,"name":{"$schema":"http://config.bazaarvoice.com/api/schemas/Configuration/LocalizedText/1.0.1","defaultValue":"Slider 7"},"sliderDimension1Label":"Cool","id":"Slider7","subjectIDRequired":false,"hideOnSubmission":false},"anotherTestSlider3":{"displayLabel":"another test slider 3","sliderDimension2Label":"three","submissionFormLabel":"another test slider 3","filterable":false,"possibleValues":[{"displayLabel":"1","id":"valueLabel1"},{"displayLabel":"2","id":"valueLabel2"},{"displayLabel":"3","id":"valueLabel3"}],"autoPopulate":false,"sliderSize":3,"type":"SLIDER","required":false,"allowUserCreated":false,"disabledPossibleValues":[],"hideDisplay":false,"name":{"$schema":"http://config.bazaarvoice.com/api/schemas/Configuration/LocalizedText/1.0.1","defaultValue":"another test slider 3"},"sliderDimension1Label":"one","id":"anotherTestSlider3","subjectIDRequired":false,"hideOnSubmission":false}},"contextdatavalue":{"TestDropdown":{"displayLabel":"Test Dropdown","submissionFormLabel":"Test Dropdown","filterable":false,"possibleValues":[{"displayLabel":"Test Dropdown","id":"TestDropdown"},{"displayLabel":"Test Dropdown 2","id":"TestDropdown2"}],"autoPopulate":false,"type":"CHOICE","required":true,"allowUserCreated":false,"disabledPossibleValues":[],"hideDisplay":false,"name":{"$schema":"http://config.bazaarvoice.com/api/schemas/Configuration/LocalizedText/1.0.1","defaultValue":"Test Dropdown"},"id":"TestDropdown","subjectIDRequired":false,"hideOnSubmission":false}},"additionalfield":{"TestText":{"displayLabel":"Test Text","submissionFormLabel":"Test Text","filterable":false,"possibleValues":[],"autoPopulate":false,"type":"TEXT","required":false,"allowUserCreated":false,"answerLength":"SHORT_LINE","disabledPossibleValues":[],"hideDisplay":false,"name":{"$schema":"http://config.bazaarvoice.com/api/schemas/Configuration/LocalizedText/1.0.1","defaultValue":"Test Text"},"id":"TestText","subjectIDRequired":false,"hideOnSubmission":false}},"tag":{"BestUsesTelecom":{"displayLabel":"Best Uses - Telecom","submissionFormLabel":"Best Uses","filterable":false,"possibleValues":[{"displayLabel":"Everyday Use","id":"EverydayUse"},{"displayLabel":"Home Use","id":"HomeUse"},{"displayLabel":"Office Use","id":"OfficeUse"},{"displayLabel":"Outdoors","id":"Outdoors"}],"autoPopulate":false,"type":"MULTICHOICE_TAGGROUP","required":false,"allowUserCreated":false,"disabledPossibleValues":[],"hideDisplay":false,"name":{"$schema":"http://config.bazaarvoice.com/api/schemas/Configuration/LocalizedText/1.0.1","defaultValue":"Best Uses - Telecom"},"id":"BestUsesTelecom","subjectIDRequired":false,"hideOnSubmission":false}}});
 
 BV.define('dimsumFields!fieldCategories',[], {"fieldCategoryMap":{"tag_BestUsesTelecom":"product","tag_BestUsesEntertainment":"product","tag_BestUsesPharmacyHealth":"product","tag_ProsTravel":"product","additionalfield_OrderNumber":"product","tag_ProsMusic":"product","tag_ConsB2BElectronics":"product","tag_ProsPets":"product","tag_ProsGames":"product","tag_ConsTravel":"product","contextdatavalue_Clothingfit":"product","contextdatavalue_LengthOfOwnership":"product","tag_ProsSoftware":"product","contextdatavalue_TravelPurpose_89":"product","tag_ProsSportingGoods":"product","contextdatavalue_TravelPurpose":"product","contextdatavalue_SoftwarePrimaryUse":"product","tag_BestUsesBooks":"product","tag_ConsOfficeSupplies":"product","tag_ConsCooking":"product","tag_ProsTelecom":"product","tag_ProsApparel":"product","tag_ConsGames":"product","tag_ConsTelecom":"product","tag_ConsBeauty":"product","tag_BestUsesApparel":"product","tag_ProsHomeGoods":"product","tag_blank_49":"product","tag_ProsBooks":"product","tag_ProsFinancialServices":"product","tag_BestUsesPets":"product","tag_ConsBooks":"product","tag_BestUsesTravel":"product","tag_BestUsesOfficeSupplies":"product","tag_BestUsesGames":"product","contextdatavalue_IncentivizedReview":"product","tag_BestUsesMusic":"product","contextdatavalue_ReadReviews":"product","tag_Con":"product","contextdatavalue_RunningSurface":"product","tag_BestUsesFood":"product","tag_ConsSoftware":"product","contextdatavalue_Appearance":"product","tag_ProsB2BElectronics":"product","tag_ProsBeauty":"product","tag_ProsPharmacyHealth":"product","tag_ConsMusic":"product","tag_ConsDVDs":"product","tag_ConsFlowersGifts":"product","contextdatavalue_Numberofpets":"product","tag_BestUsesBeauty":"product","tag_BestUsesFlowersGifts":"product","tag_ProsDVDs":"product","tag_ConsApparel":"product","contextdatavalue_UsageFrequency_1":"product","tag_Pro":"product","tag_ProsEducation":"product","tag_BestUsesEducation":"product","tag_BestUsesCleaningSuppliesCPG":"product","tag_ConsHomeGoods":"product","tag_ProsEntertainment":"product","tag_ConsToysHobbies":"product","tag_ConsFood":"product","tag_ConsBoringEducation":"product","tag_ProsOfficeSupplies":"product","tag_ProsCleaningSuppliesCPG":"product","tag_BestUsesSoftware":"product","contextdatavalue_ComputerPrimaryUse":"product","tag_ConsFinancialServices":"product","tag_BestUsesSportingGoods":"product","tag_ConsConsumerElectronics":"product","tag_BestUsesToysHobbies":"product","tag_BestUsesDVDs":"product","contextdatavalue_UsageFrequency_19":"product","tag_ConsEntertainment":"product","tag_ProsFood":"product","tag_blank":"product","contextdatavalue_HouseholdSize":"product","contextdatavalue_UsageFrequency":"product","contextdatavalue_WhereDidYouPurchase":"product","tag_ProsCooking":"product","contextdatavalue_NumberOfChildren":"product","tag_ConsCleaningSuppliesCPG":"product","contextdatavalue_FavoriteComicGenre":"product","tag_ConsPets":"product","tag_ConsPharmacyHealth":"product","tag_ProsToysHobbies":"product","tag_ProsConsumerElectronics":"product","tag_ProsFlowersGifts":"product","tag_BestUsesHomeGoods":"product","tag_ConsSportingGoods":"product","contextdatavalue_TvPrimaryUse":"product","tag_BestUsesConsumerElectronics":"product","tag_BestUsesCooking":"product","tag_BestUsesB2BElectronics":"product","contextdatavalue_UsageFrequency1":"product","contextdatavalue_DomainExpertise":"product","contextdatavalue_blank_1":"product","rating_CustomerService":"ratings","rating_Transportation":"ratings","rating_PictureQuality":"ratings","rating_EaseOfSetup":"ratings","rating_EaseOfUse":"ratings","rating_Design":"ratings","rating_SoundQuality1":"ratings","rating_Quality":"ratings","rating_Features":"ratings","rating_Width":"ratings","rating_Cleanliness":"ratings","rating_Effectiveness":"ratings","rating_Appearance1":"ratings","rating_SoundQuality":"ratings","rating_FoodQuality":"ratings","rating_TestSlider":"ratings","rating_EaseOfAssembly":"ratings","rating_Fit":"ratings","rating_Slider7":"ratings","rating_anotherTestSlider3":"ratings","rating_BatteryLife":"ratings","rating_Comfort":"ratings","rating_Value":"ratings","rating_Ambience":"ratings","rating_Reliability":"ratings","rating_Performance":"ratings","rating_Amenities":"ratings","rating_Fit_22":"ratings","contextdatavalue_FavoriteBookGenre":"people","additionalfield_TestText":"people","contextdatavalue_EducationalRole":"people","contextdatavalue_FavoriteMovieGenre":"people","contextdatavalue_BodyType":"people","contextdatavalue_HomeGoodsProfile":"people","contextdatavalue_Gender":"people","contextdatavalue_FashionStyle":"people","contextdatavalue_FavoriteMusicGenre":"people","contextdatavalue_Levelofexpertise":"people","contextdatavalue_HairType":"people","contextdatavalue_EyeColor":"people","contextdatavalue_DecorStyle":"people","contextdatavalue_TravelCompanions":"people","contextdatavalue_LineOfBusiness":"people","contextdatavalue_Skintype":"people","contextdatavalue_FavoriteComicGenre1":"people","contextdatavalue_TestDropdown":"people","contextdatavalue_Age":"people","contextdatavalue_HairCondition":"people","contextdatavalue_Trimester":"people"},"fieldCategoryOrder":["baseReviewQuestions","basicUserInfo","people","ratings","product","netPromoterScore","hiddenPeopleQuestions","hiddenProductQuestions"]});
 
@@ -22172,7 +22172,7 @@ BV.define('hbs!contentList',['hbs','vendor/handlebars/runtime','hbs!prsTotalCoun
 var t = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [2,'>= 1.0.0-rc.3'];
 helpers = helpers || Handlebars.helpers; partials = partials || Handlebars.partials;
-  var buffer = "", stack1, stack2, options, functionType="function", escapeExpression=this.escapeExpression, self=this, helperMissing=helpers.helperMissing;
+  var buffer = "", stack1, stack2, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, self=this, functionType="function";
 
 function program1(depth0,data,depth1) {
   
@@ -22191,22 +22191,22 @@ function program1(depth0,data,depth1) {
   stack2 = self.invokePartial(partials.actionBar, 'actionBar', depth0, helpers, partials);
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += " ";
-  options = {hash:{},inverse:self.noop,fn:self.program(9, program9, data)};
+  options = {hash:{},inverse:self.noop,fn:self.program(6, program6, data)};
   stack2 = ((stack1 = helpers.equals),stack1 ? stack1.call(depth0, ((stack1 = ((stack1 = depth0.Product),stack1 == null || stack1 === false ? stack1 : stack1.PrimaryContent)),stack1 == null || stack1 === false ? stack1 : stack1.Type), "review", options) : helperMissing.call(depth0, "equals", ((stack1 = ((stack1 = depth0.Product),stack1 == null || stack1 === false ? stack1 : stack1.PrimaryContent)),stack1 == null || stack1 === false ? stack1 : stack1.Type), "review", options));
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += " ";
   options = {hash:{
     'tag': ("div"),
     'classList': ("section-summary")
-  },inverse:self.noop,fn:self.program(11, program11, data)};
+  },inverse:self.noop,fn:self.program(8, program8, data)};
   stack2 = ((stack1 = helpers.conditionalContainer),stack1 ? stack1.call(depth0, depth0, options) : helperMissing.call(depth0, "conditionalContainer", depth0, options));
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += " ";
-  options = {hash:{},inverse:self.noop,fn:self.program(16, program16, data)};
+  options = {hash:{},inverse:self.noop,fn:self.program(13, program13, data)};
   stack2 = ((stack1 = helpers.compare),stack1 ? stack1.call(depth0, ((stack1 = ((stack1 = depth0.Product),stack1 == null || stack1 === false ? stack1 : stack1.PrimaryContent)),stack1 == null || stack1 === false ? stack1 : stack1.LocalResults), "gt", 1, options) : helperMissing.call(depth0, "compare", ((stack1 = ((stack1 = depth0.Product),stack1 == null || stack1 === false ? stack1 : stack1.PrimaryContent)),stack1 == null || stack1 === false ? stack1 : stack1.LocalResults), "gt", 1, options));
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += " </div> ";
-  options = {hash:{},inverse:self.noop,fn:self.program(23, program23, data)};
+  options = {hash:{},inverse:self.noop,fn:self.program(20, program20, data)};
   stack2 = ((stack1 = helpers.equals),stack1 ? stack1.call(depth0, ((stack1 = ((stack1 = depth0.Product),stack1 == null || stack1 === false ? stack1 : stack1.PrimaryContent)),stack1 == null || stack1 === false ? stack1 : stack1.TotalResults), 0, options) : helperMissing.call(depth0, "equals", ((stack1 = ((stack1 = depth0.Product),stack1 == null || stack1 === false ? stack1 : stack1.PrimaryContent)),stack1 == null || stack1 === false ? stack1 : stack1.TotalResults), 0, options));
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += " ";
@@ -22216,7 +22216,7 @@ function program1(depth0,data,depth1) {
   options = {hash:{}};
   buffer += escapeExpression(((stack1 = helpers.subviews),stack1 ? stack1.call(depth0, depth0, options) : helperMissing.call(depth0, "subviews", depth0, options)))
     + " ";
-  options = {hash:{},inverse:self.noop,fn:self.program(9, program9, data)};
+  options = {hash:{},inverse:self.noop,fn:self.program(6, program6, data)};
   stack2 = ((stack1 = helpers.ifHasFeature),stack1 ? stack1.call(depth0, "inlineSubmission", options) : helperMissing.call(depth0, "ifHasFeature", "inlineSubmission", options));
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += " </div> </div> ";
@@ -22239,10 +22239,7 @@ function program3(depth0,data) {
   
   var buffer = "", stack1, stack2;
   buffer += " <div class=\"bv-stars-container\" itemprop=\"aggregateRating\" itemscope itemtype=\"http://schema.org/AggregateRating\"> ";
-  stack2 = helpers['if'].call(depth0, ((stack1 = depth0.Product),stack1 == null || stack1 === false ? stack1 : stack1.Reviews), {hash:{},inverse:self.noop,fn:self.program(4, program4, data)});
-  if(stack2 || stack2 === 0) { buffer += stack2; }
-  buffer += " ";
-  stack2 = helpers['if'].call(depth0, ((stack1 = ((stack1 = ((stack1 = depth0.Product),stack1 == null || stack1 === false ? stack1 : stack1.Reviews)),stack1 == null || stack1 === false ? stack1 : stack1.Statistics)),stack1 == null || stack1 === false ? stack1 : stack1.AverageOverallRating), {hash:{},inverse:self.noop,fn:self.program(7, program7, data)});
+  stack2 = helpers['if'].call(depth0, ((stack1 = ((stack1 = ((stack1 = depth0.Product),stack1 == null || stack1 === false ? stack1 : stack1.Reviews)),stack1 == null || stack1 === false ? stack1 : stack1.Statistics)),stack1 == null || stack1 === false ? stack1 : stack1.AverageOverallRating), {hash:{},inverse:self.noop,fn:self.program(4, program4, data)});
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += " <div class=\"bv-rating-ratio-count\"> ";
   stack2 = self.invokePartial(partials.prsTotalCountAggregate, 'prsTotalCountAggregate', depth0, helpers, partials);
@@ -22252,24 +22249,6 @@ function program3(depth0,data) {
   }
 function program4(depth0,data) {
   
-  var buffer = "", stack1, stack2;
-  buffer += " ";
-  stack2 = helpers['if'].call(depth0, ((stack1 = depth0.Product),stack1 == null || stack1 === false ? stack1 : stack1.Name), {hash:{},inverse:self.noop,fn:self.program(5, program5, data)});
-  if(stack2 || stack2 === 0) { buffer += stack2; }
-  buffer += " ";
-  return buffer;
-  }
-function program5(depth0,data) {
-  
-  var buffer = "", stack1;
-  buffer += "<meta itemprop=\"itemReviewed\" content=\""
-    + escapeExpression(((stack1 = ((stack1 = depth0.Product),stack1 == null || stack1 === false ? stack1 : stack1.Name)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\"/>";
-  return buffer;
-  }
-
-function program7(depth0,data) {
-  
   var buffer = "", stack1, options;
   buffer += " <meta itemprop=\"ratingValue\" content=\"";
   options = {hash:{}};
@@ -22278,7 +22257,7 @@ function program7(depth0,data) {
   return buffer;
   }
 
-function program9(depth0,data) {
+function program6(depth0,data) {
   
   var buffer = "", stack1;
   buffer += " ";
@@ -22288,7 +22267,7 @@ function program9(depth0,data) {
   return buffer;
   }
 
-function program11(depth0,data) {
+function program8(depth0,data) {
   
   var buffer = "", stack1, stack2, options;
   buffer += " ";
@@ -22296,20 +22275,20 @@ function program11(depth0,data) {
     'tag': ("div"),
     'classList': ("section-summary-table table-full-width"),
     'role': ("presentation")
-  },inverse:self.noop,fn:self.program(12, program12, data)};
+  },inverse:self.noop,fn:self.program(9, program9, data)};
   stack2 = ((stack1 = helpers.conditionalContainer),stack1 ? stack1.call(depth0, depth0, options) : helperMissing.call(depth0, "conditionalContainer", depth0, options));
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += " ";
   return buffer;
   }
-function program12(depth0,data) {
+function program9(depth0,data) {
   
   var buffer = "", stack1, stack2, options;
   buffer += " ";
   options = {hash:{
     'tag': ("div"),
     'classList': ("section-summary-inline flex-container-responsive")
-  },inverse:self.noop,fn:self.program(13, program13, data)};
+  },inverse:self.noop,fn:self.program(10, program10, data)};
   stack2 = ((stack1 = helpers.conditionalContainer),stack1 ? stack1.call(depth0, depth0, options) : helperMissing.call(depth0, "conditionalContainer", depth0, options));
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += " ";
@@ -22323,16 +22302,16 @@ function program12(depth0,data) {
   buffer += " ";
   return buffer;
   }
-function program13(depth0,data) {
+function program10(depth0,data) {
   
   var buffer = "", stack1, stack2;
   buffer += " ";
-  stack2 = helpers['if'].call(depth0, ((stack1 = depth0.Product),stack1 == null || stack1 === false ? stack1 : stack1.TotalReviewCount), {hash:{},inverse:self.noop,fn:self.program(14, program14, data)});
+  stack2 = helpers['if'].call(depth0, ((stack1 = depth0.Product),stack1 == null || stack1 === false ? stack1 : stack1.TotalReviewCount), {hash:{},inverse:self.noop,fn:self.program(11, program11, data)});
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += " ";
   return buffer;
   }
-function program14(depth0,data) {
+function program11(depth0,data) {
   
   var buffer = "", stack1, stack2, options;
   buffer += " ";
@@ -22347,11 +22326,11 @@ function program14(depth0,data) {
   return buffer;
   }
 
-function program16(depth0,data) {
+function program13(depth0,data) {
   
   var buffer = "", stack1, stack2, options;
   buffer += " <div class=\"bv-control-bar";
-  options = {hash:{},inverse:self.noop,fn:self.program(17, program17, data)};
+  options = {hash:{},inverse:self.noop,fn:self.program(14, program14, data)};
   stack2 = ((stack1 = helpers.ifHasSubview),stack1 ? stack1.call(depth0, "contentFilterButton", options) : helperMissing.call(depth0, "ifHasSubview", "contentFilterButton", options));
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += "\"> ";
@@ -22359,11 +22338,11 @@ function program16(depth0,data) {
   stack2 = ((stack1 = helpers.mountView),stack1 ? stack1.call(depth0, "ugcCount", depth0, options) : helperMissing.call(depth0, "mountView", "ugcCount", depth0, options));
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += " ";
-  options = {hash:{},inverse:self.noop,fn:self.program(19, program19, data)};
+  options = {hash:{},inverse:self.noop,fn:self.program(16, program16, data)};
   stack2 = ((stack1 = helpers.ifHasFeature),stack1 ? stack1.call(depth0, "relevancyLink", options) : helperMissing.call(depth0, "ifHasFeature", "relevancyLink", options));
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += " ";
-  options = {hash:{},inverse:self.noop,fn:self.program(21, program21, data)};
+  options = {hash:{},inverse:self.noop,fn:self.program(18, program18, data)};
   stack2 = ((stack1 = helpers.ifHasFeature),stack1 ? stack1.call(depth0, "contentSort", options) : helperMissing.call(depth0, "ifHasFeature", "contentSort", options));
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += " ";
@@ -22372,13 +22351,13 @@ function program16(depth0,data) {
     + " </div> ";
   return buffer;
   }
-function program17(depth0,data) {
+function program14(depth0,data) {
   
   
   return " bv-control-bar-filter-offset";
   }
 
-function program19(depth0,data) {
+function program16(depth0,data) {
   
   var buffer = "", stack1, options;
   buffer += " ";
@@ -22388,7 +22367,7 @@ function program19(depth0,data) {
   return buffer;
   }
 
-function program21(depth0,data) {
+function program18(depth0,data) {
   
   var buffer = "", stack1, stack2, options;
   buffer += " ";
@@ -22399,7 +22378,7 @@ function program21(depth0,data) {
   return buffer;
   }
 
-function program23(depth0,data) {
+function program20(depth0,data) {
   
   var buffer = "", stack1;
   buffer += " ";
@@ -22881,15 +22860,16 @@ function (ENV, BView, $, _, template, msgPackCommon, viewport, window, $BV, BV, 
         // in cases where `showContent` below runs synchronously
         setTimeout(function () {
           var $viewEl = $(self.viewEl);
-          var $contentFilter = $viewEl.find('.bv-content-filter.bv-filter-controls-visible').eq(0);
-          var $firstFocusable = $viewEl.find('.bv-active-filter-button.bv-focusable:not(.bv-hidden), .bv-content-list .bv-content-item .bv-focusable:first').eq(0);
-          
-          // If filter select activeted, don't move focus.
-          if ($contentFilter.length) {
-            return;
+          var $firstFilterButton = $viewEl.find('.bv-active-filters:not(.bv-hidden) .bv-active-filters-list-item:not(.bv-hidden) .bv-active-filter-button:first').eq(0);
+          var $firstFocusable;
+
+          if ($firstFilterButton.length) {
+            $firstFocusable = $firstFilterButton;
           }
-          
-          // Move focus to first interactive element
+          else {
+            $firstFocusable = $viewEl.find('.bv-content-pagination-pages-current.bv-focusable').eq(0);
+          }
+
           if ($firstFocusable.length) {
             FocusManager.moveFocus($firstFocusable);
           }
@@ -28906,11 +28886,11 @@ return t;
 /* END_TEMPLATE */
 ;
 /* START_TEMPLATE */
-BV.define('hbs!contentItem',['hbs','vendor/handlebars/runtime','hbs!contentAvatar', 'hbs!content', 'hbs!previewMessage', 'hbs!contentActions', 'hbs!inlineFormContainer', 'template/helpers/view', 'template/helpers/extmsg', 'template/helpers/renderIcon', 'template/helpers/mountView', 'template/helpers/equals', 'template/helpers/withIf', 'template/helpers/ifHasFeature', 'template/helpers/subviews'], function(hbs, Handlebars){ 
+BV.define('hbs!contentItem',['hbs','vendor/handlebars/runtime','hbs!contentAvatar', 'hbs!content', 'hbs!previewMessage', 'hbs!contentActions', 'hbs!inlineFormContainer', 'template/helpers/view', 'template/helpers/extmsg', 'template/helpers/renderIcon', 'template/helpers/mountView', 'template/helpers/ifHasFeature', 'template/helpers/withIf', 'template/helpers/equals', 'template/helpers/subviews'], function(hbs, Handlebars){ 
 var t = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [2,'>= 1.0.0-rc.3'];
 helpers = helpers || Handlebars.helpers; partials = partials || Handlebars.partials;
-  var buffer = "", stack1, stack2, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, self=this, functionType="function";
+  var buffer = "", stack1, stack2, options, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, self=this;
 
 function program1(depth0,data) {
   
@@ -28923,11 +28903,7 @@ function program1(depth0,data) {
   stack2 = ((stack1 = helpers.mountView),stack1 ? stack1.call(depth0, "inlineProfile", depth0, options) : helperMissing.call(depth0, "mountView", "inlineProfile", depth0, options));
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += " ";
-  options = {hash:{},inverse:self.noop,fn:self.program(5, program5, data)};
-  stack2 = ((stack1 = helpers.equals),stack1 ? stack1.call(depth0, depth0.Type, "review", options) : helperMissing.call(depth0, "equals", depth0.Type, "review", options));
-  if(stack2 || stack2 === 0) { buffer += stack2; }
-  buffer += " ";
-  options = {hash:{},inverse:self.program(16, program16, data),fn:self.program(9, program9, data)};
+  options = {hash:{},inverse:self.program(12, program12, data),fn:self.program(5, program5, data)};
   stack2 = ((stack1 = helpers.ifHasFeature),stack1 ? stack1.call(depth0, "productImage", options) : helperMissing.call(depth0, "ifHasFeature", "productImage", options));
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += " ";
@@ -28940,14 +28916,14 @@ function program1(depth0,data) {
   stack2 = self.invokePartial(partials.contentActions, 'contentActions', depth0, helpers, partials);
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += " ";
-  options = {hash:{},inverse:self.noop,fn:self.program(18, program18, data)};
+  options = {hash:{},inverse:self.noop,fn:self.program(14, program14, data)};
   stack2 = ((stack1 = helpers.equals),stack1 ? stack1.call(depth0, depth0.secondaryContentType, "Comments", options) : helperMissing.call(depth0, "equals", depth0.secondaryContentType, "Comments", options));
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += " ";
   options = {hash:{}};
   buffer += escapeExpression(((stack1 = helpers.subviews),stack1 ? stack1.call(depth0, depth0, options) : helperMissing.call(depth0, "subviews", depth0, options)))
     + " ";
-  options = {hash:{},inverse:self.noop,fn:self.program(20, program20, data)};
+  options = {hash:{},inverse:self.noop,fn:self.program(16, program16, data)};
   stack2 = ((stack1 = helpers.ifHasFeature),stack1 ? stack1.call(depth0, "inlineSubmission", options) : helperMissing.call(depth0, "ifHasFeature", "inlineSubmission", options));
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += " </div> ";
@@ -28978,7 +28954,7 @@ function program5(depth0,data) {
   
   var buffer = "", stack1, stack2, options;
   buffer += " ";
-  options = {hash:{},inverse:self.noop,fn:self.program(6, program6, data)};
+  options = {hash:{},inverse:self.program(10, program10, data),fn:self.program(6, program6, data)};
   stack2 = ((stack1 = helpers.withIf),stack1 ? stack1.call(depth0, depth0.Reference, options) : helperMissing.call(depth0, "withIf", depth0.Reference, options));
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += " ";
@@ -28988,63 +28964,33 @@ function program6(depth0,data) {
   
   var buffer = "", stack1;
   buffer += " ";
-  stack1 = helpers['if'].call(depth0, depth0.Name, {hash:{},inverse:self.noop,fn:self.program(7, program7, data)});
+  stack1 = helpers['if'].call(depth0, depth0.ImageUrl, {hash:{},inverse:self.program(9, program9, data),fn:self.program(7, program7, data)});
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += " ";
   return buffer;
   }
 function program7(depth0,data) {
   
-  var buffer = "", stack1;
-  buffer += "<meta itemprop=\"itemReviewed\" content=\"";
-  if (stack1 = helpers.Name) { stack1 = stack1.call(depth0, {hash:{}}); }
-  else { stack1 = depth0.Name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
-  buffer += escapeExpression(stack1)
-    + "\"/>";
-  return buffer;
+  
+  return " <div class=\"bv-content-item-product-image-offset bv-content-item-product-image-offset-on\"> ";
   }
 
 function program9(depth0,data) {
   
-  var buffer = "", stack1, stack2, options;
+  var buffer = "", stack1, stack2;
   buffer += " ";
-  options = {hash:{},inverse:self.program(14, program14, data),fn:self.program(10, program10, data)};
-  stack2 = ((stack1 = helpers.withIf),stack1 ? stack1.call(depth0, depth0.Reference, options) : helperMissing.call(depth0, "withIf", depth0.Reference, options));
+  stack2 = helpers['if'].call(depth0, ((stack1 = depth0.Product),stack1 == null || stack1 === false ? stack1 : stack1.ImageUrl), {hash:{},inverse:self.program(10, program10, data),fn:self.program(7, program7, data)});
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += " ";
   return buffer;
   }
 function program10(depth0,data) {
   
-  var buffer = "", stack1;
-  buffer += " ";
-  stack1 = helpers['if'].call(depth0, depth0.ImageUrl, {hash:{},inverse:self.program(13, program13, data),fn:self.program(11, program11, data)});
-  if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += " ";
-  return buffer;
-  }
-function program11(depth0,data) {
-  
-  
-  return " <div class=\"bv-content-item-product-image-offset bv-content-item-product-image-offset-on\"> ";
-  }
-
-function program13(depth0,data) {
-  
-  var buffer = "", stack1, stack2;
-  buffer += " ";
-  stack2 = helpers['if'].call(depth0, ((stack1 = depth0.Product),stack1 == null || stack1 === false ? stack1 : stack1.ImageUrl), {hash:{},inverse:self.program(14, program14, data),fn:self.program(11, program11, data)});
-  if(stack2 || stack2 === 0) { buffer += stack2; }
-  buffer += " ";
-  return buffer;
-  }
-function program14(depth0,data) {
-  
   
   return " <div class=\"bv-content-item-product-image-offset-off\"> ";
   }
 
-function program16(depth0,data) {
+function program12(depth0,data) {
   
   var buffer = "", stack1;
   buffer += " ";
@@ -29054,7 +29000,7 @@ function program16(depth0,data) {
   return buffer;
   }
 
-function program18(depth0,data) {
+function program14(depth0,data) {
   
   var buffer = "", stack1;
   buffer += " ";
@@ -29064,7 +29010,7 @@ function program18(depth0,data) {
   return buffer;
   }
 
-function program20(depth0,data) {
+function program16(depth0,data) {
   
   
   return " <div class=\"bv-secondary-submission\"> <div class=\"bv-submission bv-fake-submission bv-fake-inline\"> </div> </div> ";
@@ -31292,7 +31238,7 @@ function program10(depth0,data) {
   return buffer;
   }
 
-  buffer += "<div class=\"bv-content-pagination-pages-current\"> ";
+  buffer += "<div class=\"bv-content-pagination-pages-current bv-focusable\" tabindex=\"-1\"> ";
   options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data)};
   stack2 = ((stack1 = helpers.compare),stack1 ? stack1.call(depth0, depth0.total, "gt", 1, options) : helperMissing.call(depth0, "compare", depth0.total, "gt", 1, options));
   if(stack2 || stack2 === 0) { buffer += stack2; }
@@ -44713,25 +44659,25 @@ BV.define('hbs!categoryStars',['hbs','vendor/handlebars/runtime','hbs!prsStars',
 var t = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [2,'>= 1.0.0-rc.3'];
 helpers = helpers || Handlebars.helpers; partials = partials || Handlebars.partials;
-  var buffer = "", stack1, stack2, functionType="function", escapeExpression=this.escapeExpression, self=this, helperMissing=helpers.helperMissing;
+  var buffer = "", stack1, stack2, self=this, helperMissing=helpers.helperMissing, functionType="function", escapeExpression=this.escapeExpression;
 
 function program1(depth0,data) {
   
   var buffer = "", stack1, stack2, options;
   buffer += " ";
-  options = {hash:{},inverse:self.program(7, program7, data),fn:self.programWithDepth(program2, data, depth0)};
+  options = {hash:{},inverse:self.program(6, program6, data),fn:self.programWithDepth(program2, data, depth0)};
   stack2 = ((stack1 = helpers.ifHasFeature),stack1 ? stack1.call(depth0, "aggregateRatingTag", options) : helperMissing.call(depth0, "ifHasFeature", "aggregateRatingTag", options));
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += " ";
-  options = {hash:{},inverse:self.noop,fn:self.program(9, program9, data)};
+  options = {hash:{},inverse:self.noop,fn:self.program(8, program8, data)};
   stack2 = ((stack1 = helpers.ifHasFeature),stack1 ? stack1.call(depth0, "stars", depth0, options) : helperMissing.call(depth0, "ifHasFeature", "stars", depth0, options));
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += " ";
-  options = {hash:{},inverse:self.noop,fn:self.program(19, program19, data)};
+  options = {hash:{},inverse:self.noop,fn:self.program(18, program18, data)};
   stack2 = ((stack1 = helpers.ifHasFeature),stack1 ? stack1.call(depth0, "overallRating", depth0, options) : helperMissing.call(depth0, "ifHasFeature", "overallRating", depth0, options));
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += " ";
-  options = {hash:{},inverse:self.noop,fn:self.program(22, program22, data)};
+  options = {hash:{},inverse:self.noop,fn:self.program(21, program21, data)};
   stack2 = ((stack1 = helpers.ifHasFeature),stack1 ? stack1.call(depth0, "reviewCount", depth0, options) : helperMissing.call(depth0, "ifHasFeature", "reviewCount", depth0, options));
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += " </dl> ";
@@ -44741,7 +44687,7 @@ function program2(depth0,data,depth1) {
   
   var buffer = "", stack1, stack2, options;
   buffer += " ";
-  options = {hash:{},inverse:self.program(7, program7, data),fn:self.program(3, program3, data)};
+  options = {hash:{},inverse:self.program(6, program6, data),fn:self.program(3, program3, data)};
   stack2 = ((stack1 = helpers.notEqual),stack1 ? stack1.call(depth0, ((stack1 = ((stack1 = depth1.Product),stack1 == null || stack1 === false ? stack1 : stack1.PrimaryContent)),stack1 == null || stack1 === false ? stack1 : stack1.TotalResults), 0, options) : helperMissing.call(depth0, "notEqual", ((stack1 = ((stack1 = depth1.Product),stack1 == null || stack1 === false ? stack1 : stack1.PrimaryContent)),stack1 == null || stack1 === false ? stack1 : stack1.TotalResults), 0, options));
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += " ";
@@ -44758,53 +44704,41 @@ function program3(depth0,data) {
   }
 function program4(depth0,data) {
   
-  var buffer = "", stack1, stack2;
-  buffer += " ";
-  stack2 = helpers['if'].call(depth0, ((stack1 = depth0.Product),stack1 == null || stack1 === false ? stack1 : stack1.Name), {hash:{},inverse:self.noop,fn:self.program(5, program5, data)});
-  if(stack2 || stack2 === 0) { buffer += stack2; }
-  buffer += " ";
-  return buffer;
-  }
-function program5(depth0,data) {
   
-  var buffer = "", stack1;
-  buffer += "<meta itemprop=\"itemReviewed\" content=\""
-    + escapeExpression(((stack1 = ((stack1 = depth0.Product),stack1 == null || stack1 === false ? stack1 : stack1.Name)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\"/>";
-  return buffer;
+  return " ";
   }
 
-function program7(depth0,data) {
+function program6(depth0,data) {
   
   
   return " <dl class=\"bv-stars-container\"> ";
   }
 
-function program9(depth0,data) {
+function program8(depth0,data) {
   
   var buffer = "", stack1, stack2;
   buffer += " ";
-  stack2 = helpers['if'].call(depth0, ((stack1 = ((stack1 = depth0.Product),stack1 == null || stack1 === false ? stack1 : stack1.Reviews)),stack1 == null || stack1 === false ? stack1 : stack1.Statistics), {hash:{},inverse:self.noop,fn:self.program(10, program10, data)});
+  stack2 = helpers['if'].call(depth0, ((stack1 = ((stack1 = depth0.Product),stack1 == null || stack1 === false ? stack1 : stack1.Reviews)),stack1 == null || stack1 === false ? stack1 : stack1.Statistics), {hash:{},inverse:self.noop,fn:self.program(9, program9, data)});
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += " ";
   return buffer;
   }
-function program10(depth0,data) {
+function program9(depth0,data) {
   
   var buffer = "", stack1, stack2;
   buffer += " <dt class=\"bv-rating-ratio\"> ";
-  stack2 = helpers['if'].call(depth0, ((stack1 = depth0.Product),stack1 == null || stack1 === false ? stack1 : stack1._Url), {hash:{},inverse:self.program(13, program13, data),fn:self.program(11, program11, data)});
+  stack2 = helpers['if'].call(depth0, ((stack1 = depth0.Product),stack1 == null || stack1 === false ? stack1 : stack1._Url), {hash:{},inverse:self.program(12, program12, data),fn:self.program(10, program10, data)});
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += " ";
   stack2 = self.invokePartial(partials.prsStars, 'prsStars', depth0, helpers, partials);
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += " ";
-  stack2 = helpers['if'].call(depth0, ((stack1 = depth0.Product),stack1 == null || stack1 === false ? stack1 : stack1._Url), {hash:{},inverse:self.program(17, program17, data),fn:self.program(15, program15, data)});
+  stack2 = helpers['if'].call(depth0, ((stack1 = depth0.Product),stack1 == null || stack1 === false ? stack1 : stack1._Url), {hash:{},inverse:self.program(16, program16, data),fn:self.program(14, program14, data)});
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += " </dd> ";
   return buffer;
   }
-function program11(depth0,data) {
+function program10(depth0,data) {
   
   var buffer = "", stack1;
   buffer += " <a href=\""
@@ -44813,34 +44747,34 @@ function program11(depth0,data) {
   return buffer;
   }
 
-function program13(depth0,data) {
+function program12(depth0,data) {
   
   
   return " <span class=\"bv-rating-stars-container\"> ";
   }
 
-function program15(depth0,data) {
+function program14(depth0,data) {
   
   
   return " </a> ";
   }
 
-function program17(depth0,data) {
+function program16(depth0,data) {
   
   
   return " </span> ";
   }
 
-function program19(depth0,data) {
+function program18(depth0,data) {
   
   var buffer = "", stack1, stack2;
   buffer += " ";
-  stack2 = helpers['if'].call(depth0, ((stack1 = ((stack1 = ((stack1 = depth0.Product),stack1 == null || stack1 === false ? stack1 : stack1.Reviews)),stack1 == null || stack1 === false ? stack1 : stack1.Statistics)),stack1 == null || stack1 === false ? stack1 : stack1.AverageOverallRating), {hash:{},inverse:self.noop,fn:self.program(20, program20, data)});
+  stack2 = helpers['if'].call(depth0, ((stack1 = ((stack1 = ((stack1 = depth0.Product),stack1 == null || stack1 === false ? stack1 : stack1.Reviews)),stack1 == null || stack1 === false ? stack1 : stack1.Statistics)),stack1 == null || stack1 === false ? stack1 : stack1.AverageOverallRating), {hash:{},inverse:self.noop,fn:self.program(19, program19, data)});
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += " ";
   return buffer;
   }
-function program20(depth0,data) {
+function program19(depth0,data) {
   
   var buffer = "", stack1;
   buffer += " <dd class=\"bv-rating-ratio-number\"> ";
@@ -44850,16 +44784,16 @@ function program20(depth0,data) {
   return buffer;
   }
 
-function program22(depth0,data) {
+function program21(depth0,data) {
   
   var buffer = "", stack1, stack2;
   buffer += " ";
-  stack2 = helpers['if'].call(depth0, ((stack1 = ((stack1 = depth0.Product),stack1 == null || stack1 === false ? stack1 : stack1.Reviews)),stack1 == null || stack1 === false ? stack1 : stack1.Statistics), {hash:{},inverse:self.noop,fn:self.program(23, program23, data)});
+  stack2 = helpers['if'].call(depth0, ((stack1 = ((stack1 = depth0.Product),stack1 == null || stack1 === false ? stack1 : stack1.Reviews)),stack1 == null || stack1 === false ? stack1 : stack1.Statistics), {hash:{},inverse:self.noop,fn:self.program(22, program22, data)});
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += " ";
   return buffer;
   }
-function program23(depth0,data) {
+function program22(depth0,data) {
   
   var buffer = "", stack1;
   buffer += " <dd class=\"bv-rating-ratio-count\"> ";
@@ -45300,24 +45234,24 @@ BV.define('hbs!stars',['hbs','vendor/handlebars/runtime','hbs!prsStars', 'hbs!pr
 var t = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [2,'>= 1.0.0-rc.3'];
 helpers = helpers || Handlebars.helpers; partials = partials || Handlebars.partials;
-  var buffer = "", stack1, stack2, functionType="function", escapeExpression=this.escapeExpression, self=this, helperMissing=helpers.helperMissing;
+  var buffer = "", stack1, stack2, self=this, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
 
 function program1(depth0,data) {
   
   var buffer = "", stack1, stack2, options;
   buffer += " ";
-  options = {hash:{},inverse:self.program(7, program7, data),fn:self.programWithDepth(program2, data, depth0)};
+  options = {hash:{},inverse:self.program(6, program6, data),fn:self.programWithDepth(program2, data, depth0)};
   stack2 = ((stack1 = helpers.ifHasFeature),stack1 ? stack1.call(depth0, "aggregateRatingTag", options) : helperMissing.call(depth0, "ifHasFeature", "aggregateRatingTag", options));
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += " ";
-  options = {hash:{},inverse:self.noop,fn:self.programWithDepth(program9, data, depth0)};
+  options = {hash:{},inverse:self.noop,fn:self.programWithDepth(program8, data, depth0)};
   stack2 = ((stack1 = helpers.ifHasFeature),stack1 ? stack1.call(depth0, "stars", depth0, options) : helperMissing.call(depth0, "ifHasFeature", "stars", depth0, options));
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += " ";
-  stack2 = helpers['if'].call(depth0, ((stack1 = ((stack1 = ((stack1 = depth0.Product),stack1 == null || stack1 === false ? stack1 : stack1.Reviews)),stack1 == null || stack1 === false ? stack1 : stack1.Statistics)),stack1 == null || stack1 === false ? stack1 : stack1.AverageOverallRating), {hash:{},inverse:self.noop,fn:self.program(18, program18, data)});
+  stack2 = helpers['if'].call(depth0, ((stack1 = ((stack1 = ((stack1 = depth0.Product),stack1 == null || stack1 === false ? stack1 : stack1.Reviews)),stack1 == null || stack1 === false ? stack1 : stack1.Statistics)),stack1 == null || stack1 === false ? stack1 : stack1.AverageOverallRating), {hash:{},inverse:self.noop,fn:self.program(17, program17, data)});
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += " ";
-  options = {hash:{},inverse:self.program(27, program27, data),fn:self.program(20, program20, data)};
+  options = {hash:{},inverse:self.program(26, program26, data),fn:self.program(19, program19, data)};
   stack2 = ((stack1 = helpers.unlessHasFeature),stack1 ? stack1.call(depth0, "minimalist", options) : helperMissing.call(depth0, "unlessHasFeature", "minimalist", options));
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += " </dl> ";
@@ -45327,7 +45261,7 @@ function program2(depth0,data,depth1) {
   
   var buffer = "", stack1, stack2, options;
   buffer += " ";
-  options = {hash:{},inverse:self.program(7, program7, data),fn:self.program(3, program3, data)};
+  options = {hash:{},inverse:self.program(6, program6, data),fn:self.program(3, program3, data)};
   stack2 = ((stack1 = helpers.notEqual),stack1 ? stack1.call(depth0, ((stack1 = ((stack1 = depth1.Product),stack1 == null || stack1 === false ? stack1 : stack1.PrimaryContent)),stack1 == null || stack1 === false ? stack1 : stack1.TotalResults), 0, options) : helperMissing.call(depth0, "notEqual", ((stack1 = ((stack1 = depth1.Product),stack1 == null || stack1 === false ? stack1 : stack1.PrimaryContent)),stack1 == null || stack1 === false ? stack1 : stack1.TotalResults), 0, options));
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += " ";
@@ -45344,52 +45278,40 @@ function program3(depth0,data) {
   }
 function program4(depth0,data) {
   
-  var buffer = "", stack1, stack2;
-  buffer += " ";
-  stack2 = helpers['if'].call(depth0, ((stack1 = depth0.Product),stack1 == null || stack1 === false ? stack1 : stack1.Name), {hash:{},inverse:self.noop,fn:self.program(5, program5, data)});
-  if(stack2 || stack2 === 0) { buffer += stack2; }
-  buffer += " ";
-  return buffer;
-  }
-function program5(depth0,data) {
   
-  var buffer = "", stack1;
-  buffer += "<meta itemprop=\"itemReviewed\" content=\""
-    + escapeExpression(((stack1 = ((stack1 = depth0.Product),stack1 == null || stack1 === false ? stack1 : stack1.Name)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\"/>";
-  return buffer;
+  return " ";
   }
 
-function program7(depth0,data) {
+function program6(depth0,data) {
   
   
   return " <dl class=\"bv-stars-container\"> ";
   }
 
-function program9(depth0,data,depth1) {
+function program8(depth0,data,depth1) {
   
   var buffer = "", stack1, stack2, options;
   buffer += " <dt class=\"bv-rating-ratio\"> ";
-  options = {hash:{},inverse:self.program(12, program12, data),fn:self.program(10, program10, data)};
+  options = {hash:{},inverse:self.program(11, program11, data),fn:self.program(9, program9, data)};
   stack2 = ((stack1 = helpers.equals),stack1 ? stack1.call(depth0, depth0.readOnly, true, options) : helperMissing.call(depth0, "equals", depth0.readOnly, true, options));
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += " ";
   stack2 = self.invokePartial(partials.prsStars, 'prsStars', depth1, helpers, partials);
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += " ";
-  options = {hash:{},inverse:self.program(16, program16, data),fn:self.program(14, program14, data)};
+  options = {hash:{},inverse:self.program(15, program15, data),fn:self.program(13, program13, data)};
   stack2 = ((stack1 = helpers.equals),stack1 ? stack1.call(depth0, depth0.readOnly, true, options) : helperMissing.call(depth0, "equals", depth0.readOnly, true, options));
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += " </dt> ";
   return buffer;
   }
-function program10(depth0,data) {
+function program9(depth0,data) {
   
   
   return " <span class=\"bv-rating-stars-container bv-rating-none bv-focusable\" aria-readonly=\"true\"> ";
   }
 
-function program12(depth0,data) {
+function program11(depth0,data) {
   
   var buffer = "", stack1, options;
   buffer += " <a href=\"#\" class=\"bv-rating-stars-container bv-focusable\" title=\"";
@@ -45399,19 +45321,19 @@ function program12(depth0,data) {
   return buffer;
   }
 
-function program14(depth0,data) {
+function program13(depth0,data) {
   
   
   return " </span> ";
   }
 
-function program16(depth0,data) {
+function program15(depth0,data) {
   
   
   return " </a> ";
   }
 
-function program18(depth0,data) {
+function program17(depth0,data) {
   
   var buffer = "", stack1;
   buffer += " <dd class=\"bv-rating-ratio-number\"> ";
@@ -45421,36 +45343,36 @@ function program18(depth0,data) {
   return buffer;
   }
 
-function program20(depth0,data) {
+function program19(depth0,data) {
   
   var buffer = "", stack1, stack2, options;
   buffer += " ";
-  options = {hash:{},inverse:self.noop,fn:self.program(21, program21, data)};
+  options = {hash:{},inverse:self.noop,fn:self.program(20, program20, data)};
   stack2 = ((stack1 = helpers.ifHasFeature),stack1 ? stack1.call(depth0, "reviewCount", depth0, options) : helperMissing.call(depth0, "ifHasFeature", "reviewCount", depth0, options));
+  if(stack2 || stack2 === 0) { buffer += stack2; }
+  buffer += " ";
+  return buffer;
+  }
+function program20(depth0,data) {
+  
+  var buffer = "", stack1, stack2;
+  buffer += " ";
+  stack2 = helpers['if'].call(depth0, ((stack1 = ((stack1 = ((stack1 = depth0.Product),stack1 == null || stack1 === false ? stack1 : stack1.Reviews)),stack1 == null || stack1 === false ? stack1 : stack1.Statistics)),stack1 == null || stack1 === false ? stack1 : stack1.TotalCount), {hash:{},inverse:self.noop,fn:self.program(21, program21, data)});
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += " ";
   return buffer;
   }
 function program21(depth0,data) {
   
-  var buffer = "", stack1, stack2;
-  buffer += " ";
-  stack2 = helpers['if'].call(depth0, ((stack1 = ((stack1 = ((stack1 = depth0.Product),stack1 == null || stack1 === false ? stack1 : stack1.Reviews)),stack1 == null || stack1 === false ? stack1 : stack1.Statistics)),stack1 == null || stack1 === false ? stack1 : stack1.TotalCount), {hash:{},inverse:self.noop,fn:self.program(22, program22, data)});
-  if(stack2 || stack2 === 0) { buffer += stack2; }
-  buffer += " ";
-  return buffer;
-  }
-function program22(depth0,data) {
-  
   var buffer = "", stack1, stack2, options;
   buffer += " <dd class=\"bv-rating-ratio-count\"> ";
-  options = {hash:{},inverse:self.program(25, program25, data),fn:self.program(23, program23, data)};
+  options = {hash:{},inverse:self.program(24, program24, data),fn:self.program(22, program22, data)};
   stack2 = ((stack1 = helpers.ifHasFeature),stack1 ? stack1.call(depth0, "aggregateRatingTag", options) : helperMissing.call(depth0, "ifHasFeature", "aggregateRatingTag", options));
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += " </dd> ";
   return buffer;
   }
-function program23(depth0,data) {
+function program22(depth0,data) {
   
   var buffer = "", stack1;
   buffer += " ";
@@ -45460,7 +45382,7 @@ function program23(depth0,data) {
   return buffer;
   }
 
-function program25(depth0,data) {
+function program24(depth0,data) {
   
   var buffer = "", stack1;
   buffer += " ";
@@ -45470,16 +45392,16 @@ function program25(depth0,data) {
   return buffer;
   }
 
-function program27(depth0,data) {
+function program26(depth0,data) {
   
   var buffer = "", stack1, stack2;
   buffer += " ";
-  stack2 = helpers['if'].call(depth0, ((stack1 = ((stack1 = ((stack1 = depth0.Product),stack1 == null || stack1 === false ? stack1 : stack1.Reviews)),stack1 == null || stack1 === false ? stack1 : stack1.Statistics)),stack1 == null || stack1 === false ? stack1 : stack1.TotalCount), {hash:{},inverse:self.noop,fn:self.program(28, program28, data)});
+  stack2 = helpers['if'].call(depth0, ((stack1 = ((stack1 = ((stack1 = depth0.Product),stack1 == null || stack1 === false ? stack1 : stack1.Reviews)),stack1 == null || stack1 === false ? stack1 : stack1.Statistics)),stack1 == null || stack1 === false ? stack1 : stack1.TotalCount), {hash:{},inverse:self.noop,fn:self.program(27, program27, data)});
   if(stack2 || stack2 === 0) { buffer += stack2; }
   buffer += " ";
   return buffer;
   }
-function program28(depth0,data) {
+function program27(depth0,data) {
   
   var buffer = "", stack1;
   buffer += " <dd class=\"bv-rating-ratio-count\"> ";
@@ -53454,7 +53376,7 @@ return t;
 /* END_TEMPLATE */
 ;
 /* START_TEMPLATE */
-BV.define('hbs!simpleContentItem',['hbs','vendor/handlebars/runtime','hbs!content', 'hbs!previewMessage', 'hbs!contentActions', 'template/helpers/view', 'template/helpers/equals', 'template/helpers/withIf'], function(hbs, Handlebars){ 
+BV.define('hbs!simpleContentItem',['hbs','vendor/handlebars/runtime','hbs!content', 'hbs!previewMessage', 'hbs!contentActions', 'template/helpers/view'], function(hbs, Handlebars){ 
 var t = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [2,'>= 1.0.0-rc.3'];
 helpers = helpers || Handlebars.helpers; partials = partials || Handlebars.partials;
@@ -53462,54 +53384,21 @@ helpers = helpers || Handlebars.helpers; partials = partials || Handlebars.parti
 
 function program1(depth0,data) {
   
-  var buffer = "", stack1, stack2, options;
+  var buffer = "", stack1;
   buffer += " <h3 class=\"bv-content-title\">";
   if (stack1 = helpers.contentTitle) { stack1 = stack1.call(depth0, {hash:{}}); }
   else { stack1 = depth0.contentTitle; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
   buffer += escapeExpression(stack1)
-    + "</h3> ";
-  options = {hash:{},inverse:self.noop,fn:self.program(2, program2, data)};
-  stack2 = ((stack1 = helpers.equals),stack1 ? stack1.call(depth0, depth0.Type, "review", options) : helperMissing.call(depth0, "equals", depth0.Type, "review", options));
-  if(stack2 || stack2 === 0) { buffer += stack2; }
-  buffer += " <div class=\"bv-content-item-avatar-offset bv-content-item-avatar-offset-off\"> ";
-  stack2 = self.invokePartial(partials.content, 'content', depth0, helpers, partials);
-  if(stack2 || stack2 === 0) { buffer += stack2; }
-  buffer += " ";
-  stack2 = self.invokePartial(partials.previewMessage, 'previewMessage', depth0, helpers, partials);
-  if(stack2 || stack2 === 0) { buffer += stack2; }
-  buffer += " ";
-  stack2 = self.invokePartial(partials.contentActions, 'contentActions', depth0, helpers, partials);
-  if(stack2 || stack2 === 0) { buffer += stack2; }
-  buffer += " </div> ";
-  return buffer;
-  }
-function program2(depth0,data) {
-  
-  var buffer = "", stack1, stack2, options;
-  buffer += " ";
-  options = {hash:{},inverse:self.noop,fn:self.program(3, program3, data)};
-  stack2 = ((stack1 = helpers.withIf),stack1 ? stack1.call(depth0, depth0.Reference, options) : helperMissing.call(depth0, "withIf", depth0.Reference, options));
-  if(stack2 || stack2 === 0) { buffer += stack2; }
-  buffer += " ";
-  return buffer;
-  }
-function program3(depth0,data) {
-  
-  var buffer = "", stack1;
-  buffer += " ";
-  stack1 = helpers['if'].call(depth0, depth0.Name, {hash:{},inverse:self.noop,fn:self.program(4, program4, data)});
+    + "</h3> <div class=\"bv-content-item-avatar-offset bv-content-item-avatar-offset-off\"> ";
+  stack1 = self.invokePartial(partials.content, 'content', depth0, helpers, partials);
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += " ";
-  return buffer;
-  }
-function program4(depth0,data) {
-  
-  var buffer = "", stack1;
-  buffer += "<meta itemprop=\"itemReviewed\" content=\"";
-  if (stack1 = helpers.Name) { stack1 = stack1.call(depth0, {hash:{}}); }
-  else { stack1 = depth0.Name; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
-  buffer += escapeExpression(stack1)
-    + "\"/>";
+  stack1 = self.invokePartial(partials.previewMessage, 'previewMessage', depth0, helpers, partials);
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += " ";
+  stack1 = self.invokePartial(partials.contentActions, 'contentActions', depth0, helpers, partials);
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += " </div> ";
   return buffer;
   }
 
@@ -54082,7 +53971,7 @@ function program2(depth0,data,depth1,depth2) {
   if (stack1 = helpers.Id) { stack1 = stack1.call(depth0, {hash:{}}); }
   else { stack1 = depth0.Id; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
   buffer += escapeExpression(stack1)
-    + "\"> <div class=\"bv-secondary-rating-summary-id bv-td bv-table-cell\" ariaHidden=\"true\">";
+    + "\"> <div class=\"bv-secondary-rating-summary-id bv-td bv-table-cell\" aria-hidden=\"true\">";
   options = {hash:{
     'prefix': ("rating_"),
     'defaultDisplay': (depth0.Id)
@@ -54102,7 +53991,7 @@ function program2(depth0,data,depth1,depth2) {
   options = {hash:{},inverse:self.noop,fn:self.program(4, program4, data)};
   stack2 = ((stack1 = helpers.loop),stack1 ? stack1.call(depth0, depth0.RatingRange, depth0, options) : helperMissing.call(depth0, "loop", depth0.RatingRange, depth0, options));
   if(stack2 || stack2 === 0) { buffer += stack2; }
-  buffer += " </span> </span> </span> <span class=\"bv-secondary-rating-summary-rating bv-table-cell\" ariaHidden=\"true\"> ";
+  buffer += " </span> </span> </span> <span class=\"bv-secondary-rating-summary-rating bv-table-cell\" aria-hidden=\"true\"> ";
   options = {hash:{}};
   buffer += escapeExpression(((stack1 = helpers.fixedNumber),stack1 ? stack1.call(depth0, depth0.AverageRating, 1, options) : helperMissing.call(depth0, "fixedNumber", depth0.AverageRating, 1, options)))
     + " </span> <span id=\"offscreen-secondary-rating-";
@@ -54154,7 +54043,7 @@ function program7(depth0,data,depth1,depth2,depth3) {
   if (stack1 = helpers.Id) { stack1 = stack1.call(depth0, {hash:{}}); }
   else { stack1 = depth0.Id; stack1 = typeof stack1 === functionType ? stack1.apply(depth0) : stack1; }
   buffer += escapeExpression(stack1)
-    + "\"> <div class=\"bv-secondary-rating-summary-id bv-td bv-table-cell\" ariaHidden=\"true\">";
+    + "\"> <div class=\"bv-secondary-rating-summary-id bv-td bv-table-cell\" aria-hidden=\"true\">";
   options = {hash:{
     'prefix': ("rating_"),
     'defaultDisplay': (depth0.Id)
@@ -54200,7 +54089,7 @@ function program10(depth0,data) {
   buffer += " <li class=\"bv-secondary-rating-summary-value bv-width-from-rating-stats-";
   options = {hash:{}};
   buffer += escapeExpression(((stack1 = helpers.percentage),stack1 ? stack1.call(depth0, depth0.AverageRating, depth0.RatingRange, 1, options) : helperMissing.call(depth0, "percentage", depth0.AverageRating, depth0.RatingRange, 1, options)))
-    + "\" role=\"presentation\"></li> </ul> </span> <span class=\"bv-secondary-rating-summary-rating bv-table-cell\" ariaHidden=\"true\">";
+    + "\" role=\"presentation\"></li> </ul> </span> <span class=\"bv-secondary-rating-summary-rating bv-table-cell\" aria-hidden=\"true\">";
   options = {hash:{}};
   buffer += escapeExpression(((stack1 = helpers.fixedNumber),stack1 ? stack1.call(depth0, depth0.AverageRating, 1, options) : helperMissing.call(depth0, "fixedNumber", depth0.AverageRating, 1, options)))
     + "</span> ";

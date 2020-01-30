@@ -5005,6 +5005,7 @@ BV.define('bv/c2013/view/submission',[
       'click .bv-btn-add-video': 'videoUpload',
       'click .bv-btn-add-photo': 'photoUploadChoice',
       'click .bv-fieldset-agreements a': 'goToAgreements',
+      'click .bv-fieldsets input, .bv-fieldsets textarea': 'focusEvent',
       'click .bv-fieldset-netpromoterscore .bv-radio-container-li input': 'clickEventNP',
       'focus .bv-fieldsets input, .bv-fieldsets textarea, .bv-fieldsets select': 'focusEvent',
       'focus .bv-fieldsets .bv-radio-input, .bv-fieldsets .bv-content-btn': 'focusEvent',
@@ -5498,6 +5499,13 @@ BV.define('bv/c2013/view/submission',[
     // This is from Azel... maybe clean it up later.
     focusEvent: function focusEvent (e) {
       var $target = $(e.currentTarget);
+
+      // handle keyboard show up issue on IOS devices (UIA-9520)
+      if(document.activeElement !== e.target) {
+        e.target.focus();
+        e.target.click();
+      }
+
       this.updateActiveElementCSS($target);
     },
 
